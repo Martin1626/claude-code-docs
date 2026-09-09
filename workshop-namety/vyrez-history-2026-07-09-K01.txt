@@ -1,0 +1,34 @@
+Zapracuj odpovědi požadované v @docs/plc/BACKLOG.md
+
+1. Kdo dodává bezpečnostní a řídicí prvky portů? Předpokládáme TMT — potvrdit. [PAC/TMT]
+               U mezaninu světelnou bránu dodává KVADOS (Sick 1050) a zbytek TMT.
+2. Expediční port: bude ovládací tlačítko, nebo mechanické táhlo? [PAC/DWG]
+               Dvojtlačítko. Táhlo nakonec nebudeme používat nikde.
+3. Expediční port: bude na něm čtečka nosiče, ano/ne? [PAC/DWG]
+               Nebude. Čtečka je pouze na dopravnících.
+4. Bude na PLC401 (expediční port) čtečka i HMI? Podklady si v tomto bodě odporují. [PAC]
+               S největší pravděpodobností čtečka nebude.
+5. Kolik světelných clon má expediční port — 1, nebo 2? 
+               S největší pravděpodobností budou dvě brány.
+6. Jaká je skutečná výška přední clony AGV picku — 1350 mm (dle XML), nebo 1300 mm (dle posouzení rizik SF 49)? Sladit oba podklady, pak opravit HW tabulku. [rizika/PAC]
+              Nově je tam zapracováno 1800
+7. Majáky: proč je jich 28 na 24 portech? Potřebujeme mapování, který maják patří ke kterému portu. [DWG]
+               Nikde jsem nenarazil na hodnotu 28. Počítáme s 24.
+8. Jaký konkrétní model majáku se použije? [DWG/PAC]
+               Maják od firmy Cyndar 
+9. Bude na portech AGV zóny akustická signalizace? [PAC/rizika]
+               Nebude. 
+10. Jaká je doba přechodu vrat podle použitého pohonu? Potřebujeme ji pro nastavení prahu poruchy GATE_FAULT. [PAC]
+               Testovací vrata jsou na cestě. PAC bude testovat. Budou mít vrata i poziční čidla k dispozici. Zatím tedy nevíme.
+11. Potvrzení navržených časových prodlev (časování obecně). [PAC]
+
+Dohledávky u projektanta (DWG):
+
+12. Je na vratech koncové čidlo zavřené polohy? [DWG]
+               Ano, Je
+13. Jaký model RESET tlačítka se použije? [DWG]
+               
+14. Jak je řešeno poziční čidlo 4D Shuttle u dekantingu? [DWG]
+               Zatím nevíme.
+15. Kde budou umístěna oblastní tlačítka RESET/START picking zóny? [DWG]
+               Vždy napravo. Když člověk stojí čelem k danému portu (na stejně), pokud jde zrovna sloup mezaninu, tak na sloupu mezaninu.

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Kompaktace — 19 měřených</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  /* Tokeny převzaté z claude-code-jak-funguje.html, aby slide seděl do decku */
+  :root {
+    --bg: #0c0f14; --bg-2: #12171f; --bg-3: #1a212c;
+    --line: #263040; --line-2: #313d4f;
+    --text: #d8dfea; --text-dim: #93a0b2; --muted: #5f6b7c;
+    --keep: #22a89f;          /* „zůstalo" — ověřeno validátorem, dark surface #12171f */
+    --keep-soft: rgba(34,168,159,0.14);
+    --warn: #e0b341;
+    --mono: ui-monospace, "Cascadia Code", "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+    --sans: -apple-system, "Segoe UI", Roboto, system-ui, "Helvetica Neue", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  .slide {
+    width: 1920px; height: 1080px; margin: 0 auto;
+    padding: 44px 96px 36px;
+    display: grid; grid-template-rows: auto auto 1fr auto auto; row-gap: 16px;
+  }
+  .eyebrow { font-family: var(--mono); font-size: 14px; letter-spacing: .22em; text-transform: uppercase; color: var(--text-dim); display: flex; gap: 14px; align-items: center; }
+  .eyebrow .num { color: var(--muted); }
+  .eyebrow .tag { padding: 2px 10px; border-radius: 3px; border: 1px solid var(--line-2); color: var(--text-dim); letter-spacing: .12em; }
+  .head { display: flex; align-items: baseline; gap: 40px; }
+  .hero { font-size: 104px; line-height: 1; font-weight: 600; letter-spacing: -.02em; color: var(--text); }
+  .lede { font-size: 26px; line-height: 1.35; color: var(--text-dim); max-width: 1100px; }
+  .lede b { color: var(--text); font-weight: 600; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 19px; line-height: 1; }
+  thead th { font-family: var(--mono); font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 500; text-align: right; padding: 0 14px 10px; border-bottom: 1px solid var(--line); }
+  thead th.l, td.l { text-align: left; }
+  tbody td { padding: 0 14px; height: 30px; border-bottom: 1px solid rgba(38,48,64,.55); font-variant-numeric: tabular-nums; text-align: right; color: var(--text); white-space: nowrap; }
+  td.idx { color: var(--muted); font-family: var(--mono); font-size: 15px; }
+  td.date { color: var(--text-dim); font-family: var(--mono); font-size: 16px; }
+  td.proj { color: var(--muted); font-family: var(--mono); font-size: 14px; letter-spacing: .06em; }
+  td.pct { font-weight: 600; }
+  td.dur { color: var(--text-dim); }
+  td.bar { width: 560px; padding-right: 0; }
+  /* pruh: neutrální dráha = kontext PŘED (škálováno k maximu 618 390), barevný kus = kolik ZŮSTALO */
+  .track { position: relative; height: 12px; background: var(--bg-3); border: 1px solid var(--line-2); border-radius: 4px; }
+  .track .keep { position: absolute; left: 0; top: -1px; bottom: -1px; background: var(--keep); border-radius: 4px 0 0 4px; min-width: 4px; box-shadow: 2px 0 0 var(--bg-2); }
+  .track .keep.r { border-radius: 4px; }
+  tr.low td.pct { color: var(--warn); }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .stat { background: var(--bg-2); border: 1px solid var(--line); border-radius: 8px; padding: 12px 22px; }
+  .stat .v { font-size: 34px; font-weight: 600; letter-spacing: -.01em; line-height: 1.1; }
+  .stat .k { font-family: var(--mono); font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--text-dim); margin-top: 6px; }
+  .stat .v small { font-size: 20px; color: var(--text-dim); font-weight: 500; margin-left: 8px; }
+
+  .legend { display: flex; gap: 28px; align-items: center; font-family: var(--mono); font-size: 13px; color: var(--text-dim); letter-spacing: .04em; }
+  .sw { display: inline-block; width: 22px; height: 10px; border-radius: 3px; vertical-align: middle; margin-right: 8px; }
+  .sw.track { background: var(--bg-3); border: 1px solid var(--line-2); }
+  .sw.keep { background: var(--keep); }
+  .foot { display: flex; justify-content: space-between; gap: 40px; font-family: var(--mono); font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .foot .src { max-width: 1250px; }
+</style>
+</head>
+<body>
+<section class="slide">
+
+  <div class="eyebrow"><span class="num">F-03</span><span>Kompaktace kontextu</span><span class="tag">vlastní měření · 26. 8. 2026</span></div>
+
+  <div class="head">
+    <div class="hero">97,3 %</div>
+    <div class="lede">mediánový podíl kontextu, který kompaktace <b>zahodila</b>.<br>
+      19 kompaktací ve dvou pracovních projektech — <b>všech 19 ručních, ani jedna s instrukcí.</b></div>
+  </div>
+
+  <table aria-label="Všech 19 zaznamenaných kompaktací">
+    <thead><tr>
+      <th class="l">#</th><th class="l">Datum (místní čas)</th><th class="l">Projekt</th>
+      <th>Před (tok.)</th><th>Po (tok.)</th><th>Zahozeno</th><th>Trvalo</th>
+      <th class="l" style="padding-left:28px">Před → zůstalo <span style="letter-spacing:0;color:var(--muted)">(šířka = kontext před, škála k 618 390)</span></th>
+    </tr></thead>
+    <tbody>
+      <!-- šířka dráhy = před / 618390 · šířka barevného kusu = po / před -->
+      <tr><td class="idx l">1</td><td class="date l">2026-08-09 20:17</td><td class="proj l">alzask</td><td>579 010</td><td>8 244</td><td class="pct">98,6 %</td><td class="dur">196 s</td><td class="bar"><div class="track" style="width:93.6%" title="579 010 → 8 244"><div class="keep" style="width:1.42%"></div></div></td></tr>
+      <tr><td class="idx l">2</td><td class="date l">2026-08-10 17:26</td><td class="proj l">alzask</td><td>440 617</td><td>9 506</td><td class="pct">97,8 %</td><td class="dur">186 s</td><td class="bar"><div class="track" style="width:71.3%" title="440 617 → 9 506"><div class="keep" style="width:2.16%"></div></div></td></tr>
+      <tr><td class="idx l">3</td><td class="date l">2026-08-11 07:32</td><td class="proj l">alzask</td><td>544 395</td><td>7 100</td><td class="pct">98,7 %</td><td class="dur">172 s</td><td class="bar"><div class="track" style="width:88.0%" title="544 395 → 7 100"><div class="keep" style="width:1.30%"></div></div></td></tr>
+      <tr><td class="idx l">4</td><td class="date l">2026-08-11 15:55</td><td class="proj l">alzask</td><td>586 517</td><td>11 668</td><td class="pct">98,0 %</td><td class="dur">224 s</td><td class="bar"><div class="track" style="width:94.8%" title="586 517 → 11 668"><div class="keep" style="width:1.99%"></div></div></td></tr>
+      <tr><td class="idx l">5</td><td class="date l">2026-08-12 21:24</td><td class="proj l">alzask</td><td>602 574</td><td>14 075</td><td class="pct">97,7 %</td><td class="dur">160 s</td><td class="bar"><div class="track" style="width:97.4%" title="602 574 → 14 075"><div class="keep" style="width:2.34%"></div></div></td></tr>
+      <tr><td class="idx l">6</td><td class="date l">2026-08-13 08:26</td><td class="proj l">alzask</td><td>408 542</td><td>11 757</td><td class="pct">97,1 %</td><td class="dur">160 s</td><td class="bar"><div class="track" style="width:66.1%" title="408 542 → 11 757"><div class="keep" style="width:2.88%"></div></div></td></tr>
+      <tr><td class="idx l">7</td><td class="date l">2026-08-13 12:27</td><td class="proj l">alzask</td><td>419 004</td><td>11 950</td><td class="pct">97,1 %</td><td class="dur">202 s</td><td class="bar"><div class="track" style="width:67.8%" title="419 004 → 11 950"><div class="keep" style="width:2.85%"></div></div></td></tr>
+      <tr><td class="idx l">8</td><td class="date l">2026-08-13 22:58</td><td class="proj l">alzask</td><td>356 334</td><td>9 488</td><td class="pct">97,3 %</td><td class="dur">191 s</td><td class="bar"><div class="track" style="width:57.6%" title="356 334 → 9 488"><div class="keep" style="width:2.66%"></div></div></td></tr>
+      <tr><td class="idx l">9</td><td class="date l">2026-08-18 22:16</td><td class="proj l">alzask</td><td>583 578</td><td>12 127</td><td class="pct">97,9 %</td><td class="dur">181 s</td><td class="bar"><div class="track" style="width:94.4%" title="583 578 → 12 127"><div class="keep" style="width:2.08%"></div></div></td></tr>
+      <tr><td class="idx l">10</td><td class="date l">2026-08-19 15:26</td><td class="proj l">alzask</td><td>572 770</td><td>13 344</td><td class="pct">97,7 %</td><td class="dur">119 s</td><td class="bar"><div class="track" style="width:92.6%" title="572 770 → 13 344"><div class="keep" style="width:2.33%"></div></div></td></tr>
+      <tr><td class="idx l">11</td><td class="date l">2026-08-19 19:45</td><td class="proj l">alzask</td><td>422 833</td><td>18 885</td><td class="pct">95,5 %</td><td class="dur">201 s</td><td class="bar"><div class="track" style="width:68.4%" title="422 833 → 18 885"><div class="keep" style="width:4.47%"></div></div></td></tr>
+      <tr><td class="idx l">12</td><td class="date l">2026-08-19 21:06</td><td class="proj l">alzask</td><td>416 445</td><td>16 927</td><td class="pct">95,9 %</td><td class="dur">194 s</td><td class="bar"><div class="track" style="width:67.3%" title="416 445 → 16 927"><div class="keep" style="width:4.06%"></div></div></td></tr>
+      <tr><td class="idx l">13</td><td class="date l">2026-08-19 22:32</td><td class="proj l">alzask</td><td>521 073</td><td>15 372</td><td class="pct">97,0 %</td><td class="dur">185 s</td><td class="bar"><div class="track" style="width:84.3%" title="521 073 → 15 372"><div class="keep" style="width:2.95%"></div></div></td></tr>
+      <tr class="low"><td class="idx l">14</td><td class="date l">2026-08-19 22:43</td><td class="proj l">alzask</td><td>136 471</td><td>20 495</td><td class="pct">85,0 %</td><td class="dur">184 s</td><td class="bar"><div class="track" style="width:22.1%" title="136 471 → 20 495 — 11 minut po předchozí kompaktaci"><div class="keep" style="width:15.0%"></div></div></td></tr>
+      <tr><td class="idx l">15</td><td class="date l">2026-08-20 12:01</td><td class="proj l">jiný</td><td>214 931</td><td>13 372</td><td class="pct">93,8 %</td><td class="dur">178 s</td><td class="bar"><div class="track" style="width:34.8%" title="214 931 → 13 372"><div class="keep" style="width:6.22%"></div></div></td></tr>
+      <tr><td class="idx l">16</td><td class="date l">2026-08-21 16:17</td><td class="proj l">alzask</td><td>618 390</td><td>15 342</td><td class="pct">97,5 %</td><td class="dur">174 s</td><td class="bar"><div class="track" style="width:100%" title="618 390 → 15 342 — největší"><div class="keep" style="width:2.48%"></div></div></td></tr>
+      <tr><td class="idx l">17</td><td class="date l">2026-08-22 23:21</td><td class="proj l">alzask</td><td>575 151</td><td>15 666</td><td class="pct">97,3 %</td><td class="dur">162 s</td><td class="bar"><div class="track" style="width:93.0%" title="575 151 → 15 666"><div class="keep" style="width:2.72%"></div></div></td></tr>
+      <tr><td class="idx l">18</td><td class="date l">2026-08-24 08:06</td><td class="proj l">alzask</td><td>464 352</td><td>10 248</td><td class="pct">97,8 %</td><td class="dur">173 s</td><td class="bar"><div class="track" style="width:75.1%" title="464 352 → 10 248 — mediánová hodnota „před“"><div class="keep" style="width:2.21%"></div></div></td></tr>
+      <tr><td class="idx l">19</td><td class="date l">2026-08-25 12:09</td><td class="proj l">alzask</td><td>392 015</td><td>18 245</td><td class="pct">95,3 %</td><td class="dur">169 s</td><td class="bar"><div class="track" style="width:63.4%" title="392 015 → 18 245"><div class="keep" style="width:4.65%"></div></div></td></tr>
+    </tbody>
+  </table>
+
+  <div class="stats">
+    <div class="stat"><div class="v">19 <small>/ 0 automaticky</small></div><div class="k">ručních kompaktací · nikdy strop okna</div></div>
+    <div class="stat"><div class="v">0</div><div class="k">s instrukcí, co zachovat (<span style="text-transform:none;letter-spacing:0">/compact &lt;text&gt;</span>)</div></div>
+    <div class="stat"><div class="v">181 s <small>max 224 s</small></div><div class="k">medián doby kompaktace</div></div>
+    <div class="stat"><div class="v">8 601 191</div><div class="k">tokenů zahozeno celkem</div></div>
+  </div>
+
+  <div class="foot">
+    <div class="legend"><span><i class="sw track"></i>kontext před kompaktací</span><span><i class="sw keep"></i>co zůstalo po ní</span></div>
+    <div class="src">Zdroj: <code>compactMetadata</code> (<code>preTokens</code>/<code>postTokens</code>/<code>durationMs</code>) v transkriptech <code>~/.claude/projects/*.jsonl</code>, vzorek 84 souborů; 2 duplikáty z forků session vyřazeny; zahozeno = před − po. Formát je interní a mění se mezi verzemi — čísla platí pro verzi k 26. 8. 2026.</div>
+  </div>
+
+</section>
+</body>
+</html>

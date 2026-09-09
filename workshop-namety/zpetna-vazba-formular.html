@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<title>Zpětná vazba — Claude Code pro analytiky, 1. sezení</title>
+<style>
+  @page { size: A4 portrait; margin: 16mm 18mm; }
+  :root { --ink: #111; --dim: #555; --line: #999; --soft: #ddd; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: #fff; color: var(--ink); font-family: -apple-system, "Segoe UI", Roboto, system-ui, "Helvetica Neue", sans-serif; font-size: 12.5pt; line-height: 1.4; }
+  .sheet { width: 210mm; min-height: 297mm; padding: 16mm 18mm; margin: 0 auto; display: flex; flex-direction: column; }
+  @media print { .sheet { width: auto; min-height: auto; padding: 0; } }
+  .eyebrow { font-family: ui-monospace, Consolas, "Cascadia Code", monospace; font-size: 9pt; letter-spacing: .18em; text-transform: uppercase; color: var(--dim); margin: 0 0 6mm; }
+  h1 { font-size: 18pt; margin: 0 0 2mm; letter-spacing: -.01em; }
+  .sub { color: var(--dim); margin: 0 0 7mm; font-size: 11pt; }
+  .q { margin: 0 0 6mm; break-inside: avoid; }
+  .q h2 { font-size: 12.5pt; margin: 0 0 2.5mm; display: flex; gap: 8px; align-items: baseline; }
+  .q h2 .n { font-family: ui-monospace, Consolas, monospace; color: var(--dim); font-size: 10pt; }
+  .lines { border-bottom: 1px solid var(--line); height: 9mm; }
+  .lines + .lines { margin-top: 0; }
+  .opts { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5mm 8mm; margin: 1mm 0 2.5mm; }
+  .opt { display: flex; gap: 6px; align-items: flex-start; }
+  .box { flex: 0 0 auto; width: 4.2mm; height: 4.2mm; border: 1.2px solid var(--ink); border-radius: 1px; margin-top: 1.3mm; }
+  .row { display: flex; gap: 10mm; align-items: center; font-size: 11pt; color: var(--dim); margin: 0 0 7mm; padding: 3mm 0; border-top: 1px solid var(--soft); border-bottom: 1px solid var(--soft); }
+  .row .opt { color: var(--ink); }
+  .foot { margin-top: auto; font-size: 9pt; color: var(--dim); border-top: 1px solid var(--soft); padding-top: 3mm; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+<section class="sheet">
+  <p class="eyebrow">Claude Code pro analytiky · 1. sezení · 11. 9. 2026</p>
+  <h1>Tři otázky na závěr</h1>
+  <p class="sub">Anonymně, dvě minuty. Podle odpovědí se skládá další díl.</p>
+
+  <div class="row">
+    <span>Claude Code používám:</span>
+    <label class="opt"><span class="box"></span>zatím ne</label>
+    <label class="opt"><span class="box"></span>méně než měsíc</label>
+    <label class="opt"><span class="box"></span>déle než měsíc</label>
+  </div>
+
+  <div class="q">
+    <h2><span class="n">1</span>Co jedno si odnášíš a použiješ zítra?</h2>
+    <div class="lines"></div><div class="lines"></div><div class="lines"></div>
+  </div>
+
+  <div class="q">
+    <h2><span class="n">2</span>Co bylo nejméně jasné — nebo čemu nevěříš?</h2>
+    <div class="lines"></div><div class="lines"></div><div class="lines"></div>
+  </div>
+
+  <div class="q">
+    <h2><span class="n">3</span>Co chceš příště? <span style="font-weight:400;color:var(--dim)">(zaškrtni klidně víc)</span></h2>
+    <div class="opts">
+      <label class="opt"><span class="box"></span>Jak strukturovat soubory projektu pro specifikace a analýzy (Markdown, CLAUDE.md, pravidla)</label>
+      <label class="opt"><span class="box"></span>Ontologie prvků systému a pravidla, který zdroj má přednost</label>
+      <label class="opt"><span class="box"></span>Než pustíš agenta na svá data: zákazy, návrat zpět, kam data tečou</label>
+      <label class="opt"><span class="box"></span>Jak psát zadání: dokument nese kontext, prompt nese rozhodnutí</label>
+      <label class="opt"><span class="box"></span>Revize výstupů: co kontrolovat ručně a co nechat na nástroji</label>
+      <label class="opt"><span class="box"></span>Vlastní výbava: skills, příkazy, hooky — a jak je předat kolegovi</label>
+    </div>
+    <div class="lines" style="height:8mm"></div>
+    <div style="font-size:9.5pt;color:var(--dim);margin-top:1mm">jiné / poznámka</div>
+  </div>
+
+  <div class="foot">
+    <span>Díky. Odpovědi zpracuje lektor do souhrnu; jména se nikam nezapisují.</span>
+    <span>list 1/1</span>
+  </div>
+</section>
+</body>
+</html>

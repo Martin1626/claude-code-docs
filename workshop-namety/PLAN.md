@@ -1,7 +1,21 @@
 # Plán přípravy školení — postup po krocích
 
-**Stav k:** 2026-09-09 · **Toto je návrh**, každý krok se odsouhlasí a teprve pak dělá.
+**Stav k:** 2026-09-09 · každý krok se odsouhlasí a teprve pak dělá.
 **Zadání:** série školení Claude Code pro analytiky Alza; první sezení = dvouhodinový úvod (rámec z nahrávky 2026-09-02).
+
+## Rozhodnutí z 2026-09-09 (krok 0 uzavřen)
+
+| Otázka | Rozhodnutí | Dopad na plán |
+|---|---|---|
+| Datum | **čtvrtek 2026-09-11** — za 2 dny | kroky 1–5 se stlačují do 10. 9.; krok 6 až po sezení |
+| Publikum | analytici Alza, většina s vlastním předplatným Claude Code; u klávesnice ~20 % času | malá vlastní cvičení (`/context`, `/usage`, vlastní `history.jsonl`), ne generování |
+| Rozsah | **varianta (a)** — fundament + ochutnávka K-01; ontologie a struktura pro specifikace → 2. sezení | program v `PROGRAM-01.md` |
+| Tokenizace | **bez API klíče**; ukázka na tiktokenizer.vercel.app | bod 1A **uzavřen jako nepotřebný**; 1B zůstává `[předpoklad]`. ⚠ tiktokenizer = tokenizéry OpenAI, ne Claude — říct nahlas, ukázat princip, ne počty |
+| Cvičný repozitář | **nepotřebný** — lektor prezentuje na existujícím projektu Alza, účastníci si spouštějí Claude z lokální pomocné složky | krok 3 **zrušen**; bod 1D (hook `matcher: "compact"`) se netestuje, zůstává „netestováno" |
+| Styl | zkušenosti a dobrá praxe, ukázka vlastního prostředí, **bez generování** | scénář = výklad + statické ukázky + čísla; žádná živá kompaktace |
+| Zpětná vazba | ano, uvítána | 3 otázky na konci, zápis do `ZPETNA-VAZBA-01.md` |
+
+**Stlačený harmonogram:** 9. 9. program (hotovo: `PROGRAM-01.md`) → 10. 9. deck opravit, výřez `history.jsonl`, tabulka kompaktací, ceník ověřit, zkušební průchod → **11. 9. sezení** → po něm krok 6 a 7.
 
 ---
 
@@ -62,13 +76,13 @@ Kroky 0, 1, 2 jsou na sebe nezávislé a dají se dělat souběžně. Krok 4 na 
 
 | Bod | Co je potřeba | Zdroj pravdy | Kdo |
 |---|---|---|---|
-| **A** přesné počty tokenů (CZ/EN věty, `PICK_STATION_A2_LOAD`, cesty, `CLAUDE.md`) | API klíč a volání `count_tokens` s `claude-opus-5` | platform.claude.com — Token counting | **ty:** klíč; **já:** skript a měření |
-| **B** znaky/token pro češtinu | plyne z A; do té doby 3,0 zůstává `[předpoklad]` | vlastní měření | já |
-| **C** Sonnet 5 sdílí tokenizér s Opus 5 | ověřit v docs; nízký dopad | platform.claude.com — Models | já |
-| **D** `SessionStart` hook s `matcher: "compact"` | otestovat na cvičném repu (krok 3) | code.claude.com — Hooks + vlastní test | já |
-| **E** velikost popisků skillů v mé session | `/context` — uzavře se přímo na sezení jako demo 3a | vlastní měření | na místě |
+| **A** přesné počty tokenů (CZ/EN věty, `PICK_STATION_A2_LOAD`, cesty, `CLAUDE.md`) | ~~API klíč a `count_tokens`~~ **uzavřeno 9. 9. jako nepotřebné** — ukázka principu na tiktokenizeru, žádné konkrétní počty pro Claude se nevyslovují | — | — |
+| **B** znaky/token pro češtinu | **zůstává `[předpoklad]` 3,0** — bez měření se neuzavře; ve F-02 a F-05 tak označeno | vlastní měření (neproběhne) | — |
+| **C** Sonnet 5 sdílí tokenizér s Opus 5 | **uzavřeno 9. 9.: ano** — Pricing: „Claude 4.7 and later … newer tokenizer; Sonnet 4.6 and earlier … previous" | platform.claude.com — Pricing | — |
+| **D** `SessionStart` hook s `matcher: "compact"` | **netestuje se** (krok 3 zrušen); ve F-04 zůstává „netestováno" | code.claude.com — Hooks | — |
+| **E** velikost popisků skillů v mé session | `/context` — uzavře se přímo na sezení jako ukázka v bloku 4 | vlastní měření | na místě |
 
-**A je jediný, který blokuje demo** (F-02 „Čeština není dražší, protože je delší"). Bez něj musí F-02 skončit u měřených znaků. Rozhodnutí: seženeš klíč, nebo F-02 přepíšeme na „znaky" variantu?
+Po rozhodnutích z 9. 9. **nic z A–E neblokuje sezení.** Zbývá jen hlídat, aby předpoklady B a D byly v decku i scénáři označené jako předpoklad / netestováno.
 
 **Výstup:** aktualizovaná tabulka ve `FUNDAMENT.md`; každý bod buď uzavřen s odkazem, nebo explicitně označen `[předpoklad]` tam, kde se v decku/scénáři používá. **Hotovo, když** v Dílu 1 není jediné neoznačené číslo bez zdroje.
 
@@ -79,8 +93,8 @@ Kroky 0, 1, 2 jsou na sebe nezávislé a dají se dělat souběžně. Krok 4 na 
 **Vstup:** `C:\Git\shared\docs\claude-code\claude-code-jak-funguje.html` (12 slidů, čteno včetně JS).
 
 **Opravy (nalezené, doložené):**
-- slide 02, ř. 311: „≈ 3,5 znaku na token" → **4** (doslovná citace FAQ Anthropic); doplnit odkaz na konkrétní stránku
-- slide 02: „interaktivní" tokenizér jen dělí předpřipravená pole (`TOK_EN`, `TOK_CZ`) — buď nahradit skutečnými čísly z kroku 1A, nebo nadpis změnit na „ilustrace" a říct to publiku nahlas (je to sama o sobě lekce: hezké demo nemusí měřit, co tvrdí)
+- slide 02, ř. 311: „≈ 3,5 znaku na token" — **PONECHÁNO a doplněn druhý oficiální odhad ≈ 4 / 0,75 slova.** Ověřeno 9. 9.: glosář Anthropic říká 3,5, Pricing FAQ Anthropic říká 4 — dvě oficiální stránky, dvě čísla → rozsah, ne „oprava". Původní závěr FUNDAMENT „deck má chybu" zrušen (zaznamenáno tam). Doplněny zdroje: +30 % tokenů od Opus 4.7 (Token counting, Pricing), 1 M ≈ 2,5 M znaků Unicode (Models overview). **HOTOVO 9. 9.**
+- slide 02: „interaktivní" tokenizér jen dělí předpřipravená pole (`TOK_EN`, `TOK_CZ`) — nahradit odkazem na tiktokenizer.vercel.app **s výhradou, že jde o tokenizéry OpenAI, ne Claude** (Anthropic tokenizér nezveřejňuje); ukázka principu, ne počtů. Je to sama o sobě lekce: hezké demo nemusí měřit, co tvrdí
 - slide 06: „až 1 milion tokenů" — ověřit proti aktuálnímu modelu; bod 9 už potvrdil `opus[1m]` = 1 000 000 bez příplatku, jen doplnit datum ověření
 
 **Doplnění (z FUNDAMENT.md — druhá polovina pravdy, kterou deck nemá):**
@@ -92,9 +106,11 @@ Kroky 0, 1, 2 jsou na sebe nezávislé a dají se dělat souběžně. Krok 4 na 
 
 ---
 
-## Krok 3 — Cvičný repozitář (Díl 0, `N-06`)
+## Krok 3 — Cvičný repozitář (Díl 0, `N-06`) — **ZRUŠEN 9. 9.**
 
-**Proč první:** „Bez něj polovina dem nejde předvést." A rozhodnutí 0.4 (čisté vs. moje prostředí) na něm stojí.
+Lektor prezentuje na existujícím projektu Alza, účastníci mají vlastní Claude Code a spouštějí ho z lokální pomocné složky. Nic se negeneruje, takže „repozitář, který se smí rozbít" není potřeba. Kartu `N-06` v katalogu ponechat — pro případný pozdější díl s živými cvičeními. Původní specifikace níže zůstává jen pro ten případ.
+
+**Proč původně první:** „Bez něj polovina dem nejde předvést." A rozhodnutí 0.4 (čisté vs. moje prostředí) na něm stojí.
 
 **Co v něm musí být, aby fungovala dema Dílu 1:**
 - `CLAUDE.md` s krátkou, čitelnou instrukcí (ne 23 KB) — demo `F-01`, `F-05`
@@ -159,14 +175,15 @@ Netýká se 1. sezení, ale série. Tři věci, každá samostatně:
 
 ---
 
-## Co potřebuji od tebe, abychom mohli začít
+## Otázky ke kroku 0 — zodpovězeno 9. 9.
 
-Krok 0 je celý tvůj. Konkrétně:
+Viz tabulka „Rozhodnutí z 2026-09-09" nahoře. Nezodpovězeno zůstává jen **počet účastníků** (ovlivňuje formu zpětné vazby: papír vs. sdílený dokument).
 
-- **datum 1. sezení** a počet lidí
-- **mají účastníci Claude Code** (instalace + licence), nebo je sezení čisté demo?
-- **rozsah:** varianta (a), (b), nebo (c) výše?
-- **API klíč** pro `count_tokens` (bod 1A) — seženeš, nebo F-02 přepíšeme na variantu bez přesných tokenů?
-- **kde má žít cvičný repozitář** (krok 3)
+## Co je teď na řadě (10. 9.)
 
-Kroky 1C, 1D, 2 a přípravu skriptu pro 1A můžu začít hned, nezávisle na odpovědích.
+Checklist příprav je v `PROGRAM-01.md`, sekce „Co je potřeba připravit do 10. 9.". Pořadí podle rizika:
+1. deck — oprava slidu 02 a 06 (krok 2)
+2. předfiltrovaný výřez `history.jsonl` jen z projektu Alza (blok 1) — bezpečnostní, ne kosmetické
+3. statická tabulka 19 kompaktací (blok 6)
+4. ověření ceníku (blok 5) a záložní screenshoty
+5. zkušební průchod nahlas (krok 5)

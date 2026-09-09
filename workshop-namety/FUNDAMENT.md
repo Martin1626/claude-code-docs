@@ -30,7 +30,7 @@
 | Původně jsem napsal | Ověřeno, a je to jinak |
 |---|---|
 | „Tokenizér na slidu 02 decku je zadrátovaný, ale čísla, která zobrazí, jsou ověřená" | **Ten tokenizér vůbec nepočítá tokeny.** Poměr „znaků/token" je jen `text.length / arr.length` nad ručně předrozděleným polem. Je to **ilustrace**, ne měření. Nesmím ji citovat jako doklad. |
-| „Angličtina ≈ 3,5 znaku na token (dle decku)" | **≈ 4 znaky na token.** Doslovná citace z oficiálního FAQ: *„1 token is approximately 4 characters or 0.75 words in English."* Deck má na ř. 311 věcnou chybu. |
+| „Angličtina ≈ 3,5 znaku na token (dle decku)" | ~~≈ 4 znaky na token, deck má chybu~~ → **KOREKCE 2026-09-09: deck chybu nemá.** Anthropic uvádí **obě** čísla na dvou oficiálních stránkách: glosář *„a token approximately represents 3.5 English characters"* ([glossary](https://platform.claude.com/docs/en/about-claude/glossary)) a Pricing FAQ *„1 token is approximately 4 characters or 0.75 words in English"* ([pricing](https://platform.claude.com/docs/en/about-claude/pricing)). Správně je uvést **rozsah 3,5–4 s oběma citacemi**, ne jedno číslo — jak už říká karta F-02. |
 | „`/compact` není nástroj, je to nehoda — vyhýbej se mu" | **`/compact` přijímá instrukci**: `/compact focus on the auth bug fix`. Dokumentace doslova: *„The summary keeps what you choose instead of what the automatic pass guesses is important."* Doporučení se tím překlápí — viz F-03. |
 | „`/compact` mi 51× narazil na strop" | **Ani jednou.** Ve 19 zaznamenaných kompaktacích je trigger **19× `manual`, 0× `auto`**. Vždycky jsem `/compact` napsal sám, při mediánu 464 352 tokenů — tedy na ~58 % okna, dávno před stropem. Problém není že kompaktuju, ale **kdy** a **bez instrukce**. |
 | „1M okno beru jako danost" | 1M je **výchozí**, ne beta za příplatek, a **za tokeny nad 200K není cenový příplatek**. Starý mentální model „1M = drahá beta" je potřeba publiku aktivně vyvrátit. |
@@ -969,7 +969,7 @@ podkope celý blok. Přesná čísla dá jedině `/context` na daném stroji.
 | 1 | Jak `/compact` vybírá, co zachová; lze to ovlivnit? | **Ano — `/compact <instrukce>`.** Bez ní hádá. Překlopilo F-03. |
 | 2 | Práh auto-kompaktace | Není jedno %. Sonnet 5 ~967K, konfigurovatelné (`/autocompact`, `CLAUDE_CODE_AUTO_COMPACT_WINDOW`, 100K–1M). Moje data: 0 z 21 auto. |
 | 3 | Existuje veřejný tokenizér pro Claude bez klíče? | **Ne** (negativní nález). `count_tokens` API je jediná cesta a vyžaduje auth. |
-| 4 | Poměr znaků/token pro angličtinu — 3,5 nebo 4? | **4** (doslovná citace z FAQ). Deck má na ř. 311 chybu. |
+| 4 | Poměr znaků/token pro angličtinu — 3,5 nebo 4? | **Obě hodnoty jsou oficiální** (glosář 3,5; Pricing FAQ 4 / 0,75 slova). Deck chybu nemá; správně rozsah. *Korekce 2026-09-09 — původní závěr „4, deck má chybu" byl unáhlený.* |
 | 5 | Co `/resume` obnovuje a co ne | Detailně dokumentováno. Neobnovuje **cache** ani **background/monitor úlohy**. |
 | 6 | Resetuje `/clear` cache na serveru? | Nic neresetuje — začne novou konverzaci, stará cache vyprší po TTL. **Klíčové: `/clear` neposílá žádný request → je zdarma.** |
 | 7 | Velikost systémového promptu Claude Code | ~4 200 tokenů **ilustrativně** (ne garantovaná konstanta). Přesně jen `/context`. |
@@ -983,6 +983,6 @@ podkope celý blok. Přesná čísla dá jedině `/context` na daném stroji.
 |---|---|---|
 | A | **Přesné počty tokenů** pro naše CZ/EN věty, `PICK_STATION_A2_LOAD`, cestu, `příjmu`/`prijmu`, paradigma „nosiče" a `C:\Git\alzask\CLAUDE.md` — přes `count_tokens` s `claude-opus-5`. | **Blokuje demo 2b** (F-02). Na stroji není API klíč ani `ant` CLI (změřeno). Úkol na přípravu, ne na živo. Bez toho musí F-02 skončit u měřených znaků. |
 | B | **Poměr znaků/token pro češtinu** — jakákoli dokumentovaná hodnota. | Ověřeno, že Anthropic **nezveřejňuje** (negativní nález). Můj přepočet 3,0 znaku/token je **předpoklad** — musí být takto označen ve F-02 i F-05. Uzavře se jedině měřením přes bod A. |
-| C | Zda **Sonnet 5** sdílí „nový" tokenizér s Opus 5. | Nízký dopad na výklad — dokumentace jmenuje jen „4.7 a novější + Mythos Preview", Sonnet 5 nepotvrzen ani vyvrácen. Zmínit jen kdyby se někdo ptal. |
+| C | ~~Zda **Sonnet 5** sdílí „nový" tokenizér s Opus 5.~~ **Uzavřeno 2026-09-09: ano.** Pricing: *„Claude 4.7 and later models … use a newer tokenizer … Claude Sonnet 4.6 and earlier models use the previous tokenizer."* Sonnet 5 je novější než 4.7 → nový tokenizér. |
 | D | Chování **`SessionStart` hooku s `matcher: "compact"`** v praxi. | Dokumentováno včetně příkladu, ale **netestováno**. Ve F-04 musí být uvedeno jako „netestováno", ne jako vyzkoušená praxe. |
 | E | Přesná velikost **popisků skillů v mé session** (~50 skillů). | Ilustrativní hodnota z dokumentace je ~450 tokenů; můj listing je zjevně větší. Přesně dá jedině `/context` — a to je zároveň demo 3a, takže se to uzavře na místě. |

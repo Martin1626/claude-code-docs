@@ -218,11 +218,11 @@ které se posílají pokaždé (`CLAUDE.md`, pravidla), ne v promptu, který nap
 
 | Tvrzení | Stav |
 |---|---|
-| ≈ 4 znaky na token pro angličtinu | **dokumentováno** — doslovná citace z FAQ Anthropic |
+| ≈ 3,5 (glosář) až ≈ 4 znaky / 0,75 slova (Pricing FAQ) na token pro angličtinu | **dokumentováno, dvě oficiální stránky, dvě čísla** → uvádět rozsah (ověřeno 2026-09-09) |
 | Tokenizér od Opus 4.7 dává na tomtéž textu ~30 % víc tokenů | **dokumentováno** — takže pro Opus 5 je to spíš ≈ 3,1 znaku/token |
 | Poměr pro češtinu | **Anthropic nezveřejňuje** — žádné číslo neexistuje |
 | Proč diakritika stojí víc | **odvozeno** z obecného principu byte-level BPE, nezávislý zdroj |
-| `tiktoken` podhodnocuje o 15–20 %, „mnohem víc na neanglickém vstupu" | **dokumentováno** |
+| `tiktoken` podhodnocuje o 15–20 %, „mnohem víc na neanglickém vstupu" | ~~dokumentováno~~ **zdroj nedohledán (2026-09-09)** — v oficiální dokumentaci Anthropic nenalezeno; nevyslovovat s číslem |
 
 **Role:** `[výklad]` · **Náročnost:** střední · **Odhad:** 12 min ·
 **Závislosti:** F-01 · **Priorita:** must
