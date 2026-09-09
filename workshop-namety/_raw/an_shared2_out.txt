@@ -1,0 +1,93 @@
+001| 2026-07-05 01:13 |  214| Reviduj agenty, zda jejich použití ve smyčce i jejich počet dává dobrý smysl při vytváření spec. Zároveň chci, aby při prvním použití na novém projekt
+002| 2026-07-05 01:34 |   23| zapracuj nálezy 1, 2, 3
+003| 2026-07-05 01:41 |  123| V Spec Factory nepotřebuji nikde zmínku o projektech FHB ani Alza. Ani o změnách, které byly postupně do pluginu prováděné.
+004| 2026-07-05 07:54 |   70| V pravidlech mám "Stopa použití". Jak se toto v pluginu bude využívat?
+005| 2026-07-05 12:14 |  183| V předchozích turnech jsem chtěl, abys přesně tyto a podobné věci odhalil a navrhnul způsoby opravy. Proč jsi to neudělal a jak bych musel zadat příšt
+006| 2026-07-05 12:16 |  185| V předchozích turnech jsem chtěl, abys přesně tyto a podobné věci odhalil a navrhnul způsoby opravy. Proč jsi to neudělal a jak bych musel zadat příšt
+007| 2026-07-05 12:23 |   66| NApiš kompletní lepší prompt včetně smyčky "co dalšího je takhle".
+008| 2026-07-05 12:24 |   36| Nyní to podle tohoto promptu proveď.
+009| 2026-07-05 12:35 |   21| Postupně vyřeš 1 až 7
+010| 2026-07-05 13:16 | 1384| Proveď kompletní audit pluginu spec-factory. ROZSAH: celý plugin — agenti, orchestrátor (commands/spec.md), hooky, tools, rules, templates, konfigurac
+011| 2026-07-05 21:38 |  245| Proveď postupně všechny opravy. Pokud je na výběr více variant, vyber to kvalitnější, dlouhodobější a spolehlivější řešení. Cílem je, aby skutečně byl
+012| 2026-07-06 18:48 |  325| Vytvoř prompt k prověření efektivity Spec Factory. Například zda rozdělení workflow do subagentů je vhodné, zda činnosti subagentů jsou vhodně definov
+013| 2026-07-06 18:49 |  325| Vytvoř prompt k prověření efektivity Spec Factory. Například zda rozdělení workflow do subagentů je vhodné, zda činnosti subagentů jsou vhodně definov
+014| 2026-07-06 19:00 |   27| [Pasted text #1 +112 lines]
+015| 2026-07-06 19:06 |   27| Průzkum promptu prověření 4
+016| 2026-07-06 19:12 |  268| Napiš prompt, který následně spustím na https://www.alphaxiv.org/. Chci tam vyhledat studie, které pomohou vylepšit, zdokonalit, zefektivnit mou Spec 
+017| 2026-07-06 19:38 |  131| Připrav plán všech smysluplných oprav a vylepšení. Zohledni při tom studie: C:\Temp\Studie-spec-factory [Pasted text #1 +47 lines]
+018| 2026-07-06 19:39 |  131| Připrav plán všech smysluplných oprav a vylepšení. Zohledni při tom studie: C:\Temp\Studie-spec-factory [Pasted text #1 +47 lines]
+019| 2026-07-06 20:28 |  131| [Image #1] Potřebuji, aby popis pluginu byl napsán více srozumitelněji pro lidi, kteří nejsou tak hluboko ponořeni do problematiky.
+020| 2026-07-06 21:54 |  350| Spustil jsem plugin v C:\GitHub\HA-security\docs\spec\2026-07-06_faktorial. Chci zkontrolovat, zda plugin zafungoval správně, respektuje pravidla, fun
+021| 2026-07-07 07:14 |   40| Ověř session podle připraveného promptu.
+022| 2026-07-07 11:18 |   97| odchylka 1: rozšiř regex i na tabulku odchylka 2: Je možné efektivně ošetřit pro Windows i MacOS?
+023| 2026-07-07 12:02 |   61| Potřebuji připravit plán adopce Spec Factory v projektu Alza.
+024| 2026-07-07 12:03 |  102| Potřebuji připravit plán adopce Spec Factory v projektu Alza. @..\docs\ADOPTION-ALZA.md C:\Git\alzask
+025| 2026-07-07 17:40 |   23| Návrh obecných pravidel
+026| 2026-07-07 17:43 |  267| Návrh obecných pravidel Která pravidla zachycená zde: C:\Git\alzask\.claude\knowledge-inbox C:\Git\alzask\.claude\rules\shared C:\Git\fhb\.claude\rule
+027| 2026-07-07 19:08 |   92| Nyní můžeš vymazat nahrazená pravidla v projektech Alza a FHB, přestože to není v tomto repu
+028| 2026-07-08 20:22 |   95| Proveď audit, že pravidla uložená v plugins\spec-factory\rules\shared jsou správně zohledňovaná
+029| 2026-07-08 20:22 |  158| Proveď audit, že pravidla uložená v plugins\spec-factory\rules\shared jsou správně zohledňovaná Například v projektu C:\Git\alzask se v nové session z
+030| 2026-07-08 20:24 |  173| Proveď audit, že pravidla uložená v plugins\spec-factory\rules\shared jsou správně zohledňovaná Například v projektu C:\Git\alzask se v nové session z
+031| 2026-07-08 21:15 |   49| Vysvětli srozumitelně, co by obnášela varianta A.
+032| 2026-07-08 21:28 |  251| OK, proveď variantu A. Zároveň zruš ze Spec Factory tato pravidla a jejich přenášení v rámci pluginu. Je to mimo doménovou oblast Spec Factory a nepat
+033| 2026-07-08 22:34 |   36| Potřebuji znalosntí smyčku z projeků
+034| 2026-07-08 22:38 |  427| Potřebuji znalosntí smyčku z projeků C:\Git\alzask C:\Git\fhb přepracovat tak, abych ji mohl sdílet napříč projekty, podobně jako SpecFactory. Nová os
+035| 2026-07-08 22:52 |  127| Pohlídej, aby se v nových sessions správně načítala nejen sdílená pravidla, ale i osobní pravidla a pravidla z osobního inboxu.
+036| 2026-07-09 08:24 |   87| Cizí pravidla se sice ukládají do Gitu, ale nesmí se nikdy načítat ostatním uživatelům.
+037| 2026-07-09 09:14 |   89| Provedl jsem instalaci. A proč v marketplace vidím stále kvados-spec-factory? [Image #1]
+038| 2026-07-09 09:43 |   95| Commity jsi provedl pod špatným uživatelem. Správně má být tomis@kvados.cz Oprav, co ještě jde.
+039| 2026-07-09 09:56 |   49| Co mám nyní udělat před merge do main? [Image #2]
+040| 2026-07-09 10:04 |   63| Asi jsem provedl špatně. Potřebuji asi ještě jednou. [Image #3]
+041| 2026-07-09 13:28 |   74| Vytvoř prompt pro opravu FHB, který pak spustím v nové session v FHB repu.
+042| 2026-07-09 16:39 |  222| Spustil jsem prompt v Session ID: 49d99d0b-ef92-48b3-aac1-cf6483cbccc6 Zkontroluj, zda implementace byla provedena správně. Potom zkontroluj repo C:\G
+043| 2026-07-09 16:50 |   26| Kde je ten prompt uložený?
+044| 2026-07-09 16:51 |   44| Proč v Alzask není taky docs\spec-grounding?
+045| 2026-07-09 16:54 |   68| Rád bych to přesto sjednotil na spec-grounding. Doplň to do promptu.
+046| 2026-07-10 13:22 |  118| Otestuj, že pluginy jsou přístupní nově již i přes project token glpat-o-EKU93o1s1XLfHukxWfqG86MQp1OjRjCA.01.0y0lmdqo5
+047| 2026-07-10 13:41 |   76| Vyzkoušej tento token: glpat-YKzzlZxsOQx1FIakOw_d6m86MQp1OjRkCA.01.0y0fyl0af
+048| 2026-07-10 13:52 |   73| Prověř ještě tento: glpat-2LcGxFvePhidYs2eF8Y2CW86MQp1OjRlCA.01.0y0dsbbby
+049| 2026-07-10 14:03 |   37| Fungují tedy nyní všechny tři tokeny?
+050| 2026-07-10 14:06 |  110| Původní tokeny byly smazány. Vyzkoušej proto tento nový: glpat-6pVHhXNMdoQrZnPf3DItTm86MQp1OjRmCA.01.0y1kzrnsv
+051| 2026-07-10 14:09 |  122| OK, oprav, ale necommituj. Potřebuji pak vyzkoušet reinstalaci pluginů z marketplace, který bude přístupný přes ten token.
+052| 2026-07-10 14:23 |   63| Marketplace chci nainstalovat z gitu nově. Napiš přesný postup.
+053| 2026-07-10 14:29 |   29| Provedl jsem commit té změny.
+054| 2026-07-10 14:36 |   61| Ověř, že je všechno OK a mohu na repu C:\Git\alzask používat.
+055| 2026-07-10 14:38 |   58| Zkontroluj, zda jsou správné instrukce v plugins\README.md
+056| 2026-07-10 14:40 |   39| Oprav README i homepage, ale necommituj
+057| 2026-07-10 14:46 |   95| ADR může obsahovat TODO, pokud je ve stavu draft. Když je schváleno, tak nesmí. Oprav validace.
+058| 2026-07-10 14:47 |  140| ADR může obsahovat TODO, pokud je ve stavu draft. Když je schváleno, tak nesmí. Oprav validace. viz projekt Alza: [Pasted text #1 +13 lines]
+059| 2026-07-10 15:28 |   71| Napiš do backlogu, Přepsat prompty do angličtiny, protože šetří tokeny.
+060| 2026-07-10 20:11 |   67| Uprav dokumentaci, aby byla srozumitelná i pro méně zasvěcené lidi.
+061| 2026-07-10 20:15 |  265| Uprav dokumentaci, aby byla srozumitelná i pro méně zasvěcené lidi. Například nepoužívej: Paměť je cross-session Rules jsou path-scoped precedence vč.
+062| 2026-07-10 20:37 |  231| Připrav atraktivní html prezentaci (dark mode), pomocí které tyto dva pluginy budu moci představit ostatním kolegům. Chci logické pořadí: v čem mi to 
+063| 2026-07-10 20:50 |   76| Instalaci pluginů nechci v readme doporučovat alternativně z lokálního repa.
+064| 2026-07-10 20:51 |   90| PLuginy se netýkají jen FHB a Alza. Vůbec je nezmiňuj. V budoucnu to budou další projekty.
+065| 2026-07-10 20:56 |  144| Uprav styl podle nějakého oblíbeného popularizátora AI. Chci to mít méně formální a umělé, více přirozené a zajímavé. Nepřeháněj to se žargónem.
+066| 2026-07-10 22:05 |  132| Nebylo by v rámci spec-factory efektivnější, aby se nejprve provedl research a teprve po něm planner? A je vhodné používat workflow?
+067| 2026-07-10 22:06 |  132| Nebylo by v rámci spec-factory efektivnější, aby se nejprve provedl research a teprve po něm planner? A je vhodné používat workflow?
+068| 2026-07-10 22:12 |   41| Ano, navrhni znění outline-revision kroku
+069| 2026-07-10 22:14 |   13| Ano, zapiš to
+070| 2026-07-11 08:04 |  235| Vysvětlím jí princip instalace pluginů přes project token . Zajímá mě například kde ten token je uložený . A když jsi parkin bude instalovat někdo jin
+071| 2026-07-11 08:04 |  234| Vysvětli mi princip instalace pluginů přes project token . Zajímá mě například kde ten token je uložený . A když jsi parkin bude instalovat někdo jiný
+072| 2026-07-11 08:12 |  158| Ještě tomu nerozumím. Stačí pro kolegu, když má přístup pro čtení do https://gitlab01.st.kvados.cz/kvados/customers/shared? Pak už může jen spustit in
+073| 2026-07-11 08:16 |   63| MY se přihlašujeme všichni přes kerberos. Jak to s tím souvisí?
+074| 2026-07-11 08:17 |  291| Když jsem totiž zprovozňoval instalaci pluginů přes project token, tak kolega, který spravuje gitlab mi vygeneroval nějaký token a ten jsem ti zadal, 
+075| 2026-07-11 08:22 |   53| Jak si mají kolegové vložit ten klíč do GITLAB_TOKEN?
+076| 2026-07-12 15:17 | 1679| Prezentace Mým cílem je vytvořit přehlednou intuitivní prezentaci, jack funguje Claude Code. Nyní chce vytvořit jenom osnovu až si ji schválíme tak te
+077| 2026-07-12 15:31 |  637| S osnovou souhlasím. Ještě bys tam mohl doplnit princip a ukázky tokenizace textu. A doplň vysvětlení, co se dělá při druhém a dalším turnu. Jak se ke
+078| 2026-07-12 16:02 |  384| Na slidu 2 bych rád měl nějaké jednoduché grafické schéma té funkce. Ten text v rámečku už je zahlcující. To grafické schéma by mohlo být animované, j
+079| 2026-07-12 16:10 |   91| Na poslední slide doplň ještě také vhodný diagram vztahu modelu, harnessu a jak to pracuje.
+080| 2026-07-12 16:14 |   47| Třetí odrážka je špatně formátovaná. [Image #1]
+081| 2026-07-13 21:44 |   14| Simulace Fable
+082| 2026-07-13 21:47 | 1767| Nosiče přijíždějí z pravé strany jsou odebírané z levé strany. Simulace musí umožnit z levé strany odebrat paletu , například kliknutím. Zároveň z pra
+083| 2026-07-13 21:48 |   63| Nepracuj vůbec s adresářem C:\tmp a nenačítej z něj žádná data.
+084| 2026-08-19 21:39 |   52| Přečti C:\tmp\review-spec-zadani.md a proveď ho celý
+085| 2026-08-19 22:00 |   57| Rozšiř description. Dále připrav název a popis pro commit
+086| 2026-08-19 22:14 |   82| review-spec se mi v nové session nenabízí. Proč? Přitom mám verzi 1.8.0 [Image #1]
+087| 2026-08-20 14:48 |  149| Zjisti zpětnou vazbu k review-spec na základě Session ID: dd923fb6-6ee5-4cda-82d9-63fc000d6ae7. Mají poslední úpravy v pluginu pozitivní dopad?
+088| 2026-08-20 15:03 |   60| aplikovat pravidlo :159 i na už přijaté nálezy před eskalací
+089| 2026-08-21 19:04 |  264| Mám dojem, že AI má tendenci produkovat více, než úlohy skutečně potřebují. Proveď proto posouzení, zda přístup YAGNI (You Aren't Gonna Need It) je vh
+090| 2026-08-24 11:32 |   88| Přečti si celý a proveď C:\Git\alzask\docs\onboarding\PROMPT-plugin-ontology-registry.md
+091| 2026-08-24 12:14 |   55| napiš do chatu prompt, který mám spustit v repu Alzask.
+092| 2026-08-24 23:01 |  205| V souborech pro ontology-registry se objevuje datum 2026-08-24 nebo informace o aktuální kontrole registru. To se ale týká konkrétního projektu Alzask
+093| 2026-08-25 08:40 |   43| Co by znamenalo dorovnat Alzask ze šablony?

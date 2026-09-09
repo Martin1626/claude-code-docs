@@ -1,0 +1,307 @@
+total prompts parsed: 457
+last 6: ['2026-08-26 08:16', '2026-08-26 08:18', '2026-08-26 08:41', '2026-08-26 08:42', '2026-08-26 08:44', '2026-08-26 08:45']
+core prompts: 451
+slash commands: 77
+[('/compact', 19), ('/plugins', 11), ('/body-z-jednani', 8), ('/model', 6), ('/resume', 4), ('/status', 4), ('/btw', 4), ('/dodavatele:mail', 4), ('/reload-plugins', 3), ('/dodavatele:stav', 3), ('/config', 2), ('/pruzkum', 2), ('/spec-factory:review-spec', 2), ('/context', 1), ('/usage', 1), ('/desktop', 1), ('/branch', 1), ('/review-spec', 1)]
+
+=== longest 25 ===
+7213 2026-08-24 12:18
+5280 2026-08-14 20:29
+4502 2026-08-25 19:38
+3052 2026-08-14 19:36
+2445 2026-08-04 19:48
+2175 2026-08-19 11:21
+1905 2026-08-12 13:48
+1607 2026-08-10 19:43
+1371 2026-08-24 20:47
+1216 2026-08-19 19:45
+1216 2026-08-19 19:41
+1211 2026-08-11 08:20
+1086 2026-08-18 15:13
+1012 2026-08-07 18:13
+974 2026-08-10 19:19
+916 2026-08-13 10:00
+907 2026-08-10 18:56
+907 2026-08-10 17:47
+905 2026-08-13 19:48
+902 2026-08-18 15:36
+891 2026-08-07 16:35
+879 2026-08-12 16:14
+841 2026-08-03 13:06
+803 2026-08-19 14:35
+801 2026-08-21 14:57
+
+over 1000 chars: 14
+over 500: 48
+under 100: 211
+median len: 106
+
+### SUBAGENT : 37
+  - 2026-08-04 20:28 | Na vstupním dopravní kolem portu pøíjmovém otevøení portu zajišuje automaticky PLC v okamiku kdy sport jé aktivní a zároveò prázdnı . Take ihned p
+  - 2026-08-07 18:56 | Máš pravdu s tou obrazovkou. Vytvoø krátkı prompt pro Claude Design, aby mi takou chybìjící obrazovku vytvoøil. (https://claude.ai/design/p/66bc8590-d
+  - 2026-08-09 20:44 | Skuteènì platí, e na západních portech AGV zóny, pokud jsou nosièe v reimu IN, tak WMS volá readyToClose? Kde to má oporu? Je tato kontrola nezbytná
+  - 2026-08-09 21:15 | Na konci proveï revizi subagentem a pøípadné chyby oprav.
+  - 2026-08-10 17:51 | Potom nechej zkontrolovat subagentem stávající diagramy a oprav chyby.
+  - 2026-08-10 19:43 | Upozoròuji, e ERROR_PRE_RECEIPT_0_1_P01 je dopravníkovı port na dopravníkové stanici ERROR_PRE_RECEIPT_0_1 a je u nìj instalovanı HMI panel! Robot zd
+  - 2026-08-11 08:47 | Na konci spus subagenta pro provedení revize. Pak oprav jeho váné nálezy.
+  - 2026-08-11 16:33 | Subagentem proveï adversariální revizi zmìn v mém posledním commitu zda odpovídají všude závìrùm z této session a ADR. Oprav pak závané nálezy.
+  - 2026-08-12 21:20 | /compact Proveï subagentem revizi všech diagramù, zda odpovídají dohodnutım závìrùm. Pak oprav závané nálezy.
+  - 2026-08-12 21:21 | Proveï subagentem revizi všech diagramù, zda odpovídají dohodnutım závìrùm. Pak oprav závané nálezy.
+  - 2026-08-13 08:27 | 1. Subagenty projdi všechny relevantní FR a TC a zkontroluj, zda odpovídají tìmto posledním zmìnám v poøadí událostí. 2. Potom oprav závané nálezy (p
+  - 2026-08-13 12:24 | Na error portu u pøedpøíjmu má WMS dostávat všechny události , jak je uvedeno v diagramu. Uprav FR a TC. Potom proveï subagentem revizi a oprav závan
+  - 2026-08-13 15:13 | Pøed tím ne budu dìlat commit proveï subagentem závìreènou revizi a dej mi struènou zprávu.
+  - 2026-08-13 15:39 | subagentem oprav: ADR-ASK-PROC-015 , TC-BP-EXPED-003-01 , changelogy, indexy
+  - 2026-08-13 19:48 | 1. Pomocí subagentù implementuj všechny vyjmenované zmìny, kromì F2. 2. Subagentem proveï revizi zmìn. 3. Pokud existují závané nedostatky, oprav je 
+  - 2026-08-13 22:52 | U nebudu potøebovat docs/spec/2026-06-26_dynamicka-aktualizace-storno-objednavky/, take ty reference mì nebudou trápit. Rád bych systém vyèistil od 
+  - 2026-08-13 22:55 | U nebudu potøebovat docs/spec/2026-06-26_dynamicka-aktualizace-storno-objednavky/, take ty reference mì nebudou trápit. Rád bych systém vyèistil od 
+  - 2026-08-13 22:57 | Tak, jak byly dùleité závìry a zmìny z Alzy implementované do docs\api\asrs-v2\API-myFABER-ASRS-v2-README.md, tak nyní je potøebuji udìlat opìt pomoc
+  - 2026-08-14 10:14 | Potvrzuji: pokud jinı vhodnı nosiè neexistuje — kdy je poadované SKU jen v tom zamèeném, tak po definované dobì pøechází objednávka do blocked. Suba
+  - 2026-08-14 14:03 | 1) V pøípadì expedice tranzit konèí na portu, tedy na odbìrovém místì. V pøípadì pickingu a po vrácení zpìt do skladu nebo po neplánovaném containerR
+  - 2026-08-14 14:24 | Doplò zadání ještì o tyto body: Zùstávají tøi vìci, které revize oznaèila a které nejsou rozhodnuté: katalog error.code není nikde publikovanı, pøesto
+  - 2026-08-14 19:39 | Doplò zadání ještì o tyto body: Zùstávají tøi vìci, které revize oznaèila a které nejsou rozhodnuté: katalog error.code není nikde publikovanı, pøesto
+  - 2026-08-15 08:32 | Subagentem reviduj vytvoøené ADR.
+  - 2026-08-15 09:00 | Oprav pomocí subagentù tyto nálezy: Bod 4: required: [latestTime] zrušit „Pojem aktivní transit není definován ani v datovém modelu" „Uzavøít OQ #24" 
+  - 2026-08-15 09:31 | Varianta A, nakresli D8.2 a D8.4 1.) subagenty proveï úpravy 2.) subagentem proveï revizi 3.) pokud existují závané nedostatky, subagentem proveï opr
+  - 2026-08-15 11:27 | Varianta 2, uprav subagentem ADR i diagramy Další rozhodnutí uprav: Pro POST /v1/stations/{stationId}/actions/activate (nové X-Client-Request-Id) má b
+  - 2026-08-15 11:36 | Dále potøebuji subagentem opravit kontrakt, WES nedìlá automatické odblokování: Otevøenı bod — kontrakt slibuje automatické odblokování. Popis webhook
+  - 2026-08-17 21:07 | Udìlej A. ADR uprav, je zbyteèné psát, e stohovaè není staníce. Staèí napsat, e se jedná o procesní lokaci. 2. Potom subagentem s modelem Fable prov
+  - 2026-08-18 16:09 | Otázky formuluj jako podkapitoly: 2.1.1 Q1 — How does WES-PLC talk to WCS-PLC, atd. V rámci kapitol nedávej vše na jeden øádek. Potom: 1.) proveï suba
+  - 2026-08-18 22:50 | Subagentem (Fable) uèeš zkrácenı dokument, aby byl srozumitelnı, pøehlednı, správnı a pøeloenı celı do angliètiny.
+  - 2026-08-19 11:44 | Zapracuj do dokumentací (pøedevším ADR, @docs/plc/AlzaSk-PLC-specifikace.md , @docs/api/Diagrams-API-AlzaSk-v3.md atd. ) pomocí subagentù tyto body: 1
+  - 2026-08-19 14:21 | 1. Subagentem (Fable) proveï adversariální revizi provedenıch zmìn. 2. Pokud existují skuteènì závané nálezy, tak je oprav subagentem a pokraèuj bode
+  - 2026-08-19 16:20 | Udìlej prùzkum, jak v Claude Code nejefektivnìji provádìt revize pøi tvorbì specifikací tohoto mého projektu. Zatím pouívám tento prompt, ale pøi opr
+  - 2026-08-19 16:20 | /pruzkum Udìlej prùzkum, jak v Claude Code nejefektivnìji provádìt revize pøi tvorbì specifikací tohoto mého projektu. Zatím pouívám tento prompt, al
+  - 2026-08-19 19:41 | 1. Spus docs/plc/.plc-tools/validate.cmd (nebo fr-tools/validate.py). Chyby lintru oprav hned, bez LLM. 2. Ulo baseline: git stash list nech bıt, je
+  - 2026-08-19 19:45 | 1. Spus docs/plc/.plc-tools/validate.cmd (nebo fr-tools/validate.py). Chyby lintru oprav hned, bez LLM. 2. Ulo baseline: git stash list nech bıt, je
+  - 2026-08-22 20:27 | Zalo subagenta, kterı prozkoumá transkripty nìkolika sessions v tomto repu z posledních 7 dní a na nich zjistí, jak tato ontologie bude prospìšná a z
+
+### NO-WRITE GATE : 12
+  - 2026-08-04 12:13 | Pøiprav mi podklady k tomu, abych mohl rozhodnout, co se má zobrazovat na HMI panelech. ZAtím nic neukládej, jan zjisti související informace a zeptej
+  - 2026-08-10 17:47 | Rád bych udìlal vìtší poøádek v pojmenování diagramù. Potøeboval bych diagramy, které popisují minimálnì tyto procesy: Pøedpøíjem - pøíjem nosièe Pøed
+  - 2026-08-10 18:56 | Rád bych udìlal vìtší poøádek v pojmenování diagramù. Potøeboval bych diagramy, které popisují minimálnì tyto procesy: Pøedpøíjem - pøíjem nosièe Pøed
+  - 2026-08-13 10:00 | Tranzit mùe bıt v ASRS v2 zahájenı buï novou objednávkou, nebo nová objednávka mùe bıt vyøízena ji existujícím tranzitem. Takto je to rozdíl oproti
+  - 2026-08-14 14:03 | 1) V pøípadì expedice tranzit konèí na portu, tedy na odbìrovém místì. V pøípadì pickingu a po vrácení zpìt do skladu nebo po neplánovaném containerR
+  - 2026-08-14 19:36 | Pøeèti tyto tøi dokumenty ve sloce C:\Git\fhb\docs\api\asrs-v2\ jako tøi vrstvy popisu jedné a tée vìci: KONCEPT ASRS-v2-API-koncept.md — zámìr: co 
+  - 2026-08-14 20:29 | Porovnej dvì vrstvy popisu jednoho API v repozitáøi C:\Git\alzask: TOK docs\api\Diagrams-API-AlzaSk-v3.md — chování v èase: kdo koho volá, v jakém poø
+  - 2026-08-15 13:23 | Pøedpokládám, e kvùli NSwag tam tìlo bıt musí, je to tak? Pokud by tìlo nebylo, není správnìjší 204? Nic zatím nemìò.
+  - 2026-08-17 15:10 | Naèti si API a relevantní ADR, FR a TC. Pøiprav návrh, co je potøeba doplnit do ADR pøípadnì do API descriptions. Zatím nic nemìò, vyberu, co implemen
+  - 2026-08-19 21:38 | Proveï C:\tmp\alzask-prompt-porty-aktivace-stanice.md . Nic needituj ani nevytváøej. Zatím piš jen do chatu.
+  - 2026-08-22 11:21 | pøiprav projekt kterı smapuje všechny prvky systému a pøipraví jejich ontologií chci projít postupnì všechny dùleité dokumen ty ve k nezapomnìlo zatí
+  - 2026-08-22 11:22 | pøiprav prompt kterı zmapuje všechny prvky systému a pøipraví jejich ontologií chci projít postupnì všechny dùleité dokumen ty ve k nezapomnìlo zatím
+
+### PROMPT-AS-ARTIFACT : 10
+  - 2026-08-07 18:55 | Máš pravdu s tou obrazovkou. Vytvoø krátkı prompt pro Claude Design, aby mi takou chybìjící obrazovku vytvoøil. (https://claude.ai/design/p/66bc8590-d
+  - 2026-08-07 18:56 | Máš pravdu s tou obrazovkou. Vytvoø krátkı prompt pro Claude Design, aby mi takou chybìjící obrazovku vytvoøil. (https://claude.ai/design/p/66bc8590-d
+  - 2026-08-14 14:03 | 1) V pøípadì expedice tranzit konèí na portu, tedy na odbìrovém místì. V pøípadì pickingu a po vrácení zpìt do skladu nebo po neplánovaném containerR
+  - 2026-08-14 17:04 | Vylepši tento prompt a napiš do chatu: Prostuduj si C:\Git\fhb\docs\api\asrs-v2\ASRS-v2-API-koncept.md a vytipuj 3 rozpory nebo informace, po jejich 
+  - 2026-08-14 20:15 | Vytvoø nyní obdobnı prompt pro: docs\api\Diagrams-API-AlzaSk-v3.md docs\api\API-myFABER-WES-AlzaSk.yml
+  - 2026-08-19 14:35 | Pøiprav prompt, kterı mi pomùe s tímto: Promysli, jak má WES správnì øídit porty ovládané PLC, aby bylo správnì podporováno také aktivování a deaktiv
+  - 2026-08-19 15:18 | Zjistil jsem, e volání událostí v diagramech neodpovídá tomu, co je uvedeno v C:\Temp\WMS_volani_na_portech_k_odsouhlaseni.md. Pøiprav prompt, kterı 
+  - 2026-08-22 11:22 | pøiprav prompt kterı zmapuje všechny prvky systému a pøipraví jejich ontologií chci projít postupnì všechny dùleité dokumen ty ve k nezapomnìlo zatím
+  - 2026-08-24 10:44 | N1, N2, N4 pøijmout pøed pøenosem. N3 zamítnout Pokraèuj další dávkou. Pro zmìny v pluginech vytvoø pak samostatnı prompt, abych jej mohl spustit ve s
+  - 2026-08-25 19:29 | Napiš prompt pro novou session, co je potøeba nejnaléhavìji dodìlat
+
+### ASK-FIRST : 10
+  - 2026-08-03 13:06 | Dodavatel BullsEye nám dnes e-mailem poslal tyto informace Weighing machine: Provide DC24V power to the weighing machine, connect a network cable to c
+  - 2026-08-04 11:33 | Implementuj a zkontroluj, e aktuální stav odpovídá závìrùm bodù: 3, 4, 7, 8, 10, 11, 12, 13, 16, 17, 18, 20, 22, 23: nejedná se o BMW, ale WMS volá r
+  - 2026-08-04 12:13 | Pøiprav mi podklady k tomu, abych mohl rozhodnout, co se má zobrazovat na HMI panelech. ZAtím nic neukládej, jan zjisti související informace a zeptej
+  - 2026-08-04 20:28 | Na vstupním dopravní kolem portu pøíjmovém otevøení portu zajišuje automaticky PLC v okamiku kdy sport jé aktivní a zároveò prázdnı . Take ihned p
+  - 2026-08-13 22:57 | Tak, jak byly dùleité závìry a zmìny z Alzy implementované do docs\api\asrs-v2\API-myFABER-ASRS-v2-README.md, tak nyní je potøebuji udìlat opìt pomoc
+  - 2026-08-14 13:38 | Prostuduj si C:\Git\fhb\docs\api\asrs-v2\ASRS-v2-API-koncept.md a vytipuj 3 rozpory nebo informace, po jejich správném vyjasnìní bys dokázal opravit 
+  - 2026-08-14 15:53 | Prostuduj si C:\Git\fhb\docs\api\asrs-v2\ASRS-v2-API-koncept.md a vytipuj 3 rozpory nebo informace, po jejich správném vyjasnìní bys dokázal opravit 
+  - 2026-08-14 17:04 | Vylepši tento prompt a napiš do chatu: Prostuduj si C:\Git\fhb\docs\api\asrs-v2\ASRS-v2-API-koncept.md a vytipuj 3 rozpory nebo informace, po jejich 
+  - 2026-08-17 15:10 | Naèti si API a relevantní ADR, FR a TC. Pøiprav návrh, co je potøeba doplnit do ADR pøípadnì do API descriptions. Zatím nic nemìò, vyberu, co implemen
+  - 2026-08-24 08:38 | Byla vytvoøena ontology.yaml pro tento projekt. potøebuji ji ukotvit do projektu, aby pøi dalších zmìnách a úpravách se specifikace o ni vhodnì opíral
+
+### GROUNDING CHALLENGE : 13
+  - 2026-08-05 17:50 | Na expedièním dopravníku v mezaninu èidlo máme, dopravník dodává TMT a PAC jej øídí. Proè na Expedici sever se neposílá readyToClose? Jak jsi na to pø
+  - 2026-08-07 16:48 | Odkud pochází tvrzení, e Alza nebude posílat readyToClose u vstupního dopravníku pøedpøíjmu?
+  - 2026-08-07 17:01 | Zjisti, kdo a kdy to mìnil z bliká na svítí.
+  - 2026-08-09 20:28 | Na posledním jednání @docs/meetings/2026-08-07_08-07_Alza_HMI_obrazovky_procesy_nouzového_pødpøíjmu.md bylo s Alzou dohodnuto, e port nouzového pøedp
+  - 2026-08-09 20:44 | Skuteènì platí, e na západních portech AGV zóny, pokud jsou nosièe v reimu IN, tak WMS volá readyToClose? Kde to má oporu? Je tato kontrola nezbytná
+  - 2026-08-11 10:29 | Chyba v D1.2: pokuzd druhá èteèka FAIL, tak WMS nemùe volat containerRemoved, protoe nezná containerId. Operátor na HMI panelu uvede, e odebral nos
+  - 2026-08-13 22:32 | C:\Git\fhb\docs\api\asrs-v2\ASRS-v2-API-koncept.md myslím byl ji pouitı jako zadání pro vytvoøení C:\Git\fhb\docs\api\asrs-v2\API-myFABER-ASRS-v2.ya
+  - 2026-08-14 08:56 | auto-merge: neplatí po celou dobu drení nosièe. Staèí do doby containerPrepared. Nepotøebuji zavádìt pickingAutoMergeWindow. Odbìrové místo v FHB: od
+  - 2026-08-15 13:23 | Pøedpokládám, e kvùli NSwag tam tìlo bıt musí, je to tak? Pokud by tìlo nebylo, není správnìjší 204? Nic zatím nemìò.
+  - 2026-08-18 10:54 | Pøeèti si celı dokument @"docs/plc/sources/bullseye/WCSWMS Interface document BullsEye V1.6-2026-06-25.pdf" Jakım zpùsobem WCS ádá WMS (WES) o inboun
+  - 2026-08-22 19:52 | Laicky mi vysvìtli princip a postup, kterı tedy navrhuješ. Jak bude vypadat index, kdo a kdy jej vytváøí apod?
+  - 2026-08-24 21:42 | V C:\Git\alzask\.claude\skills\ontologie-prvku-alzask\SKILL.md jsou zapsaná èísla, která se po aktualizacích ontologie mìní. Pøipadá mi to neefektivní
+  - 2026-08-25 14:11 | Kdy posílám nové otázky dodavateli, kdo a kdy jim pøidìlí èísla? Co v okamiku, kdy u jsem poslal své otázky a nepøidìlil jim èísla nebo je oèíslov
+
+### REVIEW : 19
+  - 2026-08-09 21:15 | Na konci proveï revizi subagentem a pøípadné chyby oprav.
+  - 2026-08-10 19:43 | Upozoròuji, e ERROR_PRE_RECEIPT_0_1_P01 je dopravníkovı port na dopravníkové stanici ERROR_PRE_RECEIPT_0_1 a je u nìj instalovanı HMI panel! Robot zd
+  - 2026-08-11 16:33 | Subagentem proveï adversariální revizi zmìn v mém posledním commitu zda odpovídají všude závìrùm z této session a ADR. Oprav pak závané nálezy.
+  - 2026-08-12 21:20 | /compact Proveï subagentem revizi všech diagramù, zda odpovídají dohodnutım závìrùm. Pak oprav závané nálezy.
+  - 2026-08-12 21:21 | Proveï subagentem revizi všech diagramù, zda odpovídají dohodnutım závìrùm. Pak oprav závané nálezy.
+  - 2026-08-13 12:24 | Na error portu u pøedpøíjmu má WMS dostávat všechny události , jak je uvedeno v diagramu. Uprav FR a TC. Potom proveï subagentem revizi a oprav závan
+  - 2026-08-13 15:13 | Pøed tím ne budu dìlat commit proveï subagentem závìreènou revizi a dej mi struènou zprávu.
+  - 2026-08-13 19:48 | 1. Pomocí subagentù implementuj všechny vyjmenované zmìny, kromì F2. 2. Subagentem proveï revizi zmìn. 3. Pokud existují závané nedostatky, oprav je 
+  - 2026-08-14 10:14 | Potvrzuji: pokud jinı vhodnı nosiè neexistuje — kdy je poadované SKU jen v tom zamèeném, tak po definované dobì pøechází objednávka do blocked. Suba
+  - 2026-08-14 14:24 | Doplò zadání ještì o tyto body: Zùstávají tøi vìci, které revize oznaèila a které nejsou rozhodnuté: katalog error.code není nikde publikovanı, pøesto
+  - 2026-08-14 19:39 | Doplò zadání ještì o tyto body: Zùstávají tøi vìci, které revize oznaèila a které nejsou rozhodnuté: katalog error.code není nikde publikovanı, pøesto
+  - 2026-08-15 08:32 | Subagentem reviduj vytvoøené ADR.
+  - 2026-08-15 09:31 | Varianta A, nakresli D8.2 a D8.4 1.) subagenty proveï úpravy 2.) subagentem proveï revizi 3.) pokud existují závané nedostatky, subagentem proveï opr
+  - 2026-08-17 21:07 | Udìlej A. ADR uprav, je zbyteèné psát, e stohovaè není staníce. Staèí napsat, e se jedná o procesní lokaci. 2. Potom subagentem s modelem Fable prov
+  - 2026-08-18 16:09 | Otázky formuluj jako podkapitoly: 2.1.1 Q1 — How does WES-PLC talk to WCS-PLC, atd. V rámci kapitol nedávej vše na jeden øádek. Potom: 1.) proveï suba
+  - 2026-08-19 14:21 | 1. Subagentem (Fable) proveï adversariální revizi provedenıch zmìn. 2. Pokud existují skuteènì závané nálezy, tak je oprav subagentem a pokraèuj bode
+  - 2026-08-19 16:20 | Udìlej prùzkum, jak v Claude Code nejefektivnìji provádìt revize pøi tvorbì specifikací tohoto mého projektu. Zatím pouívám tento prompt, ale pøi opr
+  - 2026-08-19 16:20 | /pruzkum Udìlej prùzkum, jak v Claude Code nejefektivnìji provádìt revize pøi tvorbì specifikací tohoto mého projektu. Zatím pouívám tento prompt, al
+  - 2026-08-21 11:54 | /spec-factory:review-spec Reviduj zmìny provedené v této session
+
+### DECISION REVERSAL / SELF-CORRECTION : 9
+  - 2026-08-07 17:15 | Chci proto ponechat tvrzení, e tlaèítko bliká. Zruš provedené zmìny na "svítí". Alza potvrdila, e text na HMI panelech má bıt ve slovenštinì a angli
+  - 2026-08-10 15:57 | Tak nakonec jsem to pøehodnotil a chci to srovnat podle toho, jak to je v AGV zónì. Tzn. nejprve posílat containerTransitCompleted a teprve potom cont
+  - 2026-08-10 18:57 | Rozhodl jsem se, e diagramy pøeèísluji tak, abych je mohl rozdìli a seøadit tak, aby to dávalo co nejvíce logickı smysl. Pøiprav návrh - seznam-
+  - 2026-08-11 16:15 | Beru zpìt rozhodnutí, e na AGV portech se nevolá readyToClose. Platí to jen pro reim OUT. Pokud je AGV port v reimu IN, tak se musí nejprve volat c
+  - 2026-08-13 13:48 | 3) mìním své rozhodnutí - containerRemoved se má odesílat automaticky jako dosud. Operátor nezávisle na tom stiskne na HMI panelu tlaèítko, e nosiè o
+  - 2026-08-13 14:52 | Omlouvám se, HMI panel na pøedpøíjmu i nouzovém pøedpøíjmu má tlaèítko pro odebrání. Po jeho stisknutí by mìlo bıt odesláno containerRemoved. Dává to 
+  - 2026-08-25 20:19 | Tak to jsem špatnì pochopil. Potvrzuji, e mìøící brána má jen èidla, která mìøí volno/obsazeno. V PLC budou èíslována poøadovımi èísly od nejniších 
+  - 2026-08-25 20:24 | Mìním své rozhodnutí. Transformace hodnot z èidel na hodnoty v mm bude v gesci PLC. Pøevede hodnoty z èidel bude vrace hodnoty v milimetrech dle insta
+  - 2026-08-25 20:26 | Mìním rozhodnutí. Budu chtít zmìnit jen diagramy. FR a TC nechám na kolegyni.
+
+### EXPLAIN / LEARNING : 10
+  - 2026-08-13 10:03 | Vysvìtli jednoduše problematiku containerPrepared u pøíjmu.
+  - 2026-08-14 09:04 | Vysvìtli mi: handoff lokace LOC-CONV-* se posílají bez portId.
+  - 2026-08-21 15:04 | Vysvìtli co v ADR znamená, e dìlba je urèena místem a ne typem prvku. "**Vyøešeno** — `ADR-ASK-HW-002` vedl mìøicí brány paušálnì pod kanálem PLC; re
+  - 2026-08-22 19:52 | Laicky mi vysvìtli princip a postup, kterı tedy navrhuješ. Jak bude vypadat index, kdo a kdy jej vytváøí apod?
+  - 2026-08-24 08:49 | Vysvìtli jak funguje a k èemu se pouívá docs\ontology\anchors.tsv
+  - 2026-08-24 09:12 | vysvìtli i návazná témata
+  - 2026-08-24 09:40 | Laicky vysvìtli V3. Nevím, co jsou seamy. Nebylo by vhodnìjším øešením, kdyby ontologie byla vdy øešena jen na úrovni konkrétního projektu, aby byla 
+  - 2026-08-24 09:53 | laicky vysvìtli ten latentní rozpor
+  - 2026-08-24 13:00 | Vytvoø grafickou schématickou stránku (claude artefakt), pomocí které budu schopen kolegùm analytikùm vysvìtlit smysl a princip pouívání ontologie na
+  - 2026-08-25 11:33 | Na konci mi pak laicky napiš postup, jak máme jako analytici v jednotlivıch situacích postupovat, co máme dìlat, jaké pokyny máme dát Claude Code apod
+
+### CORRECTION HARD : 8
+  - 2026-08-07 17:28 | Pozor! Ve zmìnách TC vidím stále toto! Proè jsi to nevrátil zpìt? [Image #5]
+  - 2026-08-10 18:59 | "pøíjem outbound" je blbost. Mám pøíjmovı dopravník a expedièní dopravník (oznaèovanı jako error vìtev)
+  - 2026-08-11 10:29 | Chyba v D1.2: pokuzd druhá èteèka FAIL, tak WMS nemùe volat containerRemoved, protoe nezná containerId. Operátor na HMI panelu uvede, e odebral nos
+  - 2026-08-11 14:33 | V D3.1 se uvádí, e vstupní dopravník nemá pozièní èidlo. To je chyba. NA mezaninech jsou pozièní èidla z vstupního i vıstupního dopravníku pøipojena 
+  - 2026-08-21 18:34 | Není pravda: "Nad automatizovanım paletovım skladem (PS, 4D shuttle) stojí **mezaninová nástavba se tøemi patry**. " Mezaniny stojí vedle automatizova
+  - 2026-08-25 12:09 | Proè jsi na to nevytvoøil vhodné projektové skills? Rád bych to pouíval opakovanì jednoduchım zpùsobem. e-maily z inboxu se po zpracování nìkam autom
+  - 2026-08-25 20:00 | Toto je mlná informace: "Pro øízení portu (blikání, otevírání) èidlo nahrazovat nemusí, protoe PLC BullsEye svoje èidlo má a stav pozice zná." Bezpeè
+  - 2026-08-25 20:07 | Pokud se nepletu, tak toto také není pøesné: "Upøesnìní 2 — tlaèítko se nerozbliká kvùli stisku na HMI. Blikání drí PLC autonomnì ze stavu portu: bli
+
+### GIT : 10
+  - 2026-08-11 14:30 | Napiš 5 a 10 hlavních zmìn, které jsem provedl a chybí jejich commit. Pro kadou 1 odstavec.
+  - 2026-08-11 16:33 | Subagentem proveï adversariální revizi zmìn v mém posledním commitu zda odpovídají všude závìrùm z této session a ADR. Oprav pak závané nálezy.
+  - 2026-08-13 07:58 | Druhá vrstva zùstává. containerTransitCompleted se volá a po containerRemoved, ale s hodnotou station jako všude jinde. Napiš název a popis pro commi
+  - 2026-08-13 13:30 | Na konci Pøiprav název a popis pro commit
+  - 2026-08-13 15:13 | Pøed tím ne budu dìlat commit proveï subagentem závìreènou revizi a dej mi struènou zprávu.
+  - 2026-08-22 21:04 | Otázka: má po containerRemoved ještì pøijít containerTransitCompleted, nebo je containerRemoved konec? Platí varianta A, je potøeba dorovnat TC. Pokud
+  - 2026-08-24 11:17 | Provedl jsem commit, ale po regeneraci ontology vzniklo 350 zmìn v entitách, protoe v souborech se zmìnil jen hash z ontology. Kdy provedu drobnou z
+  - 2026-08-24 12:18 | # PROMPT — Zpìtné dorovnání nástrojù registru ze šablony pluginu (AlzaSk) > **Jak to pouít:** vlo obsah do èerstvé session v repozitáøi `C:\Git\alza
+  - 2026-08-24 12:39 | Dorovnej C061 (dorovnání TC + ADR-ASK-API-011 bylo odloeno „a za commit ontologie", kterı právì probìhl).
+  - 2026-08-25 19:38 | Naléhavì potøebuju propsat doloené odpovìdi dodavatele BullsEye do PLC specifikací. Kontext: v pøedchozí session jsem ukotvil dodavatelskou korespond
+
+### ONTOLOGY/CITATION : 19
+  - 2026-08-03 15:05 | Potøebuji, aby ve vısledném dokumentu byly uvedené pouze informace obsaené v tìch dvou uvedenıch dokumentech a nic ze specifikace. Chci mít èisté inf
+  - 2026-08-14 19:36 | Pøeèti tyto tøi dokumenty ve sloce C:\Git\fhb\docs\api\asrs-v2\ jako tøi vrstvy popisu jedné a tée vìci: KONCEPT ASRS-v2-API-koncept.md — zámìr: co 
+  - 2026-08-14 20:29 | Porovnej dvì vrstvy popisu jednoho API v repozitáøi C:\Git\alzask: TOK docs\api\Diagrams-API-AlzaSk-v3.md — chování v èase: kdo koho volá, v jakém poø
+  - 2026-08-19 19:41 | 1. Spus docs/plc/.plc-tools/validate.cmd (nebo fr-tools/validate.py). Chyby lintru oprav hned, bez LLM. 2. Ulo baseline: git stash list nech bıt, je
+  - 2026-08-19 19:45 | 1. Spus docs/plc/.plc-tools/validate.cmd (nebo fr-tools/validate.py). Chyby lintru oprav hned, bez LLM. 2. Ulo baseline: git stash list nech bıt, je
+  - 2026-08-21 17:58 | V docs\adr\process\ADR-ASK-PROC-018.md uprav ještì formulaci tak, aby bylo zøejmé, kdy se mluví o patech 4D shuttle (PS) a kdy o dopravnících, které j
+  - 2026-08-22 23:08 | Nemìla by Citace obsahovat ale nìjakı minimální poèet slov? Pokud je to jen jedno slovo, tak hrozí, e úpravou dokumentu mùe také rychlo nastat dupli
+  - 2026-08-24 08:38 | Byla vytvoøena ontology.yaml pro tento projekt. potøebuji ji ukotvit do projektu, aby pøi dalších zmìnách a úpravách se specifikace o ni vhodnì opíral
+  - 2026-08-24 09:02 | Pøeèti celı a proveï docs/onboarding/PROMPT-ukotveni-ontologie.md
+  - 2026-08-24 09:07 | Pøeèti celı a proveï docs/onboarding/PROMPT-ukotveni-ontologie.md
+  - 2026-08-24 09:10 | Pøeèti celı a proveï docs/onboarding/PROMPT-ukotveni-ontologie.md
+  - 2026-08-24 09:19 | Souhlasím, je potøeba mít spolehlivı mechanismus, kterı bude udrovat kotvy. Pokraèuj dávkou B.
+  - 2026-08-24 12:18 | # PROMPT — Zpìtné dorovnání nástrojù registru ze šablony pluginu (AlzaSk) > **Jak to pouít:** vlo obsah do èerstvé session v repozitáøi `C:\Git\alza
+  - 2026-08-25 08:35 | OK, poznamenej do ukotvení.
+  - 2026-08-25 17:41 | provìø jak všechny nové informace od dodavatelù z e-maiul jak je potøeba novì ukotvit v ontologii prvku.
+  - 2026-08-25 19:38 | Naléhavì potøebuju propsat doloené odpovìdi dodavatele BullsEye do PLC specifikací. Kontext: v pøedchozí session jsem ukotvil dodavatelskou korespond
+  - 2026-08-25 22:08 | Kam je vhodné ukotvit, e nosièe vyšší ne 2100 mm (a do vıšky 2200 mm) není moné expedovat na mezaninovı dopravník v 5. patøe mezaninu? Z tohoto dùv
+  - 2026-08-25 22:42 | Proveï úklid podle RULE-ONT-003.
+  - 2026-08-25 22:43 | Ty zmizelé kotvy se pokus opravit sám.
+
+### SUPPLIER : 55
+  - 2026-08-03 13:06 | Dodavatel BullsEye nám dnes e-mailem poslal tyto informace Weighing machine: Provide DC24V power to the weighing machine, connect a network cable to c
+  - 2026-08-03 15:05 | Potøebuji, aby ve vısledném dokumentu byly uvedené pouze informace obsaené v tìch dvou uvedenıch dokumentech a nic ze specifikace. Chci mít èisté inf
+  - 2026-08-03 19:02 | Vysvìtlení: Váhu bude øídit BullsEye pøes své WCS do WES bude posílat jen namìøené hodnoty. Rozmìry ale budou odesílány z PLC pøímo do WES. Take potø
+  - 2026-08-05 15:17 | Dozvìdìl jsem se novou informaci, e nìkteré porty nemají èidla pro detekci pøítomnosti palety (nebo èidla nemáme pøístupná v PLC) a proto je nemùeme
+  - 2026-08-05 17:48 | Na expedièním dopravníku v mezaninu èidlo máme, dopravník dodává TMT a PAC jej øídí.
+  - 2026-08-05 17:50 | Na expedièním dopravníku v mezaninu èidlo máme, dopravník dodává TMT a PAC jej øídí. Proè na Expedici sever se neposílá readyToClose? Jak jsi na to pø
+  - 2026-08-06 16:19 | Doplò ještì do dokumentu, e to je dokument od BullsEye a je to ten dokument, kterı má uzavøít mezeru v komunikaci mezi dopravníky od BullsEye a TMT. 
+  - 2026-08-07 08:25 | Jaké pokyny mají chodit z obchodní vrstvy (BullsEye, WES) do PLC?
+  - 2026-08-07 08:29 | Jedná se mi nyní vıhradnì o informace z C:\Git\alzask\docs\plc\sources\komunikace-dopravniku-bullseye-tmt\2026-08-05-ASRS-hoist-conveyor-docking-spec.
+  - 2026-08-07 11:13 | Potøebuji postupnì zjistit, jak má vzájemná komunikace systémù WCS (BullsEye) a WES (KVADOS) probíhat. Pøikládám pùvodní e-mail od BullsEye i s jejich
+  - 2026-08-07 11:23 | Potøebuji uvaovat a formulovat myšlenky jednoduše. Myslím, e potøebuji: - jak WES poádá WCS o povolení k poslání nosièe? Musí to udìlat ještì pøedt
+  - 2026-08-07 11:43 | Napiš v èeštinì konkrétní pøíklad, proè potøebujeme vydávat poovlení, aby to dodavatel správnì pochopil, kdy to zatím odmítá.
+  - 2026-08-07 18:13 | Pøi ochranném zaststavení by se muselo také sjednotit. PAC na tom ještì nezaèala pracovat. Je proto ještì èas vytvoøit kvalitnìjší specifikaci. 3) S t
+  - 2026-08-07 18:41 | debounce nastaví PAC sama dle vlastních zkušeností. S tou lutou souhlasím. Pokud je port stále pøístupnı pro operátora, má svítit zelná. Teprve stisk
+  - 2026-08-10 15:06 | Napiš struènı seznam otázek, které je na zákaldì závìrù schùzky potøeba poslat na BullsEye. Tıká se to komunikace smìrem z WES do WCS a øízení PLC. @d
+  - 2026-08-10 15:19 | Pøelo tyto dvì otázky do jednoduché angliètiny pochopitelné pro dodavatele: 1. Jakım voláním WES øekne „odvez paletu z tohoto vstupního dopravníkovéh
+  - 2026-08-11 14:33 | V D3.1 se uvádí, e vstupní dopravník nemá pozièní èidlo. To je chyba. NA mezaninech jsou pozièní èidla z vstupního i vıstupního dopravníku pøipojena 
+  - 2026-08-12 13:48 | Pomoz mi formulovat krátkı, cílenı dotaz na upøesnìní konkrétního chování. Zatím BullsEye odpovídá pøíliš v obecné rovinì. Napiš zatím dotazy v èeštin
+  - 2026-08-12 14:09 | Ještì potøebuji doplnit dotazy, zda komunikace musí bıt vıhradnì mezi PLC, nebo zda WES mùe komunikovat pøímo s BullsEye PLC.
+  - 2026-08-18 10:54 | Pøeèti si celı dokument @"docs/plc/sources/bullseye/WCSWMS Interface document BullsEye V1.6-2026-06-25.pdf" Jakım zpùsobem WCS ádá WMS (WES) o inboun
+  - 2026-08-18 14:14 | Zajímá mì pøedevším vyjádøení BullsEye
+  - 2026-08-18 15:13 | Vytvoø pracovní markdown dokument kterı bude slouit pro jako podklad k jednání s bullseye . Nejprve do nìj vytvoø sekvenèní diagram kterı bude popiso
+  - 2026-08-18 15:46 | Otázky umísti vdy pod diagram, kterého se tıkají. Formuluj otázky ještì struènìji. Pokud je to moné, tak u otázek napiš navrhovanou odpovìï, aby ji 
+  - 2026-08-18 15:58 | Otázky neuvádìj do samostatné kapitoly, ale vdy do kapitoly s diagramem a pod pøíslušnı diagram. Sjedno názvy otázek v diagramu a název kapitoly. Na
+  - 2026-08-19 07:12 | Exportuj @docs/plc/sources/bullseye/BullsEye-inbound-and-exit-branch-brief-2026-08-19-EN.md do docx formátu
+  - 2026-08-19 10:01 | Pøiprav struènı pøehled závìrù z jednání, na èem jsem se dohodli, co BullsEye potvrdil, kterı pak budeme schopni odeslat všem úèastníkùm. Sluèuj body,
+  - 2026-08-19 11:21 | Pøelo do angliètiny tento text: Zápis ze spoleèného jednání KVADOS – BullsEye Datum: 19. 8. 2026 | Téma: Integrace WES (KVADOS) se systémem WCS (Bull
+  - 2026-08-19 19:41 | 1. Spus docs/plc/.plc-tools/validate.cmd (nebo fr-tools/validate.py). Chyby lintru oprav hned, bez LLM. 2. Ulo baseline: git stash list nech bıt, je
+  - 2026-08-19 19:45 | 1. Spus docs/plc/.plc-tools/validate.cmd (nebo fr-tools/validate.py). Chyby lintru oprav hned, bez LLM. 2. Ulo baseline: git stash list nech bıt, je
+  - 2026-08-20 14:27 | Pøikládám níe e-mailovou komunikaci s BullsEye. Potøebuji vytipovat, které dohodnuté informace by bylo vhodné zaloit do ADR. Pøiprav seznam, ze kter
+  - 2026-08-21 11:10 | Zapiš pouze A1, A2, A3, A4 ADR-ASK-HW-002: na mezaninech toto spravuje PLC. U pøedpøíjmu, nouzového pøedpøíjmu i uvnitø PS je v kompetenci BullsEye a 
+  - 2026-08-21 11:41 | V jsem našel "Finální zodpovìdnost za rozhodnutí o zaskladnìní nese Alza". Na schùzce tím bylo myšleno, e zodpovìdnost za rozhodnutí, zda naskladnit,
+  - 2026-08-21 11:42 | V docs\adr\integration\ADR-ASK-INT-001.md jsem našel "Finální zodpovìdnost za rozhodnutí o zaskladnìní nese Alza". Na schùzce tím bylo myšleno, e zod
+  - 2026-08-21 14:57 | Dodavatel nás informoval, e druhá èteèka není instalována. Tuto informaci zatím beru jako nepotvrzenou. Hana Jeíková budu ovìøovat v tıdnu od 24. 8.
+  - 2026-08-21 15:04 | Vysvìtli co v ADR znamená, e dìlba je urèena místem a ne typem prvku. "**Vyøešeno** — `ADR-ASK-HW-002` vedl mìøicí brány paušálnì pod kanálem PLC; re
+  - 2026-08-21 15:25 | A nebylo by tedy správnìjší zavést typy prvkù napøíklad "mìøící brána øízená BullsEye" a "mìøící brána øízená PAC"? Nebo rozlišovat tím, zda údaje z t
+  - 2026-08-24 20:47 | Formuluj v èeštinì následující otázky tak, aby jim dodavatel správnì rozumìl. Dotaz na BullsEye, jaké jsou monosti zastavení 1., 3., 4. nebo 5. patra
+  - 2026-08-25 10:01 | Kde jsou uloené odpovìdi od BlueSword a BullsEye na naše otázky?
+  - 2026-08-25 10:19 | Zaèínáme se v tìch konverzacích s dodavateli ztrácet. Posíláme si otázky a odpovìdi e-maily a nevíme, k èemu ji máme dostatek informací a co ještì ch
+  - 2026-08-25 11:06 | Dohòanskı u zpracoval seznam otázek a pøiøadil jim identifikátory: C:\Temp\BullsEye_communication_register_EN – kopie.xlsx Pøi vytváøení pøíkladù prv
+  - 2026-08-25 13:04 | /dodavatele:stav
+  - 2026-08-25 14:10 | /dodavatele:mail
+  - 2026-08-25 14:11 | Kdy posílám nové otázky dodavateli, kdo a kdy jim pøidìlí èísla? Co v okamiku, kdy u jsem poslal své otázky a nepøidìlil jim èísla nebo je oèíslov
+  - 2026-08-25 14:18 | /dodavatele:mail
+  - 2026-08-25 14:45 | Jak to, e v inboxu zùstal C:\Git\alzask\docs\suppliers\bluesword\inbox\RE Urgent Follow-up on DataMatrix Code Requirements AGV Interface Clarificatio
+  - 2026-08-25 14:52 | /dodavatele:mail V e-mailu z 18.8.2026 nám BullsEye poslal excel tabulku s aktualizovanımi svımi odpovìïi. Aktualizuj toto do naší evidence otázek.
+  - 2026-08-25 15:32 | /dodavatele:stav BullsEye
+  - 2026-08-25 15:51 | /dodavatele:mail
+  - 2026-08-25 17:41 | provìø jak všechny nové informace od dodavatelù z e-maiul jak je potøeba novì ukotvit v ontologii prvku.
+  - 2026-08-25 19:38 | Naléhavì potøebuju propsat doloené odpovìdi dodavatele BullsEye do PLC specifikací. Kontext: v pøedchozí session jsem ukotvil dodavatelskou korespond
+  - 2026-08-25 20:00 | Toto je mlná informace: "Pro øízení portu (blikání, otevírání) èidlo nahrazovat nemusí, protoe PLC BullsEye svoje èidlo má a stav pozice zná." Bezpeè
+  - 2026-08-25 20:09 | PRE-016 je e-mail pøijatı od dodavatele. Já jsem jej jen takto otevøel, abych do nìj mohl vloit pøílohy, které byly komprimované. Oprav si to.
+  - 2026-08-25 21:33 | Hodnoty pásem pro šíøku: 800 / 810 mm pro délku: 1200 / 1210 mm OQ #6: z PLC se vrací skuteènì namìøená váha, WES rozhoduje, e nosièe nad 500 kg nepu
+  - 2026-08-25 23:07 | Zalo dotaz na BullsEye, zda nám mùe všechny tyto rozmìry poskytovat na všech svıch mìøících branách, které nám dodává.
+  - 2026-08-26 08:01 | /dodavatele:stav BullsEye
+
+### HYPOTHESIS-CHECK : 12
+  - 2026-08-07 11:23 | Potøebuji uvaovat a formulovat myšlenky jednoduše. Myslím, e potøebuji: - jak WES poádá WCS o povolení k poslání nosièe? Musí to udìlat ještì pøedt
+  - 2026-08-07 11:29 | Moná by to mohlo fungovat i bez toho, aby WCS ádalo o povolení. WES toti odešle vdy jen jeden nosiè, pokud dostane povolení. Jinak pøedpokládám, 
+  - 2026-08-07 17:55 | Je dobrı nápad rozlišit to blikáním RESET tlaèítka. Tzn. po volání readyToClose by se RESET trvale svítilo, pokud ve svìtelná závoøe (clonì) není pøek
+  - 2026-08-07 17:56 | Je dobrı nápad rozlišit to blikáním RESET tlaèítka? Tzn. po volání readyToClose by se RESET trvale svítilo, pokud ve svìtelná závoøe (clonì) není pøek
+  - 2026-08-10 15:57 | Tak nakonec jsem to pøehodnotil a chci to srovnat podle toho, jak to je v AGV zónì. Tzn. nejprve posílat containerTransitCompleted a teprve potom cont
+  - 2026-08-10 19:19 | V tom pojmenováno byl na zaèátku zmatek, ale nyní u je to jasnìjší. U pøedpøíjmu jsou 3 stanice: PRE_RECEIPT_0_1 - Vstupní/pøíjmovı/hlavní dopravník 
+  - 2026-08-13 14:52 | Omlouvám se, HMI panel na pøedpøíjmu i nouzovém pøedpøíjmu má tlaèítko pro odebrání. Po jeho stisknutí by mìlo bıt odesláno containerRemoved. Dává to 
+  - 2026-08-13 22:32 | C:\Git\fhb\docs\api\asrs-v2\ASRS-v2-API-koncept.md myslím byl ji pouitı jako zadání pro vytvoøení C:\Git\fhb\docs\api\asrs-v2\API-myFABER-ASRS-v2.ya
+  - 2026-08-15 13:23 | Pøedpokládám, e kvùli NSwag tam tìlo bıt musí, je to tak? Pokud by tìlo nebylo, není správnìjší 204? Nic zatím nemìò.
+  - 2026-08-21 18:15 | Nevím, zda si pøesnì rozumíme. Pouívej "patro skladu" a "patro mezaninu". Pøitom napøíklad 3. patro skladu vıškovì odpovídá 1. patru mezaninu. Paleto
+  - 2026-08-24 21:42 | V C:\Git\alzask\.claude\skills\ontologie-prvku-alzask\SKILL.md jsou zapsaná èísla, která se po aktualizacích ontologie mìní. Pøipadá mi to neefektivní
+  - 2026-08-25 19:54 | A není to tak, e po té, co operátor stiskl tlaèítko odebrání na HMI, tak se rozbliká tlaèítko a protoe je port v reimu IN, tak se oèekává, e operá
+
+### TRANSLATION : 8
+  - 2026-08-07 11:53 | Ano, udìlej anglickou verzi v spuèasné podobì. Pøekládej jednoduchou angliètinou, aby èíòané snadno pochopili.
+  - 2026-08-07 17:15 | Chci proto ponechat tvrzení, e tlaèítko bliká. Zruš provedené zmìny na "svítí". Alza potvrdila, e text na HMI panelech má bıt ve slovenštinì a angli
+  - 2026-08-10 15:19 | Pøelo tyto dvì otázky do jednoduché angliètiny pochopitelné pro dodavatele: 1. Jakım voláním WES øekne „odvez paletu z tohoto vstupního dopravníkovéh
+  - 2026-08-12 12:25 | Ano, udìlej anglickou verzi v spuèasné podobì. Pøekládej jednoduchou angliètinou, aby èíòané snadno pochopili.
+  - 2026-08-12 16:14 | Pøelo tyto vìty: 1.1 Tlaèítko pro start dopravy je pøipojené k našemu safety PLC. Jak se tento povel dostane do vašeho PLC? Jsou to beznapìová relé?
+  - 2026-08-18 15:58 | Otázky neuvádìj do samostatné kapitoly, ale vdy do kapitoly s diagramem a pod pøíslušnı diagram. Sjedno názvy otázek v diagramu a název kapitoly. Na
+  - 2026-08-18 22:50 | Subagentem (Fable) uèeš zkrácenı dokument, aby byl srozumitelnı, pøehlednı, správnı a pøeloenı celı do angliètiny.
+  - 2026-08-19 11:21 | Pøelo do angliètiny tento text: Zápis ze spoleèného jednání KVADOS – BullsEye Datum: 19. 8. 2026 | Téma: Integrace WES (KVADOS) se systémem WCS (Bull
+
+### CONTINUE : 8
+  - 2026-08-05 15:33 | pokraèuj
+  - 2026-08-07 18:42 | pokraèuj
+  - 2026-08-12 21:12 | pokraèuj
+  - 2026-08-13 07:08 | pokraèuj
+  - 2026-08-13 21:43 | pokraèuj
+  - 2026-08-19 15:26 | pokraèuj
+  - 2026-08-24 09:16 | pokraèuj
+  - 2026-08-24 12:25 | pokraèuj

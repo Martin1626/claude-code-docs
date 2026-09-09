@@ -1,0 +1,193 @@
+PER DAY (21 dnu):
+  2026-02-11    1
+  2026-03-03    3
+  2026-04-27    7
+  2026-06-10    3
+  2026-06-18   12
+  2026-06-19    6
+  2026-06-23    2
+  2026-06-26   52
+  2026-06-27   47
+  2026-07-03    2
+  2026-07-04   18
+  2026-07-05    9
+  2026-07-07   14
+  2026-07-08    4
+  2026-07-09    9
+  2026-07-10    2
+  2026-08-14    4
+  2026-08-20   10
+  2026-08-21    8
+  2026-08-24    3
+  2026-08-25    2
+
+##### 2026-06-26..2026-06-27 : 99 promptu
+  07:40 | /resume
+  07:41 | /resume
+  07:42 | /compact
+  07:49 | Co se jeví jako perspektivní vyzkoušet pro moje potřeby z těchto studií: C:\Temp\AI-studie ?
+  08:09 | K čemu má být web-gate? Jak funguje?
+  09:37 | Ano, spoj do jednoho balíku s #1 a #2.
+  09:53 | napiš prompt pro vyhledání studie pro objektivní verifikátor specifikací.
+  09:57 | implementuj
+  11:25 | Připrav prompt, na kterém to nejlépe otestovat.
+  11:30 | /rename
+  11:31 | /spec
+  11:32 | /spec Specifikuj proces dynamické aktualizace a storna objednávky na vyskladnění mezi WMS a WES: okno, ve kter
+  13:53 | /rename
+  13:54 | /rename test1-spec-draft-lint-critique
+  14:05 | /compact
+  15:02 | Spustil jsem v nové session test1-spec-draft-lint-critique Zkontroluj reasoning podle journals a vyhodnoť, zda
+  19:04 | Přelož tuto větu do češtiny: "Workspace + PIN 14 pravidel (train/serve oddělení) + governance jako       │ │  
+  19:16 | Nyní oprav doporučení 1 až 5.
+  19:39 | Co mám nyní rozhodnout a jaké mám možnosti?
+  19:46 | /rename
+  19:47 | /rename spec-patch-delete-order
+  19:48 | /rename test-spec-patch-delete-order
+  21:21 | test
+  21:24 | Na základě závěrů schůzky @docs/meetings/2026-06-26_06-26_FHB_Sjednocení_terminologie_a_procesy_dopravníku.md 
+  21:35 | Budeme řešit postupně. Formuluj nyní správně otázky 6a a 6b.
+  21:44 | Navrhované názvy míst na dopavníku doplň do závorky. Ke každé otázce vytvoř stručný název, podle kterého se dá
+  21:50 | Chci ponechat označení PICK_STATION_A1_LOAD, PICK_STATION_A1_UNLOAD apod. Máme je takto použité už v obrázku.[
+  21:58 | Napiš otázku do markdown souboru. Z něj si budu kopírovat do e-mailu. Nedávej tam značky EN a 中文（简体）aby text b
+  21:58 | test
+  21:59 | /resume
+  21:59 | /context
+  22:02 | Jaké jsou rozumné možností sdílení Spec Factory mezi projekty FHB, Alza a dalšími?
+  22:02 | /rename
+  22:26 | Pro větší přehlednost přidávej volné řádky takto:  [Pasted text #4 +36 lines]
+  22:31 | Pokračuj další otázkou
+  22:37 | Při úpravě pluginu si každý musí na svém projektu spustit install znovu nebo se update provádí automaticky?
+  22:42 | Když chci vytvořit plugin, je vhodné pro Spec Factory založit samostatné repo? Kde jsou pluginy v GitLab ulože
+  22:48 | Tato otázka se kryje s 6b. Je to tak nebo je v ní něco nového?
+  22:54 | /plugins
+  22:57 | chci 1
+  23:00 | další otázka
+  23:06 | otázky 10, 14, 15, 16
+  23:10 | /context
+  23:14 | otázky 20, 21
+  23:15 | 10 a 16 vyřaď. pak pokračuj otázky 20, 21
+  23:21 | popisné štítky mají prefix INBOUND_STATION a OUTBOUND_STATION. nyní pokračuj otázkami až k 27
+  23:25 | Stručně popiš princip pluginů v Claude Code
+  23:33 | Otázky 20 až 27 jsou nové. Chci je mít tedy na konci uvedené společně.
+  23:35 | Otázka 24 se kryje s nějakou předchozí otázkou, ne?
+  23:40 | ano, 24 a 25 chci zúžit. Místo 27 chci otázku, jaký je postup při spouštění skladu, co musí být splněno, jaká 
+  23:46 | /spec Analyzuj vytvoření Spec Factory pluginu. Myslím, že v projektu FHB mám komplexnější schopnosti spec fact
+  23:55 | INBOUND_STATION a OUTBOUND_STATION popiš stejně mezi ostatními lokacemi v úvodu.
+  00:01 | Ke které otázce se nejvíce hodí tento obrázek? [Image #4]
+  00:23 | OK
+  08:44 | Prostuduj journal reasoningu z session alza-fhb-review-system-diff a kriticky ji zhodnoť a populární formou mi
+  09:03 | /context
+  09:03 | /context
+  09:05 | Implementuj
+  09:06 | Implementuj podle @docs/spec/2026-06-26_spec-factory-plugin-sjednoceni/implementation-prompt.md . Plugin dočas
+  09:15 | /context
+  09:25 | Jazyk, jakým se v promptech Claude Code vyjadřuje je pro mě příliš technicky. Udělej průzkum na internetu, jak
+  09:26 | /context
+  13:20 | Doplň ještě variantu:  Formální -> Neformální: 50% Věcný -> Nadšený: 40 % Stručný -> Rozvádějící: 30 % Doslovn
+  14:50 | Formuluj v tomto stylu svou poslední odpověď.
+  14:51 | Formuluj v tomto stylu nyní poslední odpověď ze session spec-factory-plugin-implementation
+  14:56 | Stále mám pocit, že těmto vyjádřením chybí "osobnost". Najdi 3 veřejně známé osobnosti, které se vyjadřují pod
+  14:57 | Která z těchto osobností je považována za nejzábavnvější?
+  14:59 | Formuluj tedy tu poslední odpověď z vedlejší session jako Marek Eben.
+  15:02 | A teď jako David Attenborough
+  15:04 | A teď jako Richard Feynman
+  15:07 | Jaká je nyní doslovnost -> obraznost? Chtěl bych tak na 30 %.
+  15:21 | Vysvětli nyní jako Richard Feynman, co ze spec factory zůstalo v FHB. Byla již provedena migrace? Můžu si nový
+  15:33 | Jaké jsou nyní systémové instrukce, jak se má Clude Code v tomto projektu vyjadřovat? Jakým jazykem, stylem...
+  15:37 | Co to je outputStyle a jak se s tím pracuje?
+  15:47 | Navrhni mi custom styl, komunikace česky, zachovat odborné termíny, kódovat normálně.  Blízký je mi Richard Fe
+  15:59 | OK
+  16:00 | Když chci aktivovat ve stávající session, co musím udělat - používám claude agents
+  16:05 | /config
+  16:06 | test
+  16:06 | /config
+  17:15 | isActive=false by Mělo být v situaci, kdy nosič je mimo storage zone to znamená je v outside zone . Myslím že 
+  17:20 | Už jsou tu plaginu zahrnuté i specifika pro PLC včetně linter ?
+  17:26 | /context
+  17:31 | Do readme vlož change lock na konec. proveď bump verze v yaml souboru na 2. 1. 1. Autora zapiš do yaml i readm
+  17:39 | Je správně že response nevrací 404 ani 409?
+  17:42 | Proveď ještě adversiální test na provedené řešení
+  17:47 | /config
+  17:47 | /resume
+  17:48 | Jak nastavím styl pro mě jako uživatele a ne pro projekt?
+  17:53 | /resume
+  18:02 | Jakýnm stylem aktuálně komunikuješ?
+  18:03 | Vysvětli mi princip nastavení stylu komunikace.
+  18:09 | Vysvětlí nejprve jen zde do chatu co dělá kontejnerRemoved
+  18:12 | Ano, doplň ten vztah do popisu webhooku
+  18:12 | V yml chci změnu ve verzích popisovat pomocí       changes:         - feature:
+  18:13 | Například takto: [Pasted text #1 +6 lines]
+  18:15 | Proč v containerDelete je 4xx a 5xx? To je zbytečné ne?
+  18:18 | a
+  21:15 | /resume
+
+##### 2026-07-04..2026-07-05 : 27 promptu
+  22:09 | /resume
+  22:10 | /config
+  22:10 | /context
+  22:12 | SpecFactory mám nyní uloženou ve složce C:\GitHub\SpecFactory, kde mám primárně projekty z GitHub. Nyní ji chc
+  22:13 | SpecFactory mám nyní uloženou ve složce C:\GitHub\SpecFactory, kde mám primárně projekty z GitHub. Nyní ji chc
+  22:31 | /compact
+  22:45 | Chci provést commit do mé větve dev/martint. Jak?
+  22:49 | Připrav mi příkazy, které mám teď spustit. Ověř předtím aktuální stav.
+  22:56 | Zkontroluj, zda jsem udělal správně
+  23:00 | JAký je můj účet v gitlab? Nebo jak to zjistím?
+  23:05 | Provedl jsem merge. Je vše OK?
+  23:09 | Přidej tam ještě uživatele @pavelny
+  23:10 | Jak mám nyní plugin otestovat?
+  23:17 | oprav ty nesoulady
+  23:23 | [Pasted text #1 +26 lines]
+  23:33 | Spustil jsem /plugin marketplace add C:\Git\shared\plugins, ale marketplace kvados se mi nenabízí. [Image #2]
+  23:38 | Je možné si instalovat plugin, aniž bych si musel stahovat repo lokálně na disk a pak instalovat plugin z disk
+  23:49 | Do Gitu se hlásím přes KRB5. [Pasted text #3 +3 lines]
+  00:00 | Snažím se instalovat z lokálního disku. [Pasted text #4 +19 lines]
+  00:11 | /model
+  00:12 | Nyní mi již instalace z adresáře funguje. Použil jsi ale správný postup? Jaký je správný postup pro instalci z
+  00:26 | Když spustím tento příkaz: claude /plugin marketplace add https://gitlab01.st.kvados.cz:8443/kvados/customers/
+  00:30 | [Pasted text #4 +7 lines]
+  00:32 | /model
+  00:34 | Z důvodu bezpečnosti do gitu přistupuji pod uživatelem martint, ale claude spouštím pod ai_martint. Ale plugin
+  00:59 | /model
+  01:00 | Pokud používám deploy token, jak probíhá aktualizace? Běží automaticky na pozadí nebo ve které chvíli?
+
+##### 2026-07-07..2026-07-07 : 14 promptu
+  10:51 | Otázky
+  10:51 | /model
+  10:52 | /resume
+  10:53 | /context
+  10:53 | /compact
+  10:56 | /context
+  10:59 | BlueSword nám poslal odpovědi zde: @"docs/meetings/2026-07-07-FHB_Blue_Email   issue-20260707-part-2.docx"   N
+  14:58 | Formuluj závěry ohledně chování při nečitelném kódu nosiče, zde do chatu. Co si pamatuji: WMS se musí vždy doz
+  15:22 | Souhlasím s tímto popisem. Tento popis se promítá do odpovědí na více otázek. Uprav odpovědi na otázky tak, ab
+  15:37 | Chci, aby i v případě, že kód je čitelný, tak aby WCS o tom informoval WMS a na ten popud WMS založí úkol buď 
+  15:39 | A prověř, zda je uveden explicitní dotaz, přes jaké rozhraní WMS informuje WCS, který nosič chce vnutit při ne
+  15:47 | Pro vnucení čísla nosiče nenabízej možnost odpověď na webhook WhErrorReport. Je to nekoncepční.
+  19:18 | Body z jednání
+  19:18 | /body-z-jednani 7.7.
+
+##### 2026-08-20..2026-08-25 : 23 promptu
+  09:45 | /body-z-jednani 20
+  10:00 | Proveď ve specifikaci tyto změny:  25, jedná se o změny do @docs/api/asrs-v2/API-myFABER-ASRS-v2-README.md
+  11:42 | Co by znamenalo odpověď formulovat v obecnější rovině - pokud není možné detekovat vložení i odjezd nosiče ani
+  11:48 | Proč došlo ke zrušení popisu nového POST DELETE? [Image #1]
+  11:58 | /compact
+  12:04 | /spec-factory:review-spec Reviduj řešení provedené v této session
+  14:22 | Vysvětli mi ty tři critical nálezy podrobněji
+  14:31 | Oprav I4 a přeřaď ho v reportu
+  14:44 | Při zaskladňování má k automatickému otevření portu dojít v okamžiku, když dopravník nebo robot úspěšně odvezl
+  14:47 | /status
+  10:39 | /body-z-jednani 21 ASRS
+  10:58 | Formuluj stručný seznam závěrů schůzky (kumuluj související body), které budou zahrnovat tyto body: 1, 2, 3, 4
+  11:34 | Zkontroluj a navrhni, které z těchto závěrů by bylo potřeba podchytit do @docs/api/asrs-v2/ASRS-v2-API-koncept
+  12:24 | Zapracuj tyto body včetně mého upřesnění. Koncept má popisovat budoucí finální stav a možnosti, které zatím je
+  15:29 | Vysvětli mi tuto chybu a vypátrej, jak k to vzniklo. C:\Users\ai_martint\.claude\jobs\29ee4439\pasted-1.png
+  15:42 | Jednoduše popiš doporučenou opravu
+  15:48 | vysvětli mi to laicky v čem je chyba a co je správně
+  15:57 | Navrhni opravy
+  08:02 | Vyhledej ve schůzkách FHB, zda jsme se rozhodli, zda chybové kódy v ASRS v2 budou jako string nebo enum a z ja
+  11:38 | /body-z-jednani 24
+  12:31 | Proveď: 1, 3
+  09:08 | Přelož do angličtiny C:\Git\fhb\docs\api\asrs-v2\API-myFABER-ASRS-v2.yaml a C:\Git\fhb\docs\api\asrs-v2\API-my
+  09:41 | Vytvoř nový snapshot včetně českých verzí a EN přesuň tam.

@@ -1,0 +1,204 @@
+N = 218
+
+===== A_otazky_zaver : 2
+   2026-07-07 10:59 | BlueSword nám poslal odpovědi zde: @"docs/meetings/2026-07-07-FHB_Blue_Email   issue-20260707-part-2.docx"   Na interní schůzce jsme probírali návrhy 
+   2026-08-14 20:13 | Přečti tyto tři dokumenty ve složce C:\Git\fhb\docs\api\asrs-v2\ jako tři vrstvy popisu jedné a téže věci:    KONCEPT   ASRS-v2-API-koncept.md        
+
+===== B_obdobne_jako : 3
+   2026-06-23 12:34 | V API chybí POST DELETE na container. Chtěl bych to udělat obdobně, jako v C:\Git\alzask\docs\api. Je potřeba doplnit i do diagramu.
+   2026-06-27 17:15 | isActive=false by Mělo být v situaci, kdy nosič je mimo storage zone to znamená je v outside zone . Myslím že aspoň takto jsme se na tom domlouvali, a
+   2026-07-07 10:59 | BlueSword nám poslal odpovědi zde: @"docs/meetings/2026-07-07-FHB_Blue_Email   issue-20260707-part-2.docx"   Na interní schůzce jsme probírali návrhy 
+
+===== C_nejprve_cesky : 6
+   2026-06-26 19:04 | Přelož tuto větu do češtiny: "Workspace + PIN 14 pravidel (train/serve oddělení) + governance jako       │ │                │ závazné constraints"
+   2026-06-26 21:24 | Na základě závěrů schůzky @docs/meetings/2026-06-26_06-26_FHB_Sjednocení_terminologie_a_procesy_dopravníku.md prověř, zda jsou správně formulované nás
+   2026-06-26 21:44 | Navrhované názvy míst na dopavníku doplň do závorky. Ke každé otázce vytvoř stručný název, podle kterého se dá otázku srozumiotelně identifikovat. Pot
+   2026-07-07 10:59 | BlueSword nám poslal odpovědi zde: @"docs/meetings/2026-07-07-FHB_Blue_Email   issue-20260707-part-2.docx"   Na interní schůzce jsme probírali návrhy 
+   2026-07-07 15:22 | Souhlasím s tímto popisem. Tento popis se promítá do odpovědí na více otázek. Uprav odpovědi na otázky tak, aby odpovídaly tomuto popisu. Vysvětli číň
+   2026-08-25 09:08 | Přelož do angličtiny C:\Git\fhb\docs\api\asrs-v2\API-myFABER-ASRS-v2.yaml a C:\Git\fhb\docs\api\asrs-v2\API-myFABER-ASRS-v2-README.md. Nové md soubory
+
+===== D_jen_navrh : 5
+   2026-06-26 21:58 | Napiš otázku do markdown souboru. Z něj si budu kopírovat do e-mailu. Nedávej tam značky EN a 中文（简体）aby text byl kompaktnější. Otázky z obrázku odřízn
+   2026-06-27 18:09 | Vysvětlí nejprve jen zde do chatu co dělá kontejnerRemoved
+   2026-07-07 14:58 | Formuluj závěry ohledně chování při nečitelném kódu nosiče, zde do chatu. Co si pamatuji: WMS se musí vždy dozvědět o tom, co bylo načteno. Na základě
+   2026-08-14 20:13 | Přečti tyto tři dokumenty ve složce C:\Git\fhb\docs\api\asrs-v2\ jako tři vrstvy popisu jedné a téže věci:    KONCEPT   ASRS-v2-API-koncept.md        
+   2026-08-21 11:34 | Zkontroluj a navrhni, které z těchto závěrů by bylo potřeba podchytit do @docs/api/asrs-v2/ASRS-v2-API-koncept.md  . Připrav jen návrh, vyberu co impl
+
+===== E_picklist : 6
+   2026-06-26 23:06 | otázky 10, 14, 15, 16
+   2026-06-26 23:14 | otázky 20, 21
+   2026-06-26 23:15 | 10 a 16 vyřaď. pak pokračuj otázky 20, 21
+   2026-06-26 23:33 | Otázky 20 až 27 jsou nové. Chci je mít tedy na konci uvedené společně.
+   2026-08-20 10:00 | Proveď ve specifikaci tyto změny:  25, jedná se o změny do @docs/api/asrs-v2/API-myFABER-ASRS-v2-README.md
+   2026-08-21 10:58 | Formuluj stručný seznam závěrů schůzky (kumuluj související body), které budou zahrnovat tyto body: 1, 2, 3, 4, 5, 7, 10, 11, 22, 30, 31, 32, 33, 34, 
+
+===== F_at_file : 5
+   2026-06-26 21:24 | Na základě závěrů schůzky @docs/meetings/2026-06-26_06-26_FHB_Sjednocení_terminologie_a_procesy_dopravníku.md prověř, zda jsou správně formulované nás
+   2026-06-27 09:06 | Implementuj podle @docs/spec/2026-06-26_spec-factory-plugin-sjednoceni/implementation-prompt.md . Plugin dočasně ulož do C:\GitHub\SpecFactory
+   2026-07-07 10:59 | BlueSword nám poslal odpovědi zde: @"docs/meetings/2026-07-07-FHB_Blue_Email   issue-20260707-part-2.docx"   Na interní schůzce jsme probírali návrhy 
+   2026-08-20 10:00 | Proveď ve specifikaci tyto změny:  25, jedná se o změny do @docs/api/asrs-v2/API-myFABER-ASRS-v2-README.md
+   2026-08-21 11:34 | Zkontroluj a navrhni, které z těchto závěrů by bylo potřeba podchytit do @docs/api/asrs-v2/ASRS-v2-API-koncept.md  . Připrav jen návrh, vyberu co impl
+
+===== G_abs_path : 10
+   2026-06-23 12:34 | V API chybí POST DELETE na container. Chtěl bych to udělat obdobně, jako v C:\Git\alzask\docs\api. Je potřeba doplnit i do diagramu.
+   2026-06-26 07:49 | Co se jeví jako perspektivní vyzkoušet pro moje potřeby z těchto studií: C:\Temp\AI-studie ?
+   2026-06-27 09:06 | Implementuj podle @docs/spec/2026-06-26_spec-factory-plugin-sjednoceni/implementation-prompt.md . Plugin dočasně ulož do C:\GitHub\SpecFactory
+   2026-07-04 22:12 | SpecFactory mám nyní uloženou ve složce C:\GitHub\SpecFactory, kde mám primárně projekty z GitHub. Nyní ji chci přesunout nebo zkopírovat do složky C:
+   2026-07-04 22:13 | SpecFactory mám nyní uloženou ve složce C:\GitHub\SpecFactory, kde mám primárně projekty z GitHub. Nyní ji chci přesunout nebo zkopírovat do složky C:
+   2026-07-04 23:33 | Spustil jsem /plugin marketplace add C:\Git\shared\plugins, ale marketplace kvados se mi nenabízí. [Image #2]
+   2026-07-09 14:58 | Chci rozdělit do striktně oddělených bloků a řešit obě domény v rámci FHB. Pokud zjistíš, že je potřeba provést úpravy i v C:\Git\shared\plugins, tak 
+   2026-08-14 20:13 | Přečti tyto tři dokumenty ve složce C:\Git\fhb\docs\api\asrs-v2\ jako tři vrstvy popisu jedné a téže věci:    KONCEPT   ASRS-v2-API-koncept.md        
+   2026-08-21 15:29 | Vysvětli mi tuto chybu a vypátrej, jak k to vzniklo. C:\Users\ai_martint\.claude\jobs\29ee4439\pasted-1.png
+   2026-08-25 09:08 | Přelož do angličtiny C:\Git\fhb\docs\api\asrs-v2\API-myFABER-ASRS-v2.yaml a C:\Git\fhb\docs\api\asrs-v2\API-myFABER-ASRS-v2-README.md. Nové md soubory
+
+===== H_image : 5
+   2026-06-26 21:50 | Chci ponechat označení PICK_STATION_A1_LOAD, PICK_STATION_A1_UNLOAD apod. Máme je takto použité už v obrázku.[Image #2] [Image #3]
+   2026-06-27 00:01 | Ke které otázce se nejvíce hodí tento obrázek? [Image #4]
+   2026-07-04 23:33 | Spustil jsem /plugin marketplace add C:\Git\shared\plugins, ale marketplace kvados se mi nenabízí. [Image #2]
+   2026-07-05 00:26 | Když spustím tento příkaz: claude /plugin marketplace add https://gitlab01.st.kvados.cz:8443/kvados/customers/shared.git tak se mi zobrazí terminál: [
+   2026-08-20 11:48 | Proč došlo ke zrušení popisu nového POST DELETE? [Image #1]
+
+===== I_pasted : 11
+   2026-06-18 23:27 | Udělal jsem to takto, přesto na mobilu žádnou existující session nevidím. [Pasted text #1 +5 lines]
+   2026-06-19 15:12 | [Pasted text #1 +9 lines]
+   2026-06-19 15:13 | [Pasted text #2 +4 lines]
+   2026-06-26 22:26 | Pro větší přehlednost přidávej volné řádky takto:  [Pasted text #4 +36 lines]
+   2026-06-27 18:13 | Například takto: [Pasted text #1 +6 lines]
+   2026-07-04 23:23 | [Pasted text #1 +26 lines]
+   2026-07-04 23:49 | Do Gitu se hlásím přes KRB5. [Pasted text #3 +3 lines]
+   2026-07-05 00:00 | Snažím se instalovat z lokálního disku. [Pasted text #4 +19 lines]
+   2026-07-05 00:30 | [Pasted text #4 +7 lines]
+   2026-07-09 13:45 | [Pasted text #1 +84 lines]
+   2026-07-09 16:24 | Napiš potenciální námitky, které Zdeněk může mít, jakmile obdrží tuto moji odpověď na jeho e-mail.  [Pasted text #1 +122 lines]
+
+===== J_session_ref : 7
+   2026-06-18 11:41 | Pokud bych pro konkrétní session chtěl nastavit ukládání do worktree, jak se to dá udělat?
+   2026-06-18 23:27 | Udělal jsem to takto, přesto na mobilu žádnou existující session nevidím. [Pasted text #1 +5 lines]
+   2026-06-26 15:02 | Spustil jsem v nové session test1-spec-draft-lint-critique Zkontroluj reasoning podle journals a vyhodnoť, zda Spec Factory pracuje dle očekávání. Pře
+   2026-06-27 08:44 | Prostuduj journal reasoningu z session alza-fhb-review-system-diff a kriticky ji zhodnoť a populární formou mi řekni výsledek.
+   2026-06-27 14:51 | Formuluj v tomto stylu nyní poslední odpověď ze session spec-factory-plugin-implementation
+   2026-06-27 14:59 | Formuluj tedy tu poslední odpověď z vedlejší session jako Marek Eben.
+   2026-08-14 20:16 | Reviduj, zda změny provedené v Session ID:       3b4f64bf-8ffd-419c-a080-b3050285f79a byly provedeny správně.
+
+===== K_proc_why : 3
+   2026-06-27 18:15 | Proč v containerDelete je 4xx a 5xx? To je zbytečné ne?
+   2026-07-08 16:49 | Proč u vychystávání nepovažovat za okamžik, kdy už WMS nosič nepotřebuje tak, že WMS nechá uzavřít port a to je signál pro WES, že jej může odvézt zpě
+   2026-08-20 11:48 | Proč došlo ke zrušení popisu nového POST DELETE? [Image #1]
+
+===== L_vysvetli : 20
+   2026-03-03 22:25 | Co je potřeba udělat pro přeinstalaci a jaké to bude mít důsledky?
+   2026-06-18 09:19 | Co znamená přesune editace do worktrees?
+   2026-06-19 15:08 | Jak mám vyřešit GIT konflikty v tomto repu, když chci u všech přijmout změny, které přicházejí ze serveru?
+   2026-06-26 08:09 | K čemu má být web-gate? Jak funguje?
+   2026-06-26 22:02 | Jaké jsou rozumné možností sdílení Spec Factory mezi projekty FHB, Alza a dalšími?
+   2026-06-27 15:21 | Vysvětli nyní jako Richard Feynman, co ze spec factory zůstalo v FHB. Byla již provedena migrace? Můžu si nový plugin instalovat do FHB? Jak to pak bu
+   2026-06-27 15:33 | Jaké jsou nyní systémové instrukce, jak se má Clude Code v tomto projektu vyjadřovat? Jakým jazykem, stylem...? Kde je to zapsáno a jak?
+   2026-06-27 15:37 | Co to je outputStyle a jak se s tím pracuje?
+   2026-06-27 17:48 | Jak nastavím styl pro mě jako uživatele a ne pro projekt?
+   2026-06-27 18:02 | Jakýnm stylem aktuálně komunikuješ?
+   2026-06-27 18:03 | Vysvětli mi princip nastavení stylu komunikace.
+   2026-06-27 18:09 | Vysvětlí nejprve jen zde do chatu co dělá kontejnerRemoved
+   2026-07-04 23:00 | JAký je můj účet v gitlab? Nebo jak to zjistím?
+   2026-07-04 23:10 | Jak mám nyní plugin otestovat?
+   2026-07-04 23:38 | Je možné si instalovat plugin, aniž bych si musel stahovat repo lokálně na disk a pak instalovat plugin z disku?
+   2026-07-08 16:42 | K čemu sloučí v API ASRS V2 endpoint releaseContainer? Vysvětli, kdy se volá, jaká je idea.
+   2026-07-08 17:08 | Jakým stylem máš odpovídat?
+   2026-08-20 14:22 | Vysvětli mi ty tři critical nálezy podrobněji
+   2026-08-21 15:29 | Vysvětli mi tuto chybu a vypátrej, jak k to vzniklo. C:\Users\ai_martint\.claude\jobs\29ee4439\pasted-1.png
+   2026-08-21 15:48 | vysvětli mi to laicky v čem je chyba a co je správně
+
+===== M_meta_ccode : 51
+   2026-03-03 22:25 | Co je potřeba udělat pro přeinstalaci a jaké to bude mít důsledky?
+   2026-06-18 09:19 | Co znamená přesune editace do worktrees?
+   2026-06-18 11:13 | Skončí úprava rovnou v mé primární kopii. Nechci to nyní nastavovat do settings
+   2026-06-18 11:16 | Rozumím. settings je jen pro mě nebo pro všechny v týmu?
+   2026-06-18 11:19 | OK, nastav mi tedy settings pro mě ve všech repech, aby se do worktree neukládalo.
+   2026-06-18 11:41 | Pokud bych pro konkrétní session chtěl nastavit ukládání do worktree, jak se to dá udělat?
+   2026-06-18 23:16 | Když mám spuštěného v Claude Code Agent View agenta pomocí --bg, je možné se na něj připojit z mobilu a odpvídat na jeho dotazy? Musím mít zapnutý not
+   2026-06-18 23:27 | Udělal jsem to takto, přesto na mobilu žádnou existující session nevidím. [Pasted text #1 +5 lines]
+   2026-06-26 15:02 | Spustil jsem v nové session test1-spec-draft-lint-critique Zkontroluj reasoning podle journals a vyhodnoť, zda Spec Factory pracuje dle očekávání. Pře
+   2026-06-26 21:59 | /context
+   2026-06-26 22:37 | Při úpravě pluginu si každý musí na svém projektu spustit install znovu nebo se update provádí automaticky?
+   2026-06-26 22:42 | Když chci vytvořit plugin, je vhodné pro Spec Factory založit samostatné repo? Kde jsou pluginy v GitLab uložené? Každý plugin vlastní repo nebo mohou
+   2026-06-26 22:54 | /plugins
+   2026-06-26 23:10 | /context
+   2026-06-26 23:25 | Stručně popiš princip pluginů v Claude Code
+   2026-06-26 23:46 | /spec Analyzuj vytvoření Spec Factory pluginu. Myslím, že v projektu FHB mám komplexnější schopnosti spec factory než v Alza, ale Alza může mít něco, 
+   2026-06-27 08:44 | Prostuduj journal reasoningu z session alza-fhb-review-system-diff a kriticky ji zhodnoť a populární formou mi řekni výsledek.
+   2026-06-27 09:03 | /context
+   2026-06-27 09:03 | /context
+   2026-06-27 09:06 | Implementuj podle @docs/spec/2026-06-26_spec-factory-plugin-sjednoceni/implementation-prompt.md . Plugin dočasně ulož do C:\GitHub\SpecFactory
+   2026-06-27 09:15 | /context
+   2026-06-27 09:25 | Jazyk, jakým se v promptech Claude Code vyjadřuje je pro mě příliš technicky. Udělej průzkum na internetu, jaké jsou preferované atraktivní formy styl
+   2026-06-27 09:26 | /context
+   2026-06-27 14:51 | Formuluj v tomto stylu nyní poslední odpověď ze session spec-factory-plugin-implementation
+   2026-06-27 14:59 | Formuluj tedy tu poslední odpověď z vedlejší session jako Marek Eben.
+   2026-06-27 15:21 | Vysvětli nyní jako Richard Feynman, co ze spec factory zůstalo v FHB. Byla již provedena migrace? Můžu si nový plugin instalovat do FHB? Jak to pak bu
+   2026-06-27 15:37 | Co to je outputStyle a jak se s tím pracuje?
+   2026-06-27 15:47 | Navrhni mi custom styl, komunikace česky, zachovat odborné termíny, kódovat normálně.  Blízký je mi Richard Feynman, ale analyzuj journal z mých sessi
+   2026-06-27 16:00 | Když chci aktivovat ve stávající session, co musím udělat - používám claude agents
+   2026-06-27 17:26 | /context
+   2026-07-03 10:55 | /model
+   2026-07-04 22:10 | /context
+   2026-07-04 22:13 | SpecFactory mám nyní uloženou ve složce C:\GitHub\SpecFactory, kde mám primárně projekty z GitHub. Nyní ji chci přesunout nebo zkopírovat do složky C:
+   2026-07-04 23:10 | Jak mám nyní plugin otestovat?
+   2026-07-04 23:33 | Spustil jsem /plugin marketplace add C:\Git\shared\plugins, ale marketplace kvados se mi nenabízí. [Image #2]
+   2026-07-04 23:38 | Je možné si instalovat plugin, aniž bych si musel stahovat repo lokálně na disk a pak instalovat plugin z disku?
+   2026-07-05 00:11 | /model
+   2026-07-05 00:12 | Nyní mi již instalace z adresáře funguje. Použil jsi ale správný postup? Jaký je správný postup pro instalci z URL?
+   2026-07-05 00:26 | Když spustím tento příkaz: claude /plugin marketplace add https://gitlab01.st.kvados.cz:8443/kvados/customers/shared.git tak se mi zobrazí terminál: [
+   2026-07-05 00:32 | /model
+   2026-07-05 00:34 | Z důvodu bezpečnosti do gitu přistupuji pod uživatelem martint, ale claude spouštím pod ai_martint. Ale plugin potřebuji instalovat do claude z gitu. 
+   2026-07-05 00:59 | /model
+   2026-07-05 01:00 | Pokud používám deploy token, jak probíhá aktualizace? Běží automaticky na pozadí nebo ve které chvíli?
+   2026-07-07 10:51 | /model
+   2026-07-07 10:53 | /context
+   2026-07-07 10:56 | /context
+   2026-07-09 13:44 | /plugins
+   2026-07-09 14:56 | /model
+   2026-07-09 14:58 | Chci rozdělit do striktně oddělených bloků a řešit obě domény v rámci FHB. Pokud zjistíš, že je potřeba provést úpravy i v C:\Git\shared\plugins, tak 
+   2026-08-14 20:16 | Reviduj, zda změny provedené v Session ID:       3b4f64bf-8ffd-419c-a080-b3050285f79a byly provedeny správně.
+   2026-08-20 12:04 | /spec-factory:review-spec Reviduj řešení provedené v této session
+
+===== N_domena : 25
+   2026-04-27 12:28 | Varianta A: Volání Wh orderUnloadRequest a navazující operace jsou povinné pouze v případě, že dopravník je řízený WMS a ne WES. Varianta A však popis
+   2026-04-27 12:40 | Do Inbound u varianty C dopiš, že se jedná  také například o situaci, kdy dopravník řídí WMS a WES řídí až robota, který si přebírá nosič z dopravníku
+   2026-06-23 12:33 | /rename V API chybí POST DELETE na container
+   2026-06-23 12:34 | V API chybí POST DELETE na container. Chtěl bych to udělat obdobně, jako v C:\Git\alzask\docs\api. Je potřeba doplnit i do diagramu.
+   2026-06-26 11:32 | /spec Specifikuj proces dynamické aktualizace a storna objednávky na vyskladnění mezi WMS a WES: okno, ve kterém smí WMS změnit nebo stornovat objedná
+   2026-06-26 21:24 | Na základě závěrů schůzky @docs/meetings/2026-06-26_06-26_FHB_Sjednocení_terminologie_a_procesy_dopravníku.md prověř, zda jsou správně formulované nás
+   2026-06-26 23:21 | popisné štítky mají prefix INBOUND_STATION a OUTBOUND_STATION. nyní pokračuj otázkami až k 27
+   2026-06-26 23:55 | INBOUND_STATION a OUTBOUND_STATION popiš stejně mezi ostatními lokacemi v úvodu.
+   2026-06-27 17:15 | isActive=false by Mělo být v situaci, kdy nosič je mimo storage zone to znamená je v outside zone . Myslím že aspoň takto jsme se na tom domlouvali, a
+   2026-06-27 18:15 | Proč v containerDelete je 4xx a 5xx? To je zbytečné ne?
+   2026-07-03 10:55 | Při zaskladňování nového nosiče na portu (kde není čtečka kódu nosiče) jakým způsobem WMS oznámí do WES, který nosič je připraven na portu?
+   2026-07-07 10:59 | BlueSword nám poslal odpovědi zde: @"docs/meetings/2026-07-07-FHB_Blue_Email   issue-20260707-part-2.docx"   Na interní schůzce jsme probírali návrhy 
+   2026-07-07 14:58 | Formuluj závěry ohledně chování při nečitelném kódu nosiče, zde do chatu. Co si pamatuji: WMS se musí vždy dozvědět o tom, co bylo načteno. Na základě
+   2026-07-07 15:22 | Souhlasím s tímto popisem. Tento popis se promítá do odpovědí na více otázek. Uprav odpovědi na otázky tak, aby odpovídaly tomuto popisu. Vysvětli číň
+   2026-07-07 15:37 | Chci, aby i v případě, že kód je čitelný, tak aby WCS o tom informoval WMS a na ten popud WMS založí úkol buď typu move nebo moveAMR. Doplň do odpověd
+   2026-07-07 15:39 | A prověř, zda je uveden explicitní dotaz, přes jaké rozhraní WMS informuje WCS, který nosič chce vnutit při nečitelném kódu čtečkou.
+   2026-07-07 15:47 | Pro vnucení čísla nosiče nenabízej možnost odpověď na webhook WhErrorReport. Je to nekoncepční.
+   2026-07-08 16:42 | K čemu sloučí v API ASRS V2 endpoint releaseContainer? Vysvětli, kdy se volá, jaká je idea.
+   2026-07-08 16:49 | Proč u vychystávání nepovažovat za okamžik, kdy už WMS nosič nepotřebuje tak, že WMS nechá uzavřít port a to je signál pro WES, že jej může odvézt zpě
+   2026-07-08 17:00 | Jak ale WES bude vědět, jaké číslo nosiče položil operátor na zabezpečený port, když na portu obvykle není čtečka?
+   2026-08-14 20:13 | Přečti tyto tři dokumenty ve složce C:\Git\fhb\docs\api\asrs-v2\ jako tři vrstvy popisu jedné a téže věci:    KONCEPT   ASRS-v2-API-koncept.md        
+   2026-08-20 11:42 | Co by znamenalo odpověď formulovat v obecnější rovině - pokud není možné detekovat vložení i odjezd nosiče ani tuto informaci neposílá nadřazený systé
+   2026-08-20 14:31 | Oprav I4 a přeřaď ho v reportu
+   2026-08-20 14:44 | Při zaskladňování má k automatickému otevření portu dojít v okamžiku, když dopravník nebo robot úspěšně odvezl nosič z portu. To je potvrzeno čidly na
+   2026-08-21 12:24 | Zapracuj tyto body včetně mého upřesnění. Koncept má popisovat budoucí finální stav a možnosti, které zatím ještě nejsou implementované. To jen upřesň
+
+===== O_kontrola_prace : 9
+   2026-06-26 21:24 | Na základě závěrů schůzky @docs/meetings/2026-06-26_06-26_FHB_Sjednocení_terminologie_a_procesy_dopravníku.md prověř, zda jsou správně formulované nás
+   2026-06-27 17:15 | isActive=false by Mělo být v situaci, kdy nosič je mimo storage zone to znamená je v outside zone . Myslím že aspoň takto jsme se na tom domlouvali, a
+   2026-06-27 17:42 | Proveď ještě adversiální test na provedené řešení
+   2026-07-04 22:49 | Připrav mi příkazy, které mám teď spustit. Ověř předtím aktuální stav.
+   2026-07-04 22:56 | Zkontroluj, zda jsem udělal správně
+   2026-07-07 15:39 | A prověř, zda je uveden explicitní dotaz, přes jaké rozhraní WMS informuje WCS, který nosič chce vnutit při nečitelném kódu čtečkou.
+   2026-08-14 20:13 | Přečti tyto tři dokumenty ve složce C:\Git\fhb\docs\api\asrs-v2\ jako tři vrstvy popisu jedné a téže věci:    KONCEPT   ASRS-v2-API-koncept.md        
+   2026-08-14 20:16 | Reviduj, zda změny provedené v Session ID:       3b4f64bf-8ffd-419c-a080-b3050285f79a byly provedeny správně.
+   2026-08-20 12:04 | /spec-factory:review-spec Reviduj řešení provedené v této session
+
+===== P_pamet_clovek : 3
+   2026-06-26 23:46 | /spec Analyzuj vytvoření Spec Factory pluginu. Myslím, že v projektu FHB mám komplexnější schopnosti spec factory než v Alza, ale Alza může mít něco, 
+   2026-06-27 17:15 | isActive=false by Mělo být v situaci, kdy nosič je mimo storage zone to znamená je v outside zone . Myslím že aspoň takto jsme se na tom domlouvali, a
+   2026-07-07 14:58 | Formuluj závěry ohledně chování při nečitelném kódu nosiče, zde do chatu. Co si pamatuji: WMS se musí vždy dozvědět o tom, co bylo načteno. Na základě

@@ -1,0 +1,97 @@
+=== NEAR-DUPLICATE RESENDS: 14 groups, 29 prompts ===
+3 ['2026-08-24 09:02', '2026-08-24 09:07', '2026-08-24 09:10'] | přečti celý a proveď docs/onboarding/prompt-ukotveni-ontologie.md
+2 ['2026-08-05 11:27', '2026-08-05 12:05'] | na mezaninech jsou také dva porty - jeden pro vstup a druhý pro výstup. není potřeba zobra
+2 ['2026-08-07 11:53', '2026-08-12 12:25'] | ano, udělej anglickou verzi v spučasné podobě. překládej jednoduchou angličtinou, aby číňa
+2 ['2026-08-07 18:55', '2026-08-07 18:56'] | máš pravdu s tou obrazovkou. vytvoř krátký prompt pro claude design, aby mi takou chybějíc
+2 ['2026-08-09 20:13', '2026-08-09 20:28'] | na posledním jednání @docs/meetings/2026-08-07_08-07_alza_hmi_obrazovky_procesy_nouzového_
+2 ['2026-08-10 17:47', '2026-08-10 18:56'] | rád bych udělal větší pořádek v pojmenování diagramů. potřeboval bych diagramy, které popi
+2 ['2026-08-10 18:31', '2026-08-10 18:50'] | vytvoř nový dokument s diagramy v3. číslování diagramů ponechej a přidej nové . pořadí dia
+2 ['2026-08-13 22:52', '2026-08-13 22:55'] | už nebudu potřebovat docs/spec/2026-06-26_dynamicka-aktualizace-storno-objednavky/, takže 
+2 ['2026-08-14 13:38', '2026-08-14 15:53'] | prostuduj si c:\git\fhb\docs\api\asrs-v2\asrs-v2-api-koncept.md a vytipuj 3 rozpory nebo i
+2 ['2026-08-14 14:24', '2026-08-14 19:39'] | doplň zadání ještě o tyto body: zůstávají tři věci, které revize označila a které nejsou r
+2 ['2026-08-19 19:41', '2026-08-19 19:45'] | 1. spusť docs/plc/.plc-tools/validate.cmd (nebo fr-tools/validate.py). chyby lintru oprav 
+2 ['2026-08-24 23:24', '2026-08-24 23:24'] | k čemu jsou v ontology uváděné dávky? je to efektivní a nutné? čím a jak by se to dalo nah
+2 ['2026-08-25 15:32', '2026-08-26 08:01'] | /dodavatele:stav bullseye
+2 ['2026-08-25 21:22', '2026-08-25 21:29'] | measure_result mi nakonec dává smysl zachovat s hodnotami measure_ok a measure_skipped pro
+
+=== SHORT (<60ch, non-slash): 80 ===
+   2026-08-03 13:00 | Kontrola rozměrů a váhy
+   2026-08-05 12:29 | Doplň ještě toto. [Image #1]
+   2026-08-05 12:49 | test
+   2026-08-05 15:33 | pokračuj
+   2026-08-06 14:59 | Převeď do markdown
+   2026-08-07 08:24 | test
+   2026-08-07 17:01 | Zjisti, kdo a kdy to měnil z bliká na svítí.
+   2026-08-07 18:42 | pokračuj
+   2026-08-09 21:15 | Na konci proveď revizi subagentem a případné chyby oprav.
+   2026-08-10 08:05 | C:\Temp\Prehled_stanic_readyToClose.m
+   2026-08-10 15:25 | co znamená onward?
+   2026-08-10 18:25 | Napiš zde konkrétní návrhy změn do ADR.
+   2026-08-10 18:50 | Chci nové názvy
+   2026-08-10 18:57 | Nepiš pořadová čísla na začítek řádků. Jen D01, D02 ...
+   2026-08-10 18:58 | Nepiš pořadová čísla na začítek řádků.
+   2026-08-11 07:24 | Kde bylo chybějící X-Client-Request-Id?
+   2026-08-11 07:27 | Můžeš tu pasáž vypustit
+   2026-08-11 07:42 | Která rozhodnutí bych měl potvrdit v ADR?
+   2026-08-11 15:56 | Sjednoť nyní i API. Popiš změnu do 1.1.1
+   2026-08-11 17:47 | Nyní zjisti, co bude bránit tomu, abych mohl udělat rebase.
+   2026-08-11 18:45 | Zkontroluj to nyní.
+   2026-08-11 18:52 | Vysvětli nejprve rozdíl co by znamenal merge a co rebase.
+   2026-08-11 18:59 | udělej merge
+   2026-08-12 12:24 | Odpověď na dopis
+   2026-08-12 13:51 | Potřebuji ke každému jejich bodu jednu maximálně dvě věty.
+   2026-08-12 21:12 | pokračuj
+   2026-08-13 07:08 | pokračuj
+   2026-08-13 10:03 | Vysvětli jednoduše problematiku containerPrepared u příjmu.
+   2026-08-13 13:30 | Na konci Připrav název a popis pro commit
+   2026-08-13 13:57 | JAk to bylo dosud před touto mou změnou?
+   2026-08-13 15:15 | stejný vzorec open použij i na mezaninech
+   2026-08-13 21:43 | pokračuj
+   2026-08-14 17:05 | Nechci vlastně porovnat jen koncept, ale i API a README
+   2026-08-14 18:17 | Zruš seznam změn v úvodu dokumentu. Nepotřebuji ho.
+   2026-08-14 20:53 | Navrhni seznam změn, které by měly být zapracované do ADR.
+   2026-08-14 21:11 | A) založ navrhovaná ADR. další změny zatím nedělej.
+   2026-08-15 08:32 | Subagentem reviduj vytvořené ADR.
+   2026-08-15 09:35 | ADR se mírně změnila, tak před revizí si je načti znovu.
+   2026-08-18 09:32 | Akceptuji docs\adr\api\ADR-ASK-API-016.md
+   2026-08-18 10:52 | Přečti si celý dokument
+   2026-08-18 14:14 | Zajímá mě především vyjádření BullsEye
+   2026-08-18 16:04 | Otázky vlož do kapitol 2.1 a 2.2 pod sekvenční diagramy
+   2026-08-18 16:26 | Ano, to druhé — WES řídí proces, ne motory.
+   2026-08-18 22:58 | Pořadí participantů chci ponechat jak jsem upravil
+   2026-08-18 22:58 | Operátor má být první
+   2026-08-19 14:26 | Pokud je port ve stavu closing, má maják svítit zeleně.
+   2026-08-19 15:26 | pokračuj
+   2026-08-19 16:18 | Udělej průzkum, jak v Claude Code
+   2026-08-19 16:25 | Další kolo oprav již neprováděj.
+   2026-08-19 16:33 | Proveď prompt C:\Temp\PROMPT_kontrola_volani_na_portech.md
+   2026-08-19 20:24 | ještě jedno kolo revize
+   2026-08-19 22:13 | toto je zkouška
+   2026-08-19 22:24 | Verzi API posuň na 1.2.2
+   2026-08-20 14:23 | e-mail
+   2026-08-21 18:47 | Vyřeš aktuální kolize při merge
+   2026-08-22 23:14 | K čemu je relations.tsv? Tam jsou také čísla řádků.
+   2026-08-24 09:12 | vysvětli i návazná témata
+   2026-08-24 09:16 | pokračuj
+   2026-08-24 09:51 | Souhlasím s V4, pokračuj dávkou C.
+   2026-08-24 09:53 | laicky vysvětli ten latentní rozpor
+   2026-08-24 10:00 | ano, zařadit SessionStart kontrolu (a) . Pokračuj dávkou D.
+   2026-08-24 11:00 | Proveď kroky 1–2 implementace v AlzaSk
+   2026-08-24 11:30 | Proveď A + C
+   2026-08-24 11:44 | Až bude hotový plugin, co bych měl dělat dále?
+   2026-08-24 12:22 | zkouška pluginů
+   2026-08-24 12:25 | pokračuj
+   2026-08-24 12:53 | V API dej do verze 1.2.3
+   2026-08-24 13:10 | Vyřeš mé konflikty v mr
+   2026-08-24 20:35 | ano, proveď to celé
+   2026-08-24 21:44 | Je to u některých dalších souborů podobně zbytečně?
+   2026-08-25 08:28 | ano, udělej bump. Které rozdíly hlásí G6?
+   2026-08-25 08:35 | OK, poznamenej do ukotvení.
+   2026-08-25 14:46 | ano, smaž ho
+   2026-08-25 18:35 | Souhlasím s celým navrženým postupem.
+   2026-08-25 19:24 | Kolegyně mi poslala níže uvedený dotaz.
+   2026-08-25 21:38 | API verze 1.2.3 → 1.2.4
+   2026-08-25 21:43 | Proč tam zůstala ještě otázka PRE-016?
+   2026-08-25 22:33 | Stačí mi napsat jen to ADR a případně aktualizovat ontology
+   2026-08-25 22:42 | Proveď úklid podle RULE-ONT-003.
+   2026-08-25 22:43 | Ty zmizelé kotvy se pokus opravit sám.

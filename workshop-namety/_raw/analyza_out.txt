@@ -1,0 +1,103 @@
+prompty-alzask-H1.md 14
+prompty-alzask-06.md 235
+total 249
+[('20-99', 92), ('<20', 83), ('100-299', 48), ('300-999', 20), ('>=1000', 6)]
+slash total 90
+[('spec', 13), ('context', 13), ('rename', 12), ('resume', 11), ('compact', 5), ('body-z-jednani', 5), ('new', 4), ('config', 2), ('memory', 2), ('btw', 2), ('model', 2), ('pruzkum', 2), ('exit', 2), ('help', 1), ('agents', 1), ('statusline', 1), ('status', 1), ('mcp', 1), ('clear', 1), ('tasks', 1), ('freelo', 1), ('superpowers:writing-skills', 1), ('doctor', 1), ('effort', 1), ('login', 1), ('terminal-setup', 1), ('usage', 1), ('comp', 1)]
+short prompts: [('/context', 13), ('/resume', 10), ('pokračuj', 5), ('/compact', 5), ('/new', 4), ('exit', 3), ('/body-z-jednani 29.', 3), ('/config', 2), ('/memory', 2), ('/model', 2), ('/exit', 2), ('/rename', 2), ('/help', 1), ('/agents', 1), ('uprav @api/api-myfaber-wes-alzask.yml', 1), ('/statusline', 1), ('1', 1), ('/status', 1), ('/mcp', 1), ('co mám v notion za poznámky?', 1), ('[image #3]', 1), ('/clear', 1), ('převeď rovnou pdf do markdown souboru.', 1), ('[pasted text #2 +3 lines]', 1), ('/tasks', 1), ('co nového je v baclogu?', 1), ('/doctor', 1), ('[pasted text #1 +5 lines]', 1), ('ano, založ rule', 1), ('ano, převeď na shared', 1), ('vložím sám. co přesně mám udělat?', 1), ('zkopírováno', 1), ('hotovo, smazal jsem osobní duplikát', 1), ('ano, a + testy', 1), ('/spec dle bodu 1 rozšiř api.', 1), ('/effort', 1), ('řízení vychystávacích portů přes plc', 1), ('ano, do hlavní větve worktree', 1), ('přenes změny na dev/martint', 1), ('ano ukliď spec-svoz', 1), ('git commit --amend', 1), ('chci variantu bez commitu', 1), ('5) ano, navrhni kontrolu', 1), ('/rename připomínky neoblíbené kolegyně', 1), ('/rename připomínky oblíbené kolegyně', 1), ('vysvětli muting. jak to souvisí se sil?', 1), ('/rename připomínky neoblíbené v2', 1), ('/rename připomínky neoblíbené v3', 1), ('ano, ještě jednu', 1), ('a, protože tam má přístup obsluha', 1), ('/rename srovnání řešení od claude', 1), ('/rename připomínky neoblíbené v4', 1), ('/login', 1), ('/rename průzkum journal - zpětná vazba', 1), ('/rename klávesové zkratky', 1), ('/terminal-setup', 1), ('o co jde v "ace-style „reflector" ?', 1), ('b', 1), ('testovací dotaz', 1), ('kde najdu návrh rule-gov-001?', 1)]
+
+=== LONG >=1000 ===
+--- 2026-06-19 21:57 1775
+/spec Kolegyně, kterou nemám příliš v oblibě, mi poslala připomínky k diagramu |   @docs/api/Diagrams-API-AlzaSk-v2.md |   Zhodnoť jejich relevanci na škále 1 až 10 a navrhni zda a jak bys je zapracoval. |   Pracuj v samostatné worktree! |  | Jsou špatně kategorie wh - 
+--- 2026-06-19 22:04 1821
+/spec Kolegyně, kterou nemám příliš v oblibě, mi poslala připomínky k diagramu |     @docs/api/Diagrams-API-AlzaSk-v2.md |     Zhodnoť jejich relevanci na škále 1 až 10 a navrhni zda a jak bys je zapracoval. |     Pracuj v samostatné worktree .claude\worktrees\pripo
+--- 2026-06-19 23:48 1821
+/spec Kolegyně, kterou nemám příliš v oblibě, mi poslala připomínky k diagramu |     @docs/api/Diagrams-API-AlzaSk-v2.md |     Zhodnoť jejich relevanci na škále 1 až 10 a navrhni zda a jak bys je zapracoval. |     Pracuj v samostatné worktree .claude\worktrees\pripo
+--- 2026-06-19 23:51 1879
+/spec Kolegyně, kterou nemám příliš v oblibě, mi poslala připomínky k diagramu |       @docs/api/Diagrams-API-AlzaSk-v2.md |       Zhodnoť jejich relevanci na škále 1 až 10 a navrhni zda a jak bys je zapracoval. |       Pracuj v samostatné worktree .claude\worktrees
+--- 2026-06-22 09:11 1004
+Myslím, že tuto situaci mu budeme muset řešit jako výjimku. Pokud se nepletu tak můžou nastat 2 situace . Buď operátor paletu s dopravníků odebere vyřeší problém s nečitelným kódem nosiče, například odstraní fólií která nosič přikrývá no a potom nosič vlastně 
+--- 2026-06-29 20:38 1526
+Architektura zastavení a PLC |                                                                                                          1. LED pásky (Pick-to-Light) ven z PLC spec → do WES dokumentace                                       Proč: LED pásky neovlád
+
+=== CORRECTION CANDIDATES ===
+--- 2026-01-29 23:25 | Uprav API-myFABER-WES-AlzaSk.yml. |  |  |  |  |  |  |  | Chci zjednodušit API. Nechci používat u stanice statusTransition. Místo toho chci rozšířit status o nové stavy reprezentující aktivaci a deaktivaci stanice. |  |  |  |  |  |  |  | Obdobně chci rozšířit sta
+--- 2026-01-29 23:52 | Uprav API-myFABER-WES-AlzaSk.yml. |  |  |  |  |  |  |  | Chci zjednodušit API. Nechci používat u stanice statusTransition. Místo toho chci rozšířit status o nové stavy reprezentující aktivaci a deaktivaci stanice. |  |  |  |  |  |  |  | Obdobně chci rozšířit sta
+--- 2026-01-29 23:52 | Uprav API-myFABER-WES-AlzaSk.yml. |  |  |  |  |  |  |  | Chci zjednodušit API. Nechci používat u stanice statusTransition. Místo toho chci rozšířit status o nové stavy reprezentující aktivaci a deaktivaci stanice. |  |  |  |  |  |  |  | Obdobně chci rozšířit sta
+--- 2026-06-11 13:46 | Do terminálového okna mi nejde vložit výstřižek obrazovky přes Ctrl+V
+--- 2026-06-11 19:37 | Vyhledej, zde někde již je dokumentováno, jaké informace nebo jaký typ informací se mají zobrazovat na jednotlivých HMI panelech.
+--- 2026-06-11 20:16 | /spec V @docs/plc/AlzaSk-PLC-specifikace.md: když se jedná o dopravníkový port, tak tam na něj nejezdí robot. Nosič je přivážen dopravníkem. Není proto potřeba zmiňovat, že robot může přistavit další nosič, odjet apod.
+--- 2026-06-11 20:52 | V kapitole "Cross-zónová propagace" je napsáno "Vnější clona (strana AGV) narušena + přítomný AGV". Vnější clona je ale umístěna směrem k operátorovi. Co je myšleno "stana AGV"? Významu těch 3 odrážek vlastně nerozumím. Vysvětli m
+--- 2026-06-11 21:24 | Sjednoť terminologii S/R zóny s ostatními pojmy v dokumentu, nebo uveď do seznamu pojmů apod.
+--- 2026-06-11 21:24 | Pokračuj. Sjednoť terminologii S/R zóny s ostatními pojmy v dokumentu, nebo uveď do seznamu pojmů apod.
+--- 2026-06-11 21:34 | Propagace zastavení (dělící clona aktivní): Je jedno, ze které strany došlo k narušení clony. Nejde to ani detekovat. Rozhodující myslím je, která zóna je zastavená. Jakmile dojde k narušení clony z libovolné strany, tak dojde k z
+--- 2026-06-11 21:42 | /spec Vím, že analýza rizik uvádí " obě zóny potvrzeny jako bezpečné a bez přítomnosti osob", ale PLC nemá prostředky ke zjištění přítomnosti osob v zóně. Musíme tedy logicky postavit na předpokladu, že pokud je zóna neaktivní (za
+--- 2026-06-12 14:12 | Založ mi v Notion nový seznam úkolů, na které nechci zapomenout. Včetně možnosti zadat temrín připomenutí.
+--- 2026-06-12 23:11 | Nově nechci evidovat Prdukt, ale Projekt. V tomto případě vyber vhodný projekt sám.
+--- 2026-06-12 23:16 | Nyní založ testovací úkol, na který nechci zapomenout.
+--- 2026-06-18 11:46 | Myslím, že to je více obecný problém, ne jen zaměření pouze na bezpečnost. Jedná se o chování na jakýkoliv problém. Dá se to takto pojmout a přitom zachovat relevantní kontext?
+--- 2026-06-18 19:19 | Důležité je, že předávám pole stanic. Zeptej se mě na otázky raději znovu. Odeslal jsem je předčasně.
+--- 2026-06-18 21:04 | Pokud některá data nejsou vyplněná, nechtěli jsme, aby obsahovala NULL a jednodušším způsobem se tím pádem hodnota testovala. Týká se to i tohoto případu?
+--- 2026-06-18 21:04 | Příklady stanic uváděj raději SHIPPING_WEST_0_1 a SHIPPING_WEST_0_2
+--- 2026-06-18 21:50 | Neměl by se parametr jmenovat raději shippingStationIds nebo nějak podobně? Jedná se totiž o stanice, ze kterých bude nosič odvážen k expedici. Tento údaj pomáhá k optimalizaci uskladnění nosičů, které jsou připravené k expedici. | 
+--- 2026-06-18 22:13 | V descriptions neuváděj, že se jedná o vychystávací stanice, ale expediční.
+--- 2026-06-19 08:52 | /spec Změnit u shipping nosiče default u isAvailableForAutoSupply z false na true. Důvodem je, že většina nových nosičů je prázdných a jsou použitelné pro automatické přistavení na port. Nebudeme proto vynucovat, že WMS při založe
+--- 2026-06-19 09:02 | NErozumím tomu, co se teď stalo, protože ve Visual Studio code nyní nevidím žádné změny v mé hlavní větvi dev/martint. Vysvětli mi, kde jsou všechny provedené změny a jak si je mohu zkontrolovat. Nevidím totiž ani commit v GitLab.
+--- 2026-06-19 09:35 | Teď ale nerozumím tomu, proč v C:\Git\alzask\spec\2026-06-18_svoz-fr-tc\state.md je stále stav rozpracovaný. Myslel jsem, že už je vše hotovo.
+--- 2026-06-19 10:50 | V souboru docs\fr\comp\api\container\FR-COMP-API-CONTAINER-001_REST_API_Container.md není správně pořadí změn v changelogu. Jak je to možné? Řešili jsme to už mnohokrát...
+--- 2026-06-19 10:51 | Naopak v TC docs\fr\comp\api\container\tc\TC-COMP-API-CONTAINER-001-01_PUT_upsert.feature chybí záznam v chynges úplně.
+--- 2026-06-19 10:52 | worktree už nepotřebuji. Primárně stačí změny v dev/martint
+--- 2026-06-19 15:30 | Upřesnění: stanice se skládá z portů. Každý z portů je buď na straně PS nebo na straně AGV. Stanice tedy obsahuje zdrojové porty (strana PS) a cílové porty (strana AGV). Pojmenování jednotlivých portů a jejich přiřazení do stanic 
+--- 2026-06-19 15:35 | Upřesnění: stanice se skládá z portů. Každý z portů je buď na straně PS nebo na straně AGV. Stanice tedy obsahuje zdrojové porty (strana PS) a cílové porty (strana AGV). PS vychystávací port je tedy místo, ze které se obvykle zbož
+--- 2026-06-19 20:35 | /rename Připomínky neoblíbené kolegyně
+--- 2026-06-19 20:40 | /spec Kolegyně, kterou nemám příliš v oblibě, mi poslala připomínky k diagramu @docs/api/Diagrams-API-AlzaSk-v2.md  | Zhodnoť jejich relevanci na škále 1 až 10 a navrhni zda a jak bys je zapracoval. | Pracuj v samostatné worktree! |  | [P
+--- 2026-06-19 21:18 | Otázka 1 identifikátor konkrétní bezpečnostní funkce je SF 25 to znamená odpověď c. otázka 2 Protože  Protože při meetingu vnitřních vrat když tam bude projíždět robot nemusí být zajištěna tak vysoká ochrana . Otázka 3  B. Otázka 
+--- 2026-06-19 21:56 | /rename Připomínky neoblíbené v2
+--- 2026-06-19 21:57 | /spec Kolegyně, kterou nemám příliš v oblibě, mi poslala připomínky k diagramu |   @docs/api/Diagrams-API-AlzaSk-v2.md |   Zhodnoť jejich relevanci na škále 1 až 10 a navrhni zda a jak bys je zapracoval. |   Pracuj v samostatné worktree
+--- 2026-06-19 22:03 | /rename Připomínky neoblíbené v3
+--- 2026-06-19 22:04 | /spec Kolegyně, kterou nemám příliš v oblibě, mi poslala připomínky k diagramu |     @docs/api/Diagrams-API-AlzaSk-v2.md |     Zhodnoť jejich relevanci na škále 1 až 10 a navrhni zda a jak bys je zapracoval. |     Pracuj v samostatné wo
+--- 2026-06-19 22:08 | Začal jsi pracovat v existujícím worktree, kde jsem měl rozpracovanou práci. Měl sis založit nové worktree. Můžeš obnovit soubory, které jsi mi vymazal?
+--- 2026-06-19 22:17 | Chci obnovit přece soubory v pripominky-diagram-v2
+--- 2026-06-19 22:54 | Nechal jsem Claude třikrát zpracovat úkol dle velice podobného zadání.  | Řešení jsou uložená zde: | C:\Git\alzask\.claude\worktrees\pripominky-diagram-v2\spec\2026-06-19_hodnoceni-pripominek-diagram-v2 | C:\Git\alzask\.claude\worktrees
+--- 2026-06-19 23:48 | /spec Kolegyně, kterou nemám příliš v oblibě, mi poslala připomínky k diagramu |     @docs/api/Diagrams-API-AlzaSk-v2.md |     Zhodnoť jejich relevanci na škále 1 až 10 a navrhni zda a jak bys je zapracoval. |     Pracuj v samostatné wo
+--- 2026-06-19 23:50 | /rename Připomínky neoblíbené v4
+--- 2026-06-19 23:51 | /spec Kolegyně, kterou nemám příliš v oblibě, mi poslala připomínky k diagramu |       @docs/api/Diagrams-API-AlzaSk-v2.md |       Zhodnoť jejich relevanci na škále 1 až 10 a navrhni zda a jak bys je zapracoval. |       Pracuj v samosta
+--- 2026-06-20 11:56 | ne, zajímá mě více celé ACE. Je to přístup, který se již osvědčil a dává solidní výsledky? Nebo existují lepší přístupy? Jde mi o to, že svou zpětnou vazbu již dávám v průběhu sessions tím, že opravuji výsledky. Rád bych měl systé
+--- 2026-06-20 12:21 | commit jsem vrátil, budu commitovat později. Úklid necháme na později.
+--- 2026-06-20 12:25 | Nyní dle svých zjištění oprav M01, M08, M09
+--- 2026-06-20 13:53 | M02) Dle @"docs/analysis/940-SO-255257_Kvados_ALZA_Posouzení rizik_V1.0.md" i dle @docs/analysis/Seznam_prvku_ALZA_2026-06-18.xml by na pracovištích předpříjmu (hlavní i vedlejší pracovní stanice) měla být tlačítka RESET a START. 
+--- 2026-06-20 14:46 | v2 a v3 můžeš v worktrees také smazat. Já jsem ale nechtěl dělat commit. Tady v tomto projektu nikdy nedělej commity
+--- 2026-06-20 16:32 | V názvech kapitol mi chybí pojmenování D1 až D9
+--- 2026-06-20 16:36 | Pokud v poznámkách v diagramech je text rozdělen do více řádků, tak někdy mi na konci řádku chybí významově čárka. Pokud by text byl napsaný na jednom řádku a mezi informacemi by byla čárka nebo střední, tak ji chci zachovat i teh
+--- 2026-06-22 08:59 | ad m06) Připadá mi jako nejlepší řešení, aby WMS volalo nejprve containerRemoved a teprve pak, až je nosič v outsideZone, tak volal DELETE. Jaké to má slabé stránky, rizika?
+--- 2026-06-22 09:11 | Myslím, že tuto situaci mu budeme muset řešit jako výjimku. Pokud se nepletu tak můžou nastat 2 situace . Buď operátor paletu s dopravníků odebere vyřeší problém s nečitelným kódem nosiče, například odstraní fólií která nosič přik
+--- 2026-06-22 15:12 | Mám podezření, že tehdy jsme nemysleli na variantu, že nebude načtený kód nosiče právě 2 čtečkou. Že to je ta jediná situace, kterou nyní potřebujeme nějak ošetřit. Takže nechceme v takové situaci nebo nechci zavádět precedenc že 
+--- 2026-06-22 15:35 | Ano, můžeš takto vyřešit. Zdokumentuj, že se jedná primárně o situaci nečitelného nosiče na druhé čtečce.
+--- 2026-06-22 23:15 | Souhlasím s dalšími kroky 1, 2 . | Jak to, že v RULE-GOV-001 nevidím žádné změny?
+--- 2026-06-23 14:31 | /pruzkum Jaký linter by se hodil na kontrolu specifikací, která tvořím pro řízení PLC? Jedná se mi o kontrolu analytických dokumentů, ne programového kódu.
+--- 2026-06-25 13:53 | Nejsem si jistý u B8, zda vždy má platit. | B14: word | Napiš plc-lint pro třídy 1, 2 i 3.
+--- 2026-06-27 18:40 | Nejprve by se měl změnit status objednávky a teprve pak se volá webhook ne?
+--- 2026-06-27 19:18 | Pokud je nosič vymazán, tak WES nastavuje u nosiče interní proměnnou valid=0. Tato se ale nepublikuje do WMS. doplnit do diagramů?
+--- 2026-06-28 13:27 | Připrav seznam bodů jednání s PAC, která se primárně týká PLC. Potřebuji vyjasnit známé otázky a na schůzce dále zjistit, co nevíme a co dalšího je potřeba řešit. Vycházej ze stávající dokumentace k PLC, z existujících záznamů z j
+--- 2026-06-28 13:53 | Připrav jako přehledný claude artefact, který vhodně a srozumitelně vizualizuje jednotlivé problémy, umožňuje přepínat, zda bod jednání je neřešený, byl již vyřešen, nebo je otevřený. Možnost zapsat jako text i vlastní komentáře. 
+--- 2026-06-28 14:12 | nefunguje tlačítko reset. Hodnoty zůstaly uložené.
+--- 2026-06-28 14:24 | Potřebuji kritické filtrovat nezávisle na ostatních filtrch
+--- 2026-06-28 14:28 | Číslo ve filtru jen kritické by mělo respektovat, zda filtruji Neřešené, Otevřemé, Vyřešené...
+--- 2026-06-28 14:40 | A4b) Toto je dělící clona mezi AGV zónou a S/R (PS). Tam jezdí AGV. Ve specifikaci jsme psali, že pokud jsou obě zóny aktivní, je clona mutovaná, pokud jedna zóna stojí, není muting a narušení zastavuje druhou zónu. Je to tak?
+--- 2026-06-28 14:41 | A4c) Proč je to jako dotaz? Není zřejmé z dokumentace nebo je někde rozpor?
+--- 2026-06-28 14:50 | Tlačítko Stahnout .md neuloží soubor lokálně.
+--- 2026-06-29 09:14 | V konverzaci je zmínka o spec/2026-06-18_vychystavaci-porty-plc/. V repu ji ale nevidím. Co se s ní stalo, byla vymazána?
+--- 2026-06-29 20:00 | V jednotlivých projektech mám uložené záznamy z jednání, například v C:\Git\alzask\docs\meetings nebo C:\Git\fhb\docs\meetings. Z konkrétního jednání potřebuji pravidelně zpracovat seznam důležitých V závěru, která se mají impleme
+--- 2026-06-29 20:27 | Ano, vytvoř na user level. Pojmenuj /body-z-jednani. Parametrem může být datum ve formátech [YYYY-MM-DD], [DD.MM.YYYY], [DD. MM. YYYY], [DD. MM.], [DD.MM.], [DD.]. Pokud není uvedený měsíc a rok, tak se považuje aktuální měsíc a r
+--- 2026-06-29 20:38 | Architektura zastavení a PLC |                                                                                                          1. LED pásky (Pick-to-Light) ven z PLC spec → do WES dokumentace                                
+--- 2026-06-29 21:03 | Zpracování chci provést tak, aby v aktuální session zpracování zabralo co nejméně kontextového okna.
+--- 2026-06-29 21:07 | Do kontextu vůbec nezahrnuj informace z @docs/meetings/2026-06-29_body-k-implementaci.md
+--- 2026-06-29 21:11 | Analyzuj poslední konverzaci "PLC porty PICK_SOUTH", proč nebyly do výstupu přidány volné řádky za každý z bodů.
+--- 2026-06-29 21:21 | ano, uprav. | Zároveň pak analyzuj, proč, když jsem tento prompt spustil v samostatné session, tak vygeneroval jen 14 bodů. Co nebylo pokryto a v čem byl faktický rozdíl a z jakého důvodu.
+--- 2026-06-29 21:39 | /body-z-jednani 29. | Nevšímej si @docs/meetings/2026-06-29_body-k-implementaci.md
+--- 2026-06-29 21:41 | Z jednání @docs/meetings/2026-06-29_06-29_Alza_Integrace_PLC_bezpečnostní_zastavení_a_konfigurac.md |   vyplynuly závěry, které jsou v @docs/meetings/2026-06-29_body-k-implementaci.md |  |   Implementuj podle tohoto seznamu tyto body: |  
+--- 2026-06-29 21:41 | Z jednání @docs/meetings/2026-06-29_06-29_Alza_Integrace_PLC_bezpečnostní_zastavení_a_konfigurac.md |   vyplynuly závěry, které jsou v @docs/meetings/2026-06-29_body-k-implementaci.md |  |   Implementuj tyto body: |   1, 3, |   4) jedná se 
+--- 2026-06-29 22:34 | Měním rozhodnutí. Chci zahrnovat i body, které nemají vliv na realizaci, ale chci je mít v poslední jasně pojmenované kapitole.
+--- 2026-06-29 22:36 | Prováděl jsi i revizi? Pokud ne, tak udělej.
+--- 2026-06-30 07:54 | V horní části obrázku ještě naznač PLC5xx. (Horní strana AGV zóny sousedí svou severní stranou s jižní stranou PS). Vychystávací zóna je tvořena vychystávacími porty PS a naproti nim jsou vychystávací porty AGV.  | Rozlišuj, zda se 
+correction candidates: 79

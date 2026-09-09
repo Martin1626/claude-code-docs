@@ -1,0 +1,139 @@
+00 · úvod
+Jak funguje
+Claude Code
+Uvnitř je jen jazykový model — hloupá, ale mocná funkce z textu na text.
+Veškerá akce a paměť se odehrává kolem něj, ne v něm.
+Cíl: pochopit, proč nástroj, který „umí jen psát text", dokáže spouštět příkazy a editovat soubory.
+01 · model
+Model je bezstavová funkce
+Představ si automat na text: vhodíš dovnitř blok textu, vypadne blok textu. Nic víc uvnitř není.
+Mezi dvěma voláními si model nepamatuje vůbec nic. Každé volání začíná od nuly.
+To je klíč k celému zbytku prezentace — „paměť" konverzace je iluze, kterou vytváří okolí.
+Claude
+Code
+je…
+f( )bez paměti
+agent
+postavený
+…
+vstup → f( ) → výstup · uvnitř nic nezůstane
+02 · model
+Tokeny — čím model měří text
+Model nevidí písmena ani celá slova, ale tokeny: kousky slov. Je to jednotka, za kterou se platí a která plní kontext.
+znaků: 0
+tokenů: 0
+≈ 0 znaku / token
+Angličtina
+Čeština (diakritika)
+Pro angličtinu ≈ 3,5 znaku na token (dokumentace Anthropic). Čeština s diakritikou se seká
+na víc kousků — víc tokenů na totéž sdělení. Rozpad tokenů níže je ilustrativní;
+přesný poměr pro češtinu Anthropic nezveřejňuje.
+03 · model
+Text vzniká token po tokenu
+Model nenapíše odpověď najednou. Předpovídá jeden token, přilepí ho na konec, přečte celý text znovu a předpoví další.
+Tomu se říká autoregrese — „predict the next word, given the previous context".
+Malá vnitřní smyčka „napiš → přečti vše → napiš dál". Je to předstupeň té velké smyčky na konci prezentace.
+napiš → přečti → napiš
+Claude Code je agent …
+Claude Code je agent …
+Claude Code je agent postavený …
+04 · model
+Proč stejný vstup nedá stejný výstup
+Model nevydá jeden token, ale rozdělení pravděpodobností přes možné tokeny. Z něj se pak losuje.
+Losovat znovu
+teplota řídí, jak moc se losuje vs. bere nejpravděpodobnější
+Zajímavost: i při teplotě 0 není výstup zaručeně identický. Tvůj dotaz běží v jedné dávce
+s cizími požadavky a jejich skladba nepatrně změní pořadí výpočtů na GPU — a tím i výsledek.
+05 · model harness
+Kontext — jediné, co model vidí
+Vše, co má model k dispozici, se vejde do jednoho vstupního bloku. Jeho strop je kontextové okno.
+systémový prompt
+historie konverzace
+tvůj dotaz
+volné místo
+instrukce (systém)
+dosavadní historie
+nový vstup
+kapacita
+Dnešní okno má u Claude Code až 1 milion tokenů. Do něj se skládá systémový prompt, celá
+historie i tvůj dotaz — proto se historie posílá pokaždé znovu (viz bezstavovost).
+06 · harness
+Druhý tah: cache, ať neplatíš dvakrát
+Když se posílá celá historie znovu, neplatí se pořád za totéž? Skoro ne — díky prompt cachingu.
+Neměnný začátek promptu (systém, nástroje, starší zprávy) se uloží. Při dalším tahu se za něj neplatí plná cena, jen zlomek.
+Proto je pokračování v konverzaci levné a rychlé, i když technicky posíláme historii pokaždé celou.
+kešovaný prefix
+nový
+čtení z cache10 % ceny
+běžný vstupní token100 %
+zápis do cache (5 min)+25 %
+zápis do cache (1 h)+100 %
+Zápis je jednorázová investice; vrátí se při opakovaném použití stejného prefixu.
+07 · harness
+Když dojde místo: kompaktace
+Kontext je konečný. Dlouhá práce ho postupně zaplní. Co pak?
+Claude Code sleduje zaplnění a než narazí na tvrdý limit, spustí kompaktaci: starší část konverzace shrne a nahradí souhrnem. Zůstane záměr úkolu, klíčová rozhodnutí a stav souborů; zahodí se doslovné výstupy nástrojů a mezikroky.
+s kompaktací
+Okno se uvolní, session pokračuje dál. Dlouhé sezení zůstává naživu.
+bez kompaktace
+Okno se zaplní → tvrdý limit. API buď odmítne požadavek, nebo odpověď ořízne. Konverzace by se v určitém bodě prostě zasekla.
+08 · harness
+Od modelu k agentovi
+model
+Umí jen navrhnout text. Nemůže sám spustit příkaz ani sáhnout na soubor. Žije mimo svět.
+harness = Claude Code
+Program okolo modelu. To on skutečně jedná ve světě: spustí příkaz, čte a zapisuje soubory, volá model dokola.
+Model je mozek bez rukou. Harness jsou ruce — a také ten, kdo modelu čte a podává práci.
+09 · model harness
+Nástroje — dohodnutý jazyk
+Model neplácne do textu „spusť tohle" a harness to nevydoluje regexem. Model vydá strukturovaný požadavek na nástroj (tool_use) — přesný JSON podle předem daného schématu.
+Harness ho rozpozná, nástroj provede a výsledek zabalí zpět jako tool_result do dalšího vstupu.
+Model pak dostane zase celou historii — včetně toho, co nástroj vrátil — a rozhodne, co dál.
+← model
+{ type: "tool_use",
+name: "run_command",
+input: { cmd: "npm test" } }
+→ harness provede, vrátí
+{ type: "tool_result",
+content: "12 passed" }
+10 · model harness
+Agentní smyčka — srdce celé věci
+01
+harness → model
+Pošle celý kontext (historie + dotaz) na vstup modelu.
+02
+model odpoví
+Vrátí text a/nebo požadavek na nástroj (tool_use).
+03
+harness provede
+Spustí nástroj — příkaz, čtení či zápis souboru.
+04
+výsledek zpět
+Odpověď modelu + výsledek nástroje přilepí do kontextu.
+05
+model rozhodne
+Další nástroj? Nebo je odpověď hotová (end_turn)?
+06
+opakuj ↺
+Dokud model nedá signál „konec". Pak dostáváš finální výstup.
+▶ Přehrát smyčku
+Model neběží — je volán opakovaně. Agent = mnoho bezstavových volání za sebou.
+11 · shrnutí
+Hloupá funkce na text
++ chytrá smyčka kolem ní
+= agent.
+Model je bezstavový a jen předpovídá další token.
+Harness mu podává kontext, provádí nástroje a volá ho dokola.
+Model se světa nedotkne — jedná jen harness kolem něj.
+svět
+příkazy
+soubory
+⇄
+Harness · Claude Code
+Model
+text → text
+⟳volá dokola,
+dokud není hotovo
+Kam to vede dál: oprávnění, více nástrojů, subagenti — ale to už je jiná smyčka.
+← → nebo mezerník
+1 / 12

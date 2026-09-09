@@ -1,0 +1,140 @@
+### NO-WRITE GATE : 12
+  - 2026-08-04 12:13 | Připrav mi podklady k tomu, abych mohl rozhodnout, co se má zobrazovat na HMI panelech. ZAtím nic neukládej, jan zjisti související informace a zeptej
+  - 2026-08-10 17:47 | Rád bych udělal větší pořádek v pojmenování diagramů. Potřeboval bych diagramy, které popisují minimálně tyto procesy: Předpříjem - příjem nosiče Před
+  - 2026-08-10 18:56 | Rád bych udělal větší pořádek v pojmenování diagramů. Potřeboval bych diagramy, které popisují minimálně tyto procesy: Předpříjem - příjem nosiče Před
+  - 2026-08-13 10:00 | Tranzit může být v ASRS v2 zahájený buď novou objednávkou, nebo nová objednávka může být vyřízena již existujícím tranzitem. Takto je to rozdíl oproti
+  - 2026-08-14 14:03 | 1) V případě expedice tranzit končí na portu, tedy na odběrovém místě. V případě pickingu až po vrácení zpět do skladu nebo po neplánovaném containerR
+  - 2026-08-14 19:36 | Přečti tyto tři dokumenty ve složce C:\Git\fhb\docs\api\asrs-v2\ jako tři vrstvy popisu jedné a téže věci: KONCEPT ASRS-v2-API-koncept.md — záměr: co 
+  - 2026-08-14 20:29 | Porovnej dvě vrstvy popisu jednoho API v repozitáři C:\Git\alzask: TOK docs\api\Diagrams-API-AlzaSk-v3.md — chování v čase: kdo koho volá, v jakém poř
+  - 2026-08-15 13:23 | Předpokládám, že kvůli NSwag tam tělo být musí, je to tak? Pokud by tělo nebylo, není správnější 204? Nic zatím neměň.
+  - 2026-08-17 15:10 | Načti si API a relevantní ADR, FR a TC. Připrav návrh, co je potřeba doplnit do ADR případně do API descriptions. Zatím nic neměň, vyberu, co implemen
+  - 2026-08-19 21:38 | Proveď C:\tmp\alzask-prompt-porty-aktivace-stanice.md . Nic needituj ani nevytvářej. Zatím piš jen do chatu.
+  - 2026-08-22 11:21 | připrav projekt který smapuje všechny prvky systému a připraví jejich ontologií chci projít postupně všechny důležité dokumen ty ve k nezapomnělo zatí
+  - 2026-08-22 11:22 | připrav prompt který zmapuje všechny prvky systému a připraví jejich ontologií chci projít postupně všechny důležité dokumen ty ve k nezapomnělo zatím
+
+### PROMPT-AS-ARTIFACT : 10
+  - 2026-08-07 18:55 | Máš pravdu s tou obrazovkou. Vytvoř krátký prompt pro Claude Design, aby mi takou chybějící obrazovku vytvořil. (https://claude.ai/design/p/66bc8590-d
+  - 2026-08-07 18:56 | Máš pravdu s tou obrazovkou. Vytvoř krátký prompt pro Claude Design, aby mi takou chybějící obrazovku vytvořil. (https://claude.ai/design/p/66bc8590-d
+  - 2026-08-14 14:03 | 1) V případě expedice tranzit končí na portu, tedy na odběrovém místě. V případě pickingu až po vrácení zpět do skladu nebo po neplánovaném containerR
+  - 2026-08-14 17:04 | Vylepši tento prompt a napiš do chatu: Prostuduj si C:\Git\fhb\docs\api\asrs-v2\ASRS-v2-API-koncept.md a vytipuj 3 rozpory nebo informace, po jejichž 
+  - 2026-08-14 20:15 | Vytvoř nyní obdobný prompt pro: docs\api\Diagrams-API-AlzaSk-v3.md docs\api\API-myFABER-WES-AlzaSk.yml
+  - 2026-08-19 14:35 | Připrav prompt, který mi pomůže s tímto: Promysli, jak má WES správně řídit porty ovládané PLC, aby bylo správně podporováno také aktivování a deaktiv
+  - 2026-08-19 15:18 | Zjistil jsem, že volání událostí v diagramech neodpovídá tomu, co je uvedeno v C:\Temp\WMS_volani_na_portech_k_odsouhlaseni.md. Připrav prompt, který 
+  - 2026-08-22 11:22 | připrav prompt který zmapuje všechny prvky systému a připraví jejich ontologií chci projít postupně všechny důležité dokumen ty ve k nezapomnělo zatím
+  - 2026-08-24 10:44 | N1, N2, N4 přijmout před přenosem. N3 zamítnout Pokračuj další dávkou. Pro změny v pluginech vytvoř pak samostatný prompt, abych jej mohl spustit ve s
+  - 2026-08-25 19:29 | Napiš prompt pro novou session, co je potřeba nejnaléhavěji dodělat
+
+### ASK-FIRST : 10
+  - 2026-08-03 13:06 | Dodavatel BullsEye nám dnes e-mailem poslal tyto informace Weighing machine: Provide DC24V power to the weighing machine, connect a network cable to c
+  - 2026-08-04 11:33 | Implementuj a zkontroluj, že aktuální stav odpovídá závěrům bodů: 3, 4, 7, 8, 10, 11, 12, 13, 16, 17, 18, 20, 22, 23: nejedná se o BMW, ale WMS volá r
+  - 2026-08-04 12:13 | Připrav mi podklady k tomu, abych mohl rozhodnout, co se má zobrazovat na HMI panelech. ZAtím nic neukládej, jan zjisti související informace a zeptej
+  - 2026-08-04 20:28 | Na vstupním dopravní kolem portu příjmovém otevření portu zajišťuje automaticky PLC v okamžiku když sport jé aktivní a zároveň prázdný . Takže ihned p
+  - 2026-08-13 22:57 | Tak, jak byly důležité závěry a změny z Alzy implementované do docs\api\asrs-v2\API-myFABER-ASRS-v2-README.md, tak nyní je potřebuji udělat opět pomoc
+  - 2026-08-14 13:38 | Prostuduj si C:\Git\fhb\docs\api\asrs-v2\ASRS-v2-API-koncept.md a vytipuj 3 rozpory nebo informace, po jejichž správném vyjasnění bys dokázal opravit 
+  - 2026-08-14 15:53 | Prostuduj si C:\Git\fhb\docs\api\asrs-v2\ASRS-v2-API-koncept.md a vytipuj 3 rozpory nebo informace, po jejichž správném vyjasnění bys dokázal opravit 
+  - 2026-08-14 17:04 | Vylepši tento prompt a napiš do chatu: Prostuduj si C:\Git\fhb\docs\api\asrs-v2\ASRS-v2-API-koncept.md a vytipuj 3 rozpory nebo informace, po jejichž 
+  - 2026-08-17 15:10 | Načti si API a relevantní ADR, FR a TC. Připrav návrh, co je potřeba doplnit do ADR případně do API descriptions. Zatím nic neměň, vyberu, co implemen
+  - 2026-08-24 08:38 | Byla vytvořena ontology.yaml pro tento projekt. potřebuji ji ukotvit do projektu, aby při dalších změnách a úpravách se specifikace o ni vhodně opíral
+
+### GROUNDING CHALLENGE : 13
+  - 2026-08-05 17:50 | Na expedičním dopravníku v mezaninu čidlo máme, dopravník dodává TMT a PAC jej řídí. Proč na Expedici sever se neposílá readyToClose? Jak jsi na to př
+  - 2026-08-07 16:48 | Odkud pochází tvrzení, že Alza nebude posílat readyToClose u vstupního dopravníku předpříjmu?
+  - 2026-08-07 17:01 | Zjisti, kdo a kdy to měnil z bliká na svítí.
+  - 2026-08-09 20:28 | Na posledním jednání @docs/meetings/2026-08-07_08-07_Alza_HMI_obrazovky_procesy_nouzového_přdpříjmu.md bylo s Alzou dohodnuto, že port nouzového předp
+  - 2026-08-09 20:44 | Skutečně platí, že na západních portech AGV zóny, pokud jsou nosiče v režimu IN, tak WMS volá readyToClose? Kde to má oporu? Je tato kontrola nezbytná
+  - 2026-08-11 10:29 | Chyba v D1.2: pokuzd druhá čtečka FAIL, tak WMS nemůže volat containerRemoved, protože nezná containerId. Operátor na HMI panelu uvede, že odebral nos
+  - 2026-08-13 22:32 | C:\Git\fhb\docs\api\asrs-v2\ASRS-v2-API-koncept.md myslím byl již použitý jako zadání pro vytvoření C:\Git\fhb\docs\api\asrs-v2\API-myFABER-ASRS-v2.ya
+  - 2026-08-14 08:56 | auto-merge: neplatí po celou dobu držení nosiče. Stačí do doby containerPrepared. Nepotřebuji zavádět pickingAutoMergeWindow. Odběrové místo v FHB: od
+  - 2026-08-15 13:23 | Předpokládám, že kvůli NSwag tam tělo být musí, je to tak? Pokud by tělo nebylo, není správnější 204? Nic zatím neměň.
+  - 2026-08-18 10:54 | Přečti si celý dokument @"docs/plc/sources/bullseye/WCSWMS Interface document BullsEye V1.6-2026-06-25.pdf" Jakým způsobem WCS žádá WMS (WES) o inboun
+  - 2026-08-22 19:52 | Laicky mi vysvětli princip a postup, který tedy navrhuješ. Jak bude vypadat index, kdo a kdy jej vytváří apod?
+  - 2026-08-24 21:42 | V C:\Git\alzask\.claude\skills\ontologie-prvku-alzask\SKILL.md jsou zapsaná čísla, která se po aktualizacích ontologie mění. Připadá mi to neefektivní
+  - 2026-08-25 14:11 | Když posílám nové otázky dodavateli, kdo a kdy jim přidělí čísla? Co v okamžiku, když už jsem poslal své otázky a nepřidělil jim čísla nebo je očíslov
+
+### REVIEW : 19
+  - 2026-08-09 21:15 | Na konci proveď revizi subagentem a případné chyby oprav.
+  - 2026-08-10 19:43 | Upozorňuji, že ERROR_PRE_RECEIPT_0_1_P01 je dopravníkový port na dopravníkové stanici ERROR_PRE_RECEIPT_0_1 a je u něj instalovaný HMI panel! Robot zd
+  - 2026-08-11 16:33 | Subagentem proveď adversariální revizi změn v mém posledním commitu zda odpovídají všude závěrům z této session a ADR. Oprav pak závažné nálezy.
+  - 2026-08-12 21:20 | /compact Proveď subagentem revizi všech diagramů, zda odpovídají dohodnutým závěrům. Pak oprav závažné nálezy.
+  - 2026-08-12 21:21 | Proveď subagentem revizi všech diagramů, zda odpovídají dohodnutým závěrům. Pak oprav závažné nálezy.
+  - 2026-08-13 12:24 | Na error portu u předpříjmu má WMS dostávat všechny události , jak je uvedeno v diagramu. Uprav FR a TC. Potom proveď subagentem revizi a oprav závažn
+  - 2026-08-13 15:13 | Před tím než budu dělat commit proveď subagentem závěrečnou revizi a dej mi stručnou zprávu.
+  - 2026-08-13 19:48 | 1. Pomocí subagentů implementuj všechny vyjmenované změny, kromě F2. 2. Subagentem proveď revizi změn. 3. Pokud existují závažné nedostatky, oprav je 
+  - 2026-08-14 10:14 | Potvrzuji: pokud jiný vhodný nosič neexistuje — když je požadované SKU jen v tom zamčeném, tak po definované době přechází objednávka do blocked. Suba
+  - 2026-08-14 14:24 | Doplň zadání ještě o tyto body: Zůstávají tři věci, které revize označila a které nejsou rozhodnuté: katalog error.code není nikde publikovaný, přesto
+  - 2026-08-14 19:39 | Doplň zadání ještě o tyto body: Zůstávají tři věci, které revize označila a které nejsou rozhodnuté: katalog error.code není nikde publikovaný, přesto
+  - 2026-08-15 08:32 | Subagentem reviduj vytvořené ADR.
+  - 2026-08-15 09:31 | Varianta A, nakresli D8.2 a D8.4 1.) subagenty proveď úpravy 2.) subagentem proveď revizi 3.) pokud existují závažné nedostatky, subagentem proveď opr
+  - 2026-08-17 21:07 | Udělej A. ADR uprav, je zbytečné psát, že stohovač není staníce. Stačí napsat, že se jedná o procesní lokaci. 2. Potom subagentem s modelem Fable prov
+  - 2026-08-18 16:09 | Otázky formuluj jako podkapitoly: 2.1.1 Q1 — How does WES-PLC talk to WCS-PLC, atd. V rámci kapitol nedávej vše na jeden řádek. Potom: 1.) proveď suba
+  - 2026-08-19 14:21 | 1. Subagentem (Fable) proveď adversariální revizi provedených změn. 2. Pokud existují skutečně závažné nálezy, tak je oprav subagentem a pokračuj bode
+  - 2026-08-19 16:20 | Udělej průzkum, jak v Claude Code nejefektivněji provádět revize při tvorbě specifikací tohoto mého projektu. Zatím používám tento prompt, ale při opr
+  - 2026-08-19 16:20 | /pruzkum Udělej průzkum, jak v Claude Code nejefektivněji provádět revize při tvorbě specifikací tohoto mého projektu. Zatím používám tento prompt, al
+  - 2026-08-21 11:54 | /spec-factory:review-spec Reviduj změny provedené v této session
+
+### DECISION REVERSAL / SELF-CORRECTION : 9
+  - 2026-08-07 17:15 | Chci proto ponechat tvrzení, že tlačítko bliká. Zruš provedené změny na "svítí". Alza potvrdila, že text na HMI panelech má být ve slovenštině a angli
+  - 2026-08-10 15:57 | Tak nakonec jsem to přehodnotil a chci to srovnat podle toho, jak to je v AGV zóně. Tzn. nejprve posílat containerTransitCompleted a teprve potom cont
+  - 2026-08-10 18:57 | Rozhodl jsem se, že diagramy přečísluji tak, abych je mohl rozděli a seřadit tak, aby to dávalo co nejvíce logický smysl. Připrav návrh - seznam-
+  - 2026-08-11 16:15 | Beru zpět rozhodnutí, že na AGV portech se nevolá readyToClose. Platí to jen pro režim OUT. Pokud je AGV port v režimu IN, tak se musí nejprve volat c
+  - 2026-08-13 13:48 | 3) měním své rozhodnutí - containerRemoved se má odesílat automaticky jako dosud. Operátor nezávisle na tom stiskne na HMI panelu tlačítko, že nosič o
+  - 2026-08-13 14:52 | Omlouvám se, HMI panel na předpříjmu i nouzovém předpříjmu má tlačítko pro odebrání. Po jeho stisknutí by mělo být odesláno containerRemoved. Dává to 
+  - 2026-08-25 20:19 | Tak to jsem špatně pochopil. Potvrzuji, že měřící brána má jen čidla, která měří volno/obsazeno. V PLC budou číslována pořadovými čísly od nejnižších 
+  - 2026-08-25 20:24 | Měním své rozhodnutí. Transformace hodnot z čidel na hodnoty v mm bude v gesci PLC. Převede hodnoty z čidel bude vrace hodnoty v milimetrech dle insta
+  - 2026-08-25 20:26 | Měním rozhodnutí. Budu chtít změnit jen diagramy. FR a TC nechám na kolegyni.
+
+### EXPLAIN / LEARNING : 10
+  - 2026-08-13 10:03 | Vysvětli jednoduše problematiku containerPrepared u příjmu.
+  - 2026-08-14 09:04 | Vysvětli mi: handoff lokace LOC-CONV-* se posílají bez portId.
+  - 2026-08-21 15:04 | Vysvětli co v ADR znamená, že dělba je určena místem a ne typem prvku. "**Vyřešeno** — `ADR-ASK-HW-002` vedl měřicí brány paušálně pod kanálem PLC; re
+  - 2026-08-22 19:52 | Laicky mi vysvětli princip a postup, který tedy navrhuješ. Jak bude vypadat index, kdo a kdy jej vytváří apod?
+  - 2026-08-24 08:49 | Vysvětli jak funguje a k čemu se používá docs\ontology\anchors.tsv
+  - 2026-08-24 09:12 | vysvětli i návazná témata
+  - 2026-08-24 09:40 | Laicky vysvětli V3. Nevím, co jsou seamy. Nebylo by vhodnějším řešením, kdyby ontologie byla vždy řešena jen na úrovni konkrétního projektu, aby byla 
+  - 2026-08-24 09:53 | laicky vysvětli ten latentní rozpor
+  - 2026-08-24 13:00 | Vytvoř grafickou schématickou stránku (claude artefakt), pomocí které budu schopen kolegům analytikům vysvětlit smysl a princip používání ontologie na
+  - 2026-08-25 11:33 | Na konci mi pak laicky napiš postup, jak máme jako analytici v jednotlivých situacích postupovat, co máme dělat, jaké pokyny máme dát Claude Code apod
+
+### CORRECTION HARD : 8
+  - 2026-08-07 17:28 | Pozor! Ve změnách TC vidím stále toto! Proč jsi to nevrátil zpět? [Image #5]
+  - 2026-08-10 18:59 | "příjem outbound" je blbost. Mám příjmový dopravník a expediční dopravník (označovaný jako error větev)
+  - 2026-08-11 10:29 | Chyba v D1.2: pokuzd druhá čtečka FAIL, tak WMS nemůže volat containerRemoved, protože nezná containerId. Operátor na HMI panelu uvede, že odebral nos
+  - 2026-08-11 14:33 | V D3.1 se uvádí, že vstupní dopravník nemá poziční čidlo. To je chyba. NA mezaninech jsou poziční čidla z vstupního i výstupního dopravníku připojena 
+  - 2026-08-21 18:34 | Není pravda: "Nad automatizovaným paletovým skladem (PS, 4D shuttle) stojí **mezaninová nástavba se třemi patry**. " Mezaniny stojí vedle automatizova
+  - 2026-08-25 12:09 | Proč jsi na to nevytvořil vhodné projektové skills? Rád bych to používal opakovaně jednoduchým způsobem. e-maily z inboxu se po zpracování někam autom
+  - 2026-08-25 20:00 | Toto je mlná informace: "Pro řízení portu (blikání, otevírání) čidlo nahrazovat nemusí, protože PLC BullsEye svoje čidlo má a stav pozice zná." Bezpeč
+  - 2026-08-25 20:07 | Pokud se nepletu, tak toto také není přesné: "Upřesnění 2 — tlačítko se nerozbliká kvůli stisku na HMI. Blikání drží PLC autonomně ze stavu portu: bli
+
+### GIT : 10
+  - 2026-08-11 14:30 | Napiš 5 až 10 hlavních změn, které jsem provedl a chybí jejich commit. Pro každou 1 odstavec.
+  - 2026-08-11 16:33 | Subagentem proveď adversariální revizi změn v mém posledním commitu zda odpovídají všude závěrům z této session a ADR. Oprav pak závažné nálezy.
+  - 2026-08-13 07:58 | Druhá vrstva zůstává. containerTransitCompleted se volá až po containerRemoved, ale s hodnotou station jako všude jinde. Napiš název a popis pro commi
+  - 2026-08-13 13:30 | Na konci Připrav název a popis pro commit
+  - 2026-08-13 15:13 | Před tím než budu dělat commit proveď subagentem závěrečnou revizi a dej mi stručnou zprávu.
+  - 2026-08-22 21:04 | Otázka: má po containerRemoved ještě přijít containerTransitCompleted, nebo je containerRemoved konec? Platí varianta A, je potřeba dorovnat TC. Pokud
+  - 2026-08-24 11:17 | Provedl jsem commit, ale po regeneraci ontology vzniklo 350 změn v entitách, protože v souborech se změnil jen hash z ontology. Když provedu drobnou z
+  - 2026-08-24 12:18 | # PROMPT — Zpětné dorovnání nástrojů registru ze šablony pluginu (AlzaSk) > **Jak to použít:** vlož obsah do čerstvé session v repozitáři `C:\Git\alza
+  - 2026-08-24 12:39 | Dorovnej C061 (dorovnání TC + ADR-ASK-API-011 bylo odloženo „až za commit ontologie", který právě proběhl).
+  - 2026-08-25 19:38 | Naléhavě potřebuju propsat doložené odpovědi dodavatele BullsEye do PLC specifikací. Kontext: v předchozí session jsem ukotvil dodavatelskou korespond
+
+### ONTOLOGY/CITATION : 19
+  - 2026-08-03 15:05 | Potřebuji, aby ve výsledném dokumentu byly uvedené pouze informace obsažené v těch dvou uvedených dokumentech a nic ze specifikace. Chci mít čisté inf
+  - 2026-08-14 19:36 | Přečti tyto tři dokumenty ve složce C:\Git\fhb\docs\api\asrs-v2\ jako tři vrstvy popisu jedné a téže věci: KONCEPT ASRS-v2-API-koncept.md — záměr: co 
+  - 2026-08-14 20:29 | Porovnej dvě vrstvy popisu jednoho API v repozitáři C:\Git\alzask: TOK docs\api\Diagrams-API-AlzaSk-v3.md — chování v čase: kdo koho volá, v jakém poř
+  - 2026-08-19 19:41 | 1. Spusť docs/plc/.plc-tools/validate.cmd (nebo fr-tools/validate.py). Chyby lintru oprav hned, bez LLM. 2. Ulož baseline: git stash list nech být, je
+  - 2026-08-19 19:45 | 1. Spusť docs/plc/.plc-tools/validate.cmd (nebo fr-tools/validate.py). Chyby lintru oprav hned, bez LLM. 2. Ulož baseline: git stash list nech být, je
+  - 2026-08-21 17:58 | V docs\adr\process\ADR-ASK-PROC-018.md uprav ještě formulaci tak, aby bylo zřejmé, kdy se mluví o patech 4D shuttle (PS) a kdy o dopravnících, které j
+  - 2026-08-22 23:08 | Neměla by Citace obsahovat ale nějaký minimální počet slov? Pokud je to jen jedno slovo, tak hrozí, že úpravou dokumentu může také rychlo nastat dupli
+  - 2026-08-24 08:38 | Byla vytvořena ontology.yaml pro tento projekt. potřebuji ji ukotvit do projektu, aby při dalších změnách a úpravách se specifikace o ni vhodně opíral
+  - 2026-08-24 09:02 | Přečti celý a proveď docs/onboarding/PROMPT-ukotveni-ontologie.md
+  - 2026-08-24 09:07 | Přečti celý a proveď docs/onboarding/PROMPT-ukotveni-ontologie.md
+  - 2026-08-24 09:10 | Přečti celý a proveď docs/onboarding/PROMPT-ukotveni-ontologie.md
+  - 2026-08-24 09:19 | Souhlasím, je potřeba mít spolehlivý mechanismus, který bude udržovat kotvy. Pokračuj dávkou B.
+  - 2026-08-24 12:18 | # PROMPT — Zpětné dorovnání nástrojů registru ze šablony pluginu (AlzaSk) > **Jak to použít:** vlož obsah do čerstvé session v repozitáři `C:\Git\alza
+  - 2026-08-25 08:35 | OK, poznamenej do ukotvení.
+  - 2026-08-25 17:41 | prověř jak všechny nové informace od dodavatelů z e-maiul jak je potřeba nově ukotvit v ontologii prvku.
+  - 2026-08-25 19:38 | Naléhavě potřebuju propsat doložené odpovědi dodavatele BullsEye do PLC specifikací. Kontext: v předchozí session jsem ukotvil dodavatelskou korespond
+  - 2026-08-25 22:08 | Kam je vhodné ukotvit, že nosiče vyšší než 2100 mm (a do výšky 2200 mm) není možné expedovat na mezaninový dopravník v 5. patře mezaninu? Z tohoto dův
+  - 2026-08-25 22:42 | Proveď úklid podle RULE-ONT-003.
+  - 2026-08-25 22:43 | Ty zmizelé kotvy se pokus opravit sám.
+

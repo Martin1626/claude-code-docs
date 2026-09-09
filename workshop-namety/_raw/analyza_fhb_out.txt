@@ -1,0 +1,171 @@
+POCET PROMPTU: 218
+len min/p25/med/p75/p90/max: 1 8 43 107 193 6240
+PER MONTH: [('2026-02', 1), ('2026-03', 3), ('2026-04', 7), ('2026-06', 122), ('2026-07', 58), ('2026-08', 27)]
+SLASH COUNT: 64
+SLASH CMDS: [('/resume', 12), ('/rename', 11), ('/context', 10), ('/model', 6), ('/compact', 5), ('/config', 4), ('/body-z-jednani', 4), ('/spec', 3), ('/plugins', 2), ('/status', 2), ('/new', 1), ('/memory', 1), ('/exit', 1), ('/spec-factory:spec', 1), ('/spec-factory:review-spec', 1)]
+
+--- KRATKE (<=20 znaku, ne slash): 24
+   2026-03-03 22:27 | exit
+   2026-04-27 21:18 | exit
+   2026-06-10 10:31 | exit
+   2026-06-10 10:31 | exit
+   2026-06-18 23:25 | 2
+   2026-06-26 09:57 | implementuj
+   2026-06-26 21:21 | test
+   2026-06-26 21:58 | test
+   2026-06-26 22:57 | chci 1
+   2026-06-26 23:00 | další otázka
+   2026-06-26 23:14 | otázky 20, 21
+   2026-06-27 00:23 | OK
+   2026-06-27 09:05 | Implementuj
+   2026-06-27 15:59 | OK
+   2026-06-27 16:06 | test
+   2026-06-27 18:18 | a
+   2026-07-04 23:17 | oprav ty nesoulady
+   2026-07-07 10:51 | Otázky
+   2026-07-07 19:18 | Body z jednání
+   2026-07-09 13:44 | FHB Znalostní smyčka
+   2026-07-10 20:23 | test
+   2026-08-14 20:10 | revize
+   2026-08-21 15:57 | Navrhni opravy
+   2026-08-24 12:31 | Proveď: 1, 3
+
+=== DLOUHE >500 znaku ===
+pocet: 6
+----------------------------------------------------------------------
+2026-06-26 21:24 | LEN 6240
+Na základě závěrů schůzky @docs/meetings/2026-06-26_06-26_FHB_Sjednocení_terminologie_a_procesy_dopravníku.md prověř, zda jsou správně formulované následující otázky. Potřebuji je formulovat jednoduše, přesně a srozumitelně, aby jim rozuměli čínští dodavatelé. |  | PENDING: | 6. In picking process (scenario described on IMG - task scenario), how does WCS inform WMS that a container has been placed at po
+----------------------------------------------------------------------
+2026-07-07 10:59 | LEN 621
+BlueSword nám poslal odpovědi zde: @"docs/meetings/2026-07-07-FHB_Blue_Email |   issue-20260707-part-2.docx" |   Na interní schůzce jsme probírali návrhy odpovědí: |   @docs/meetings/2026-07-07_07-07_FHB_Zpracování_chyb_WCS_WMS_a_komunikace_s_dodavatelem.md |   Připrav návrhy odpovědí k jednotlivým otázkám dle závěrů schůzky. | Odpovědi a nové otázky formuluj k jednoduchému pochopení pro číňany, stejně jako
+----------------------------------------------------------------------
+2026-07-07 14:58 | LEN 592
+Formuluj závěry ohledně chování při nečitelném kódu nosiče, zde do chatu. | Co si pamatuji: WMS se musí vždy dozvědět o tom, co bylo načteno. Na základě toho pak vystaví úkol pro T40 (buď zaskladnění nebo převoz na jiný dopravník - UNLOAD). Pokud je kód nečitelný, tak WMS rozhodne, zda bude spuštěný alarm, nebo WMS vnutí své číslo nosiče a MCS (WCS) s tím pracuje tak, jako by byl kód nosiče úspěšně 
+----------------------------------------------------------------------
+2026-07-07 15:22 | LEN 834
+Souhlasím s tímto popisem. Tento popis se promítá do odpovědí na více otázek. Uprav odpovědi na otázky tak, aby odpovídaly tomuto popisu. Vysvětli číňanům důvody, proč preferujeme právě toto řešení. Chceme jednotné řešení pro inbound i picking. NApříklad v další etapě bude inbound dopravník napojen na předchozí část dopravníku, nebude tam obsluha a couvání dopravníku by nedávalo smysl. WMS primárn
+----------------------------------------------------------------------
+2026-08-14 20:13 | LEN 3344
+Přečti tyto tři dokumenty ve složce C:\Git\fhb\docs\api\asrs-v2\ jako tři vrstvy | popisu jedné a téže věci: |  |   KONCEPT   ASRS-v2-API-koncept.md        — záměr: co a proč to má dělat |   KONTRAKT  API-myFABER-ASRS-v2.yaml      — tvar dat: co skutečně projde |   NÁVOD     API-myFABER-ASRS-v2-README.md — jak to má druhá strana použít |  | Čti je celé, včetně poznámek pod sekcemi, otevřených otázek, TODO a ods
+----------------------------------------------------------------------
+2026-08-21 12:24 | LEN 545
+Zapracuj tyto body včetně mého upřesnění. Koncept má popisovat budoucí finální stav a možnosti, které zatím ještě nejsou implementované. To jen upřesňuji pro tvůj kontext. README by mělo být podmnožinou konceptu, ale nemělo by obsahovat významné rozpory. |  | 1) V readme je ukázka sekvenčního diagramu pro neřízený port. Je potřeba to popsat takto obecně, že pokud se jedná o neřízený port, tak tyto udá
+
+=== KEYWORD HITS ===
+
+## alzask-ref : 6
+    2026-06-23 12:34 | V API chybí POST DELETE na container. Chtěl bych to udělat obdobně, jako v C:\Git\alzask\docs\api. Je potřeba doplnit i do diagram
+    2026-06-26 22:02 | Jaké jsou rozumné možností sdílení Spec Factory mezi projekty FHB, Alza a dalšími?
+    2026-06-26 23:46 | /spec Analyzuj vytvoření Spec Factory pluginu. Myslím, že v projektu FHB mám komplexnější schopnosti spec factory než v Alza, ale 
+    2026-06-27 08:44 | Prostuduj journal reasoningu z session alza-fhb-review-system-diff a kriticky ji zhodnoť a populární formou mi řekni výsledek.
+    2026-06-27 17:15 | isActive=false by Mělo být v situaci, kdy nosič je mimo storage zone to znamená je v outside zone . Myslím že aspoň takto jsme se 
+    2026-07-07 10:59 | BlueSword nám poslal odpovědi zde: @"docs/meetings/2026-07-07-FHB_Blue_Email   issue-20260707-part-2.docx"   Na interní schůzce js
+
+## korekce : 2
+    2026-06-26 21:24 | Na základě závěrů schůzky @docs/meetings/2026-06-26_06-26_FHB_Sjednocení_terminologie_a_procesy_dopravníku.md prověř, zda jsou spr
+    2026-08-14 20:13 | Přečti tyto tři dokumenty ve složce C:\Git\fhb\docs\api\asrs-v2\ jako tři vrstvy popisu jedné a téže věci:    KONCEPT   ASRS-v2-AP
+
+## vrat-zpet : 6
+    2026-04-27 12:56 | Tuto poslední změnu vrať prosím zpět. Nemůžeš ale k tomu použít Git
+    2026-06-26 11:32 | /spec Specifikuj proces dynamické aktualizace a storna objednávky na vyskladnění mezi WMS a WES: okno, ve kterém smí WMS změnit ne
+    2026-06-27 18:15 | Proč v containerDelete je 4xx a 5xx? To je zbytečné ne?
+    2026-07-07 15:47 | Pro vnucení čísla nosiče nenabízej možnost odpověď na webhook WhErrorReport. Je to nekoncepční.
+    2026-07-08 16:49 | Proč u vychystávání nepovažovat za okamžik, kdy už WMS nosič nepotřebuje tak, že WMS nechá uzavřít port a to je signál pro WES, že
+    2026-08-20 11:48 | Proč došlo ke zrušení popisu nového POST DELETE? [Image #1]
+
+## over : 11
+    2026-06-26 15:02 | Spustil jsem v nové session test1-spec-draft-lint-critique Zkontroluj reasoning podle journals a vyhodnoť, zda Spec Factory pracuj
+    2026-06-26 21:24 | Na základě závěrů schůzky @docs/meetings/2026-06-26_06-26_FHB_Sjednocení_terminologie_a_procesy_dopravníku.md prověř, zda jsou spr
+    2026-06-27 17:15 | isActive=false by Mělo být v situaci, kdy nosič je mimo storage zone to znamená je v outside zone . Myslím že aspoň takto jsme se 
+    2026-07-04 22:49 | Připrav mi příkazy, které mám teď spustit. Ověř předtím aktuální stav.
+    2026-07-04 22:56 | Zkontroluj, zda jsem udělal správně
+    2026-07-07 15:39 | A prověř, zda je uveden explicitní dotaz, přes jaké rozhraní WMS informuje WCS, který nosič chce vnutit při nečitelném kódu čtečko
+    2026-08-14 20:10 | revize
+    2026-08-14 20:13 | Přečti tyto tři dokumenty ve složce C:\Git\fhb\docs\api\asrs-v2\ jako tři vrstvy popisu jedné a téže věci:    KONCEPT   ASRS-v2-AP
+    2026-08-14 20:16 | Reviduj, zda změny provedené v Session ID:       3b4f64bf-8ffd-419c-a080-b3050285f79a byly provedeny správně.
+    2026-08-20 12:04 | /spec-factory:review-spec Reviduj řešení provedené v této session
+    2026-08-21 11:34 | Zkontroluj a navrhni, které z těchto závěrů by bylo potřeba podchytit do @docs/api/asrs-v2/ASRS-v2-API-koncept.md  . Připrav jen n
+
+## citace : 1
+    2026-08-14 20:13 | Přečti tyto tři dokumenty ve složce C:\Git\fhb\docs\api\asrs-v2\ jako tři vrstvy popisu jedné a téže věci:    KONCEPT   ASRS-v2-AP
+
+## zeptej : 2
+    2026-07-07 10:59 | BlueSword nám poslal odpovědi zde: @"docs/meetings/2026-07-07-FHB_Blue_Email   issue-20260707-part-2.docx"   Na interní schůzce js
+    2026-08-14 20:13 | Přečti tyto tři dokumenty ve složce C:\Git\fhb\docs\api\asrs-v2\ jako tři vrstvy popisu jedné a téže věci:    KONCEPT   ASRS-v2-AP
+
+## nesahej : 2
+    2026-08-14 20:13 | Přečti tyto tři dokumenty ve složce C:\Git\fhb\docs\api\asrs-v2\ jako tři vrstvy popisu jedné a téže věci:    KONCEPT   ASRS-v2-AP
+    2026-08-21 11:34 | Zkontroluj a navrhni, které z těchto závěrů by bylo potřeba podchytit do @docs/api/asrs-v2/ASRS-v2-API-koncept.md  . Připrav jen n
+
+## styl : 18
+    2026-06-26 21:24 | Na základě závěrů schůzky @docs/meetings/2026-06-26_06-26_FHB_Sjednocení_terminologie_a_procesy_dopravníku.md prověř, zda jsou spr
+    2026-06-27 08:44 | Prostuduj journal reasoningu z session alza-fhb-review-system-diff a kriticky ji zhodnoť a populární formou mi řekni výsledek.
+    2026-06-27 09:25 | Jazyk, jakým se v promptech Claude Code vyjadřuje je pro mě příliš technicky. Udělej průzkum na internetu, jaké jsou preferované a
+    2026-06-27 14:50 | Formuluj v tomto stylu svou poslední odpověď.
+    2026-06-27 14:51 | Formuluj v tomto stylu nyní poslední odpověď ze session spec-factory-plugin-implementation
+    2026-06-27 14:56 | Stále mám pocit, že těmto vyjádřením chybí "osobnost". Najdi 3 veřejně známé osobnosti, které se vyjadřují podobným stylem.
+    2026-06-27 15:04 | A teď jako Richard Feynman
+    2026-06-27 15:21 | Vysvětli nyní jako Richard Feynman, co ze spec factory zůstalo v FHB. Byla již provedena migrace? Můžu si nový plugin instalovat d
+    2026-06-27 15:33 | Jaké jsou nyní systémové instrukce, jak se má Clude Code v tomto projektu vyjadřovat? Jakým jazykem, stylem...? Kde je to zapsáno 
+    2026-06-27 15:37 | Co to je outputStyle a jak se s tím pracuje?
+    2026-06-27 15:47 | Navrhni mi custom styl, komunikace česky, zachovat odborné termíny, kódovat normálně.  Blízký je mi Richard Feynman, ale analyzuj 
+    2026-06-27 17:48 | Jak nastavím styl pro mě jako uživatele a ne pro projekt?
+    2026-06-27 18:02 | Jakýnm stylem aktuálně komunikuješ?
+    2026-06-27 18:03 | Vysvětli mi princip nastavení stylu komunikace.
+    2026-07-07 10:59 | BlueSword nám poslal odpovědi zde: @"docs/meetings/2026-07-07-FHB_Blue_Email   issue-20260707-part-2.docx"   Na interní schůzce js
+    2026-07-08 17:08 | Jakým stylem máš odpovídat?
+    2026-08-21 15:42 | Jednoduše popiš doporučenou opravu
+    2026-08-21 15:48 | vysvětli mi to laicky v čem je chyba a co je správně
+
+## plugin : 22
+    2026-06-26 15:02 | Spustil jsem v nové session test1-spec-draft-lint-critique Zkontroluj reasoning podle journals a vyhodnoť, zda Spec Factory pracuj
+    2026-06-26 22:02 | Jaké jsou rozumné možností sdílení Spec Factory mezi projekty FHB, Alza a dalšími?
+    2026-06-26 22:37 | Při úpravě pluginu si každý musí na svém projektu spustit install znovu nebo se update provádí automaticky?
+    2026-06-26 22:42 | Když chci vytvořit plugin, je vhodné pro Spec Factory založit samostatné repo? Kde jsou pluginy v GitLab uložené? Každý plugin vla
+    2026-06-26 22:54 | /plugins
+    2026-06-26 23:25 | Stručně popiš princip pluginů v Claude Code
+    2026-06-26 23:46 | /spec Analyzuj vytvoření Spec Factory pluginu. Myslím, že v projektu FHB mám komplexnější schopnosti spec factory než v Alza, ale 
+    2026-06-27 09:06 | Implementuj podle @docs/spec/2026-06-26_spec-factory-plugin-sjednoceni/implementation-prompt.md . Plugin dočasně ulož do C:\GitHub
+    2026-06-27 14:51 | Formuluj v tomto stylu nyní poslední odpověď ze session spec-factory-plugin-implementation
+    2026-06-27 15:21 | Vysvětli nyní jako Richard Feynman, co ze spec factory zůstalo v FHB. Byla již provedena migrace? Můžu si nový plugin instalovat d
+    2026-07-04 22:12 | SpecFactory mám nyní uloženou ve složce C:\GitHub\SpecFactory, kde mám primárně projekty z GitHub. Nyní ji chci přesunout nebo zko
+    2026-07-04 22:13 | SpecFactory mám nyní uloženou ve složce C:\GitHub\SpecFactory, kde mám primárně projekty z GitHub. Nyní ji chci přesunout nebo zko
+    2026-07-04 23:10 | Jak mám nyní plugin otestovat?
+    2026-07-04 23:33 | Spustil jsem /plugin marketplace add C:\Git\shared\plugins, ale marketplace kvados se mi nenabízí. [Image #2]
+    2026-07-04 23:38 | Je možné si instalovat plugin, aniž bych si musel stahovat repo lokálně na disk a pak instalovat plugin z disku?
+    2026-07-05 00:26 | Když spustím tento příkaz: claude /plugin marketplace add https://gitlab01.st.kvados.cz:8443/kvados/customers/shared.git tak se mi
+    2026-07-05 00:34 | Z důvodu bezpečnosti do gitu přistupuji pod uživatelem martint, ale claude spouštím pod ai_martint. Ale plugin potřebuji instalova
+    2026-07-09 13:44 | /plugins
+    2026-07-09 14:19 | spec-grounding se týká SpecFactory, ne? Proč je to potřeba řešit v souvislosti se znalostní smyčkou? Potřebuji ty dvě věci od sebe
+    2026-07-09 14:58 | Chci rozdělit do striktně oddělených bloků a řešit obě domény v rámci FHB. Pokud zjistíš, že je potřeba provést úpravy i v C:\Git\
+    2026-07-10 20:23 | /spec-factory:spec --check
+    2026-08-20 12:04 | /spec-factory:review-spec Reviduj řešení provedené v této session
+
+## meta : 27
+    2026-03-03 22:25 | Co je potřeba udělat pro přeinstalaci a jaké to bude mít důsledky?
+    2026-04-27 12:56 | Tuto poslední změnu vrať prosím zpět. Nemůžeš ale k tomu použít Git
+    2026-06-18 09:19 | Co znamená přesune editace do worktrees?
+    2026-06-18 11:13 | Skončí úprava rovnou v mé primární kopii. Nechci to nyní nastavovat do settings
+    2026-06-18 11:16 | Rozumím. settings je jen pro mě nebo pro všechny v týmu?
+    2026-06-18 11:19 | OK, nastav mi tedy settings pro mě ve všech repech, aby se do worktree neukládalo.
+    2026-06-18 11:41 | Pokud bych pro konkrétní session chtěl nastavit ukládání do worktree, jak se to dá udělat?
+    2026-06-19 15:07 | /rename "GIT konflikty" Jak mám vyřešit GIT konflikty v tomto repu, když chci u všech přijmout změny, které přicházejí ze serveru?
+    2026-06-19 15:08 | /rename GIT konflikty
+    2026-06-19 15:08 | Jak mám vyřešit GIT konflikty v tomto repu, když chci u všech přijmout změny, které přicházejí ze serveru?
+    2026-06-23 12:34 | V API chybí POST DELETE na container. Chtěl bych to udělat obdobně, jako v C:\Git\alzask\docs\api. Je potřeba doplnit i do diagram
+    2026-06-26 22:42 | Když chci vytvořit plugin, je vhodné pro Spec Factory založit samostatné repo? Kde jsou pluginy v GitLab uložené? Každý plugin vla
+    2026-06-27 09:06 | Implementuj podle @docs/spec/2026-06-26_spec-factory-plugin-sjednoceni/implementation-prompt.md . Plugin dočasně ulož do C:\GitHub
+    2026-07-04 22:12 | SpecFactory mám nyní uloženou ve složce C:\GitHub\SpecFactory, kde mám primárně projekty z GitHub. Nyní ji chci přesunout nebo zko
+    2026-07-04 22:13 | SpecFactory mám nyní uloženou ve složce C:\GitHub\SpecFactory, kde mám primárně projekty z GitHub. Nyní ji chci přesunout nebo zko
+    2026-07-04 22:45 | Chci provést commit do mé větve dev/martint. Jak?
+    2026-07-04 23:00 | JAký je můj účet v gitlab? Nebo jak to zjistím?
+    2026-07-04 23:05 | Provedl jsem merge. Je vše OK?
+    2026-07-04 23:33 | Spustil jsem /plugin marketplace add C:\Git\shared\plugins, ale marketplace kvados se mi nenabízí. [Image #2]
+    2026-07-04 23:49 | Do Gitu se hlásím přes KRB5. [Pasted text #3 +3 lines]
+    2026-07-05 00:12 | Nyní mi již instalace z adresáře funguje. Použil jsi ale správný postup? Jaký je správný postup pro instalci z URL?
+    2026-07-05 00:26 | Když spustím tento příkaz: claude /plugin marketplace add https://gitlab01.st.kvados.cz:8443/kvados/customers/shared.git tak se mi
+    2026-07-05 00:34 | Z důvodu bezpečnosti do gitu přistupuji pod uživatelem martint, ale claude spouštím pod ai_martint. Ale plugin potřebuji instalova
+    2026-07-05 01:00 | Pokud používám deploy token, jak probíhá aktualizace? Běží automaticky na pozadí nebo ve které chvíli?
+    2026-07-09 14:58 | Chci rozdělit do striktně oddělených bloků a řešit obě domény v rámci FHB. Pokud zjistíš, že je potřeba provést úpravy i v C:\Git\
+    2026-08-14 20:13 | Přečti tyto tři dokumenty ve složce C:\Git\fhb\docs\api\asrs-v2\ jako tři vrstvy popisu jedné a téže věci:    KONCEPT   ASRS-v2-AP
+    2026-08-25 09:08 | Přelož do angličtiny C:\Git\fhb\docs\api\asrs-v2\API-myFABER-ASRS-v2.yaml a C:\Git\fhb\docs\api\asrs-v2\API-myFABER-ASRS-v2-README
