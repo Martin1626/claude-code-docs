@@ -13,8 +13,9 @@
 2. Platí se za tokeny, ne za slova; čeština se seká na víc kousků — šetři v souborech, které jdou pokaždé, ne v promptu.
 3. Nástroj kolem modelu (harness) dělá práci; model jen píše, co udělat.
 4. V okně je spousta věcí, které tam nikdo vědomě nedal — `/context` to ukáže za pár sekund.
-5. Kompaktace zahodí ~97 % a dá se jí říct, co má nechat. `/clear` je zdarma, `/compact` ne.
-6. **Dokument nese kontext, prompt nese rozhodnutí** — krátké prompty fungují jen nad postaveným kontextem.
+5. **Model nezapomíná — signál se ztrácí v šumu.** Čím plnější okno, tím hůř se v něm hledá to podstatné. „Už jsem ti to říkal" nepomůže; pomůže konec promptu a `CLAUDE.md`.
+6. Kompaktace zahodí ~97 % a dá se jí říct, co má nechat. `/clear` je zdarma, `/compact` ne.
+7. **Dokument nese kontext, prompt nese rozhodnutí** — krátké prompty fungují jen nad postaveným kontextem.
 
 ---
 
@@ -29,7 +30,7 @@
 | 1 | 0:04 | 13 | **Claude si tě nepamatuje. Vede si o tebe složku.** | F-01 · deck 01 | výklad + ukázka | otevřít vlastní `~/.claude/history.jsonl` a `~/.claude/projects/` (3 min) |
 | 2 | 0:17 | 10 | **Tokeny: čeština není dražší, protože je delší** | F-02 · deck 02 | výklad + ukázka | vložit vlastní větu CZ/EN do tiktokenizeru (3 min) |
 | 3 | 0:27 | 12 | **Harness: model píše, nástroje dělají** — jaké nástroje to jsou, `tool_use`, agentní smyčka, **session a turn** | deck 09–13 | výklad | — |
-| 4 | 0:39 | 13 | **Co tě stojí místo, o kterém nevíš** | F-05 · deck 05 | výklad + ukázka | `/context` ve vlastní session (4 min) |
+| 4 | 0:39 | 13 | **Co tě stojí místo, o kterém nevíš** + **signál se ztrácí v šumu** | F-05 · deck 05 | výklad + ukázka | `/context` ve vlastní session (4 min) |
 | 5 | 0:52 | 6 | **Co to stojí a jak to zjistíš** | N-05 · deck 06 | výklad + ukázka | `/usage` (2 min) |
 | — | 0:58 | 5 | *pauza* | | | |
 | 6 | 1:03 | 14 | **Tomu shrnutí můžeš říct, co má zachovat** + **co po kompaktaci zůstane** | F-03 · deck 07–08 | výklad | — |
@@ -46,13 +47,13 @@
 
 ## Bloky podrobně
 
-### 0 · Úvod (5 min)
+### 0 · Úvod (4 min)
 - Kdo jsem, z čeho čerpám: 7 měsíců, 2 671 promptů, 4 pracovní projekty — **vlastní data, ne teorie**.
 - Co dnes **není**: návod „jak napsat prompt", ontologie prvků, struktura pro specifikace (příště).
 - Jak pracujeme: já ukazuji své prostředí, vy si u sebe zkoušíte pět malých věcí. Nic negenerujeme.
 - Zdroje: kde říkám číslo, je buď z oficiální dokumentace (řeknu odkud), nebo z mých dat (řeknu jak měřeno), nebo je to odhad (řeknu to).
 
-### 1 · Claude si tě nepamatuje (F-01, 15 min)
+### 1 · Claude si tě nepamatuje (F-01, deck 01, 13 min)
 - **Výklad:** model = funkce text → text, mezi voláními nic. „Paměť" vytváří okolí tím, že posílá celou historii znovu. Důsledek: „už jsem ti to říkal" není argument; každý další prompt v dlouhé session stojí víc než předchozí, i když je kratší.
 - **Ukázka (moje prostředí):** `~/.claude/history.jsonl` — řada JSON řádků na mém disku; adresář transkriptů projektu Alza. Slide 01 decku (model jako automat na text).
 - **Účastníci:** otevřou si vlastní `history.jsonl`. Vidí, že jejich konverzace je soubor u nich na disku.
@@ -60,7 +61,7 @@
 - **Výhrada:** nesklouznout k „model je hloupý" — bezstavovost je vlastnost, díky které funguje `/resume` i subagent.
 - ⚠ **Před sezením:** `history.jsonl` obsahuje prompty ze **všech** projektů včetně jiných klientů (fhb, myfaber) a přinejmenším jeden s přístupovým tokenem (N-04). Neotvírat naživo celý soubor — ukázat **předfiltrovaný výřez** jen z projektu Alza, nebo screenshot.
 
-### 2 · Tokeny (F-02, 10 min)
+### 2 · Tokeny (F-02, deck 02, 10 min)
 - **Výklad:** model nevidí písmena ani slova, ale tokeny; platí se za ně a plní kontext. Čeština s diakritikou se seká na víc kousků → tatáž informace stojí víc tokenů. Praktický důsledek: šetři v tom, co jde pokaždé (`CLAUDE.md`, pravidla), ne v promptu napsaném jednou.
 - **Ukázka:** [tiktokenizer.vercel.app](https://tiktokenizer.vercel.app/) — tatáž věta česky a anglicky, vidět rozpad na tokeny a rozdíl v počtu.
 - **Účastníci:** vloží vlastní větu.
@@ -77,19 +78,25 @@
 - **Ukázka:** v mém terminálu jeden turn s voláním nástroje (na hotovém transkriptu, ne živě).
 - **Zdroj:** seznam nástrojů [tools-reference](https://code.claude.com/docs/en/tools-reference), ověřeno 10. 9. 2026.
 
-### 4 · Co tě stojí místo, o kterém nevíš (F-05, 15 min)
+### 4 · Co tě stojí místo, o kterém nevíš (F-05, deck 05, 13 min)
 - **Výklad:** v okně je systémový prompt, definice nástrojů, popisky všech skillů, `CLAUDE.md`, paměti — všechno **znovu s každým promptem**. Cache zlevní na desetinu ceny, ale **místo v okně zabírá pořád** — cache snižuje cenu za token, ne počet tokenů.
 - **Ukázka:** `/context` naživo v mé session projektu Alza — rozpad zaplnění po složkách. Jediné skutečné měření, které mám, a je okamžité.
 - **Účastníci:** `/context` u sebe. Porovnat: kolik mají zaplněno, než napsali první slovo.
 - **Čísla:** dokumentace uvádí ilustrativně projektový `CLAUDE.md` ≈ 1 800 tokenů; můj má 23 427 znaků → odhadem ~7 800 tokenů (**přepočet 3,0 znaku/token je předpoklad**, říct to). Formulace: „**minimálně** 13 000 tokenů, než napíšu první slovo — a to je jen to, co si můžu změřit ze souborů".
+- **deck 05 „Model nezapomíná. Signál se ztrácí v šumu."** (přepsán 10. 9., nahradil údaj o okně Haiku 4.5): dva pruhy vedle sebe — začátek session a totáž session po dvou hodinách. Žluté „pravidlo" v okně **pořád je**, jen se scvrklo z 6 % na 2 % a utopilo se.
+  **Věta k vyslovení:** z okna se nic nemaže; co klesá, je schopnost najít v tom to podstatné. Proto je **„už jsem ti to říkal" k ničemu** — řekl jsi to a utopilo se to. Zopakovat je levnější než se hádat.
+  **Léčba, tři body:** důležité na konec promptu (dokumenty nahoru, zadání dolů) · co má platit vždycky, do `CLAUDE.md` (vkládá se do každé session a přežije kompaktaci) · nezaplňovat okno zbytečně, `/clear` mezi úkoly nic nestojí.
+  ⚠ **Nesmí splynout s blokem 6.** Tady je všechno pořád v okně a jen se hůř hledá. Po kompaktaci je doslovné znění **opravdu pryč**. Ten rozdíl říct nahlas, na slidu je kvůli tomu žlutá poznámka.
+- **Zdroje (ověřeno 10. 9. 2026, obojí oficiální):** „Claude's context window fills up fast, and performance degrades as it fills" ([best practices](https://code.claude.com/docs/en/best-practices)) · „Put longform data at the top … Queries at the end can improve response quality by up to 30 percent in tests" ([prompt engineering, Long context prompting](https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices)).
+  ⚠ Těch 30 % je **měření Anthropicu na jejich testech**, ne moje. Říkat „podle Anthropicu až o 30 %", ne „o 30 %".
 
-### 5 · Co to stojí (N-05, 7 min)
+### 5 · Co to stojí (N-05, deck 06, 6 min)
 - **Výklad:** tři složky ceny: vstup (roste s délkou session), výstup (dražší, méně), cache (čtení za desetinu, zápis dráž). Dlouhý kontext bez cenového příplatku.
 - **Ukázka:** `/usage`; oficiální ceník na obrazovce ([platform.claude.com — Pricing](https://platform.claude.com/docs/en/about-claude/pricing)) — **ceny ověřit 10.9., ne říkat z hlavy**.
 - **Účastníci:** `/usage`.
 - **Přiznat:** kolik mě 7 měsíců stálo, nevím — nesbíral jsem to. Poučení: „nezkoumej ceník, změř si to".
 
-### 6 · Kompaktace (F-03, 12 min)
+### 6 · Kompaktace (F-03, deck 07–08, 14 min)
 - **Výklad:** když se okno plní, starší část se shrne — nevratná ztráta neznámé části. Zůstane záměr a rozhodnutí, zmizí doslovné výstupy nástrojů, čísla řádků, přesné citace. Analytik opřený o `soubor:řádek` pak pracuje s vyprávěním o zdroji. **A:** `/compact` přijímá instrukci — `/compact zachovej rozhodnutí o pojmenování a čísla řádků u citací`.
 - **Ukázka 1:** **statická tabulka** 19 kompaktací (`preTokens` → `postTokens`) z `DOKLADY.md` část 2. Ne živě.
 - **Ukázka 2 — deck 08 „Co po kompaktaci zůstane"** (nový 10. 9.): skutečný výřez souhrnu z mé session z 19. 8. — devět oddílů doslova (`1. Primary Request and Intent` … `9. Optional Next Step`), čísla 422 833 → 18 885 tokenů, 95,5 % zahozeno, 201 s. Vedle toho karty **zůstane / zmizí**.
@@ -97,12 +104,12 @@
 - **Čísla:** medián **97,3 %** zahozeno; **0 z 19** mělo instrukci. Popisky skillů se po kompaktaci nenačtou znovu (dokumentováno). Projektový `CLAUDE.md` naopak kompaktaci **přežije** — Claude Code ho po ní načte znovu z disku ([memory](https://code.claude.com/docs/en/memory), ověřeno 10. 9. 2026).
 - ⚠ Živou kompaktaci nepředvádět (medián 181 s, zabije session).
 
-### 7 · Padesát jedna ku jedné (F-04, 8 min)
+### 7 · Padesát jedna ku jedné (F-04, 6 min)
 - **Příběh:** `/compact` 51× vs. `/clear` 1×. `/clear` neposílá request — je zdarma; `/compact` posílá celou historii. 8,6 mil. tokenů zahozeno; 19 z 19 kompaktací ručních, nikdy strop — zasahoval jsem sám při mediánu ~46 % okna.
 - **Na tabuli:** **51 / 1 / 8 600 000.**
 - **Podání:** přiznání vlastní chyby, ne best practice.
 
-### 8 · Dokument nese kontext, prompt nese rozhodnutí (K-01, 20 min)
+### 8 · Dokument nese kontext, prompt nese rozhodnutí (K-01, deck 14–15, 22 min)
 - **Výklad:** medián mého promptu 65 znaků, nad 1 000 znaků 2 %. Vypadá to jako „piš krátce" — znamená to, že **kontext leží v souborech**. Nejdelší prompt měsíce (2 106 znaků) nese 15 odpovědí a ani jednu otázku; otázky žijí v `BACKLOG.md`.
 - **Ukázka mého prostředí (projekt Alza):** vedle sebe ten prompt a `BACKLOG.md`; pak struktura: kde je `CLAUDE.md`, `.claude/` (pravidla, settings, skills), kde leží dokumenty, které Claude čte. Odpovídá bodu „struktura projektového adresáře" z nahrávky 2026-09-02.
 - **Účastníci:** mají ve svém projektu `CLAUDE.md`? Co v něm je? (3 min)
@@ -127,6 +134,7 @@
 
 - [x] **Předfiltrovaný výřez `history.jsonl`** jen z projektu Alza (blok 1) → `vyrez-history-2026-08-19.jsonl` (14 řádků, session se 4× `/compact`) + `vyrez-history-2026-07-09-K01.txt` (blok 8); popis a kontrola citlivého obsahu ve `VYREZ-HISTORY.md`
 - [x] **Statická tabulka 19 kompaktací** (blok 6) → `slide-kompaktace.html` + `slide-kompaktace.png` (záložní obrázek); čísla přepočítána proti `DOKLADY.md`
+- [x] **Slide 05 přepsán 10. 9.** — údaj o okně Haiku 4.5 nahrazen tématem „model nezapomíná, signál se ztrácí v šumu" (dva pruhy, tři léčby, odlišení od kompaktace). Velikost okna Opus 5 / Sonnet 5 na slidu zůstává.
 - [x] **Deck rozšířen 10. 9. na 17 slidů** — nová vizualizace dávkového volání na slidu 01 (vstup → výpočet → výstup → prázdno, s tlačítkem „Zastavit") a čtyři nové slidy: 08 co po kompaktaci zůstane, 10 jaké nástroje harness má, 13 session a turn, 14 velké soubory, 15 projektový adresář. Zdroje a odůvodnění v HTML changelogu na konci souboru. **Stále necommitováno, nepushováno — GitLab**
 - [x] **Deck** (`C:\Git\shared\docs\claude-code\claude-code-jak-funguje.html`, lokálně upraveno 9. 9., **necommitováno, nepushováno — GitLab**): slide 02 = rozsah 3,5 (glosář) až 4 / 0,75 slova (Pricing FAQ) + „+30 % od Opus 4.7" + „1 M ≈ 2,5 M znaků" + falešný poměr skryt, štítek „ilustrace, ne měření", odkaz na tiktokenizer s výhradou; slide 06 = konkrétní modely + datum ověření; changelog se zdroji na konci souboru. Záloha originálu v `$CLAUDE_JOB_DIR/tmp/deck-backup.html`
 - [x] **Ceník** ověřen 9. 9. 2026 na [platform.claude.com/docs/en/about-claude/pricing](https://platform.claude.com/docs/en/about-claude/pricing): Opus 5 **$5 / $25** za MTok (vstup / výstup), cache čtení $0,50 (0,1×), cache zápis 5 min $6,25 (1,25×), 1 h $10 (2×); Sonnet 5 $2 / $10 (od 1. 9. 2026 standardní cena, ne zaváděcí); Haiku 4.5 $1 / $5. Dlouhý kontext bez příplatku („900k-token request is billed at the same per-token rate as a 9k-token request"). Čísla v kartě N-05 sedí. **Znovu zkontrolovat 10. 9.** (stránka se mění)
