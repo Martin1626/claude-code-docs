@@ -143,6 +143,8 @@
 - [ ] **Záložní screenshoty** pro `/context`, `/usage`, tiktokenizer — kdyby síť nebo terminál
 - [x] **Formulář zpětné vazby** → `zpetna-vazba-formular.html` + `zpetna-vazba-formular.pdf` (A4, 1 strana, tisk): řádek „používám: ne / < měsíc / > měsíc" + 3 otázky (Q3 = zaškrtávací témata dalších dílů + poznámka). Pro online variantu stačí tytéž otázky přepsat do MS Forms. **Vytisknout podle počtu lidí + 3 rezervní**
 - [ ] **`claude --version`** na prezentačním stroji zapsat do scénáře
+- [x] **Deck opraven pro menší okno (10. 9.)** — přetékající slide dřív uřízl začátek, ke kterému nešlo doscrollovat, a spodní text mizel pod lištou. Nyní obsah při přetečení začíná nahoře a jde scrollovat, pod lištou je přechod do pozadí a vpravo dole se objeví „▾ slide pokračuje", když se slide nevejde. Změřeno: při viewportu 1282×735, 1582×804 i 1902×984 **nepřetéká ani jeden ze 17 slidů**
+- [ ] **Na prezentačním stroji nastavit prohlížeč**: zvětšení stránky **100 %** (Ctrl+0) a celá obrazovka (**F11**). Při zvětšení na 125 % se delší slidy (05, 08, 14) musí scrollovat — funguje to, ale zdržuje
 - [ ] **Zkušební průchod nahlas s hodinkami** (10. 9.) — blok, který přeteče o >20 %, škrtnout, ne zrychlit
 
 ## Co záměrně vypadlo a kam patří
