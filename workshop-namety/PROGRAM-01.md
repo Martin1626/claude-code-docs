@@ -20,23 +20,27 @@
 
 ## Časový plán
 
-| # | Čas | Min | Blok | Karta | Role | Účastníci si zkusí |
+> **Přepočítáno 10. 9. 2026.** Deck vyrostl z 12 na 17 slidů — dodělány body z nahrávky z 2. 9., které v něm chyběly.
+> Bloky 3, 6 a 8 dostaly nový materiál; čas na ně je vzatý z bloků 0, 1, 4, 5 a 7. Celek zůstává 120 min.
+
+| # | Čas | Min | Blok | Karta / deck | Role | Účastníci si zkusí |
 |---|---|---|---|---|---|---|
-| 0 | 0:00 | 5 | Úvod: kdo jsem, co dnes je a co není, jak budeme pracovat | — | výklad | — |
-| 1 | 0:05 | 15 | **Claude si tě nepamatuje. Vede si o tebe složku.** | F-01 | výklad + ukázka | otevřít vlastní `~/.claude/history.jsonl` a `~/.claude/projects/` (3 min) |
-| 2 | 0:20 | 10 | **Tokeny: čeština není dražší, protože je delší** | F-02 | výklad + ukázka | vložit vlastní větu CZ/EN do tiktokenizeru (3 min) |
-| 3 | 0:30 | 8 | **Harness: model píše, nástroje dělají** — sessions, turns, agentní smyčka | deck 08–11 | výklad | — |
-| 4 | 0:38 | 15 | **Co tě stojí místo, o kterém nevíš** | F-05 | výklad + ukázka | `/context` ve vlastní session (4 min) |
-| 5 | 0:53 | 7 | **Co to stojí a jak to zjistíš** | N-05 | výklad + ukázka | `/usage` (2 min) |
-| — | 1:00 | 5 | *pauza* | | | |
-| 6 | 1:05 | 12 | **Tomu shrnutí můžeš říct, co má zachovat** | F-03 | výklad | — |
-| 7 | 1:17 | 8 | **Padesát jedna ku jedné** | F-04 | příběh | — |
-| 8 | 1:25 | 20 | **Dokument nese kontext, prompt nese rozhodnutí** + jak vypadá moje prostředí | K-01 | výklad + ukázka | podívat se, zda mají ve svém projektu `CLAUDE.md` a co v něm je (3 min) |
-| 9 | 1:45 | 15 | **Q&A, sdílení zkušeností, zpětná vazba** | — | diskuse | zpětná vazba (3 otázky) |
+| 0 | 0:00 | 4 | Úvod: kdo jsem, co dnes je a co není, jak budeme pracovat | deck 00 | výklad | — |
+| 1 | 0:04 | 13 | **Claude si tě nepamatuje. Vede si o tebe složku.** | F-01 · deck 01 | výklad + ukázka | otevřít vlastní `~/.claude/history.jsonl` a `~/.claude/projects/` (3 min) |
+| 2 | 0:17 | 10 | **Tokeny: čeština není dražší, protože je delší** | F-02 · deck 02 | výklad + ukázka | vložit vlastní větu CZ/EN do tiktokenizeru (3 min) |
+| 3 | 0:27 | 12 | **Harness: model píše, nástroje dělají** — jaké nástroje to jsou, `tool_use`, agentní smyčka, **session a turn** | deck 09–13 | výklad | — |
+| 4 | 0:39 | 13 | **Co tě stojí místo, o kterém nevíš** | F-05 · deck 05 | výklad + ukázka | `/context` ve vlastní session (4 min) |
+| 5 | 0:52 | 6 | **Co to stojí a jak to zjistíš** | N-05 · deck 06 | výklad + ukázka | `/usage` (2 min) |
+| — | 0:58 | 5 | *pauza* | | | |
+| 6 | 1:03 | 14 | **Tomu shrnutí můžeš říct, co má zachovat** + **co po kompaktaci zůstane** | F-03 · deck 07–08 | výklad | — |
+| 7 | 1:17 | 6 | **Padesát jedna ku jedné** | F-04 | příběh | — |
+| 8 | 1:23 | 22 | **Dokument nese kontext, prompt nese rozhodnutí** + **jak čte velké soubory** + **co má mít projektový adresář** | K-01 · deck 14–15 | výklad + ukázka | podívat se, zda mají ve svém projektu `CLAUDE.md` a co v něm je (3 min) |
+| 9 | 1:45 | 15 | **Q&A, sdílení zkušeností, zpětná vazba** | deck 16 | diskuse | zpětná vazba (3 otázky) |
 | | 2:00 | | konec | | | |
 
-**Součet:** 5 + 15 + 10 + 8 + 15 + 7 + 5 + 12 + 8 + 20 + 15 = **120 min.**
-**Čas účastníků u klávesnice:** 3 + 3 + 4 + 2 + 3 = 15 min + Q&A 15 = 30 min ≈ **25 %.** Bez Q&A 12,5 % — pokud chceš víc, prodluž blok 4 (`/context` je nejcennější věc, kterou si odnesou).
+**Součet:** 4 + 13 + 10 + 12 + 13 + 6 + 5 + 14 + 6 + 22 + 15 = **120 min.**
+**Čas účastníků u klávesnice:** 3 + 3 + 4 + 2 + 3 = 15 min + Q&A 15 = 30 min ≈ **25 %.** Beze změny proti původnímu návrhu.
+**Kde ubrat, když se to nevejde:** blok 7 (příběh 51:1) se dá říct za 3 minuty bez slidu; z bloku 3 se dá vypustit `tool_use` JSON (deck 11) — smyčku pochopí i bez něj.
 
 ---
 
@@ -65,10 +69,13 @@
 - ⚠ **Oprava vlastní přípravy:** FUNDAMENT.md tvrdil, že deck má na slidu 02 chybu (3,5 místo 4). **Nemá** — obě čísla jsou oficiální, každé na jiné stránce Anthropic. Správně je rozsah, jak říká karta F-02. Dobrá ilustrace pro publikum: **i oficiální dokumentace si na dvou stránkách odporuje** — proto se citace ověřuje, nevěří (K-05), a proto rozsah místo jednoho čísla.
 - ⚠ Tvrzení „tiktoken podhodnocuje o 15–20 %" nemá dohledaný oficiální zdroj — **nevyslovovat s číslem**; stačí „tiktokenizer používá tokenizéry OpenAI, ne Claude, ukazuje princip".
 
-### 3 · Harness (deck 08–11, 8 min)
-- **Výklad:** model vs. harness (mozek bez rukou / ruce); nástroje jako dohodnutý JSON (`tool_use` → `tool_result`); agentní smyčka: harness → model → harness provede → výsledek zpět → model rozhodne → opakuj. Pojmy **session** (celá relace) a **turn** (jedna výměna).
-- **Ukázka:** slidy 08–11 existujícího decku; v mém terminálu ukázat, jak vypadá jeden turn s voláním nástroje (na hotovém transkriptu, ne živě).
-- **Zdroj:** deck je ověřený; čísla cache na slidu 06 souhlasí s dokumentací.
+### 3 · Harness (deck 09–13, 12 min)
+- **Výklad:** model vs. harness (mozek bez rukou / ruce) → **jaké ruce to jsou** → nástroje jako dohodnutý JSON (`tool_use` → `tool_result`) → agentní smyčka → **session a turn**.
+- **deck 10 „Jaké ruce to vlastně jsou"** (nový 10. 9.): nástroje po skupinách — číst a hledat (`Read`, `Grep`, `Glob`) běží bez ptaní; měnit soubory a spouštět příkazy se ptá na svolení; web; delegace na subagenta s vlastním kontextovým oknem; MCP. Odpovídá úkolu 3 z nahrávky 2. 9.
+  ⚠ **Uvést na pravou míru:** v nahrávce zaznělo „skenování obrazovky". Claude Code obrazovku **nesnímá** — obrázek přečte jen jako soubor na disku. Říct to nahlas, je to častá představa, se kterou lidé přicházejí.
+- **deck 13 „Session a turn"** (nový 10. 9.): turn = jedna výměna až po `end_turn`, uvnitř klidně dvacet volání modelu; session = řada turnů, jeden soubor `.jsonl`, `/clear` vs. `claude --resume`. Věta k zapamatování: **platí se za volání modelu, ne za turn.**
+- **Ukázka:** v mém terminálu jeden turn s voláním nástroje (na hotovém transkriptu, ne živě).
+- **Zdroj:** seznam nástrojů [tools-reference](https://code.claude.com/docs/en/tools-reference), ověřeno 10. 9. 2026.
 
 ### 4 · Co tě stojí místo, o kterém nevíš (F-05, 15 min)
 - **Výklad:** v okně je systémový prompt, definice nástrojů, popisky všech skillů, `CLAUDE.md`, paměti — všechno **znovu s každým promptem**. Cache zlevní na desetinu ceny, ale **místo v okně zabírá pořád** — cache snižuje cenu za token, ne počet tokenů.
@@ -84,8 +91,10 @@
 
 ### 6 · Kompaktace (F-03, 12 min)
 - **Výklad:** když se okno plní, starší část se shrne — nevratná ztráta neznámé části. Zůstane záměr a rozhodnutí, zmizí doslovné výstupy nástrojů, čísla řádků, přesné citace. Analytik opřený o `soubor:řádek` pak pracuje s vyprávěním o zdroji. **A:** `/compact` přijímá instrukci — `/compact zachovej rozhodnutí o pojmenování a čísla řádků u citací`.
-- **Ukázka:** **statická tabulka** 19 kompaktací (`preTokens` → `postTokens`) z `DOKLADY.md` část 2. Ne živě.
-- **Čísla:** medián **97,3 %** zahozeno; **0 z 19** mělo instrukci. Popisky skillů se po kompaktaci nenačtou znovu (dokumentováno).
+- **Ukázka 1:** **statická tabulka** 19 kompaktací (`preTokens` → `postTokens`) z `DOKLADY.md` část 2. Ne živě.
+- **Ukázka 2 — deck 08 „Co po kompaktaci zůstane"** (nový 10. 9.): skutečný výřez souhrnu z mé session z 19. 8. — devět oddílů doslova (`1. Primary Request and Intent` … `9. Optional Next Step`), čísla 422 833 → 18 885 tokenů, 95,5 % zahozeno, 201 s. Vedle toho karty **zůstane / zmizí**.
+  Pointa, kterou vyslovit: **poslední věta souhrnu odkazuje na plný přepis.** Doslovné znění se dá dohledat, ale musíš o to říct — samo se nevrátí.
+- **Čísla:** medián **97,3 %** zahozeno; **0 z 19** mělo instrukci. Popisky skillů se po kompaktaci nenačtou znovu (dokumentováno). Projektový `CLAUDE.md` naopak kompaktaci **přežije** — Claude Code ho po ní načte znovu z disku ([memory](https://code.claude.com/docs/en/memory), ověřeno 10. 9. 2026).
 - ⚠ Živou kompaktaci nepředvádět (medián 181 s, zabije session).
 
 ### 7 · Padesát jedna ku jedné (F-04, 8 min)
@@ -98,7 +107,11 @@
 - **Ukázka mého prostředí (projekt Alza):** vedle sebe ten prompt a `BACKLOG.md`; pak struktura: kde je `CLAUDE.md`, `.claude/` (pravidla, settings, skills), kde leží dokumenty, které Claude čte. Odpovídá bodu „struktura projektového adresáře" z nahrávky 2026-09-02.
 - **Účastníci:** mají ve svém projektu `CLAUDE.md`? Co v něm je? (3 min)
 - **Výhrada — říct nahlas:** funguje to jen tam, kde ten dokument někdo vede. Pro kolegu bez backlogu je první krok „**založ si soubor**", ne „piš krátce". Kdo si odnese jen „krátké prompty", dostane špatný výsledek.
-- **Most k příštímu sezení:** jak ty soubory strukturovat pro specifikace a analýzy, ontologie prvků, precedence zdrojů.
+- **deck 14 „Velké soubory nečte celé"** (nový 10. 9.): `Grep` najde místo → `Read` přečte jen úsek (`offset`, `limit`) → u dlouhého souboru přijde první stránka a hláška `PARTIAL view` → `Glob` vrací nejvýš 100 souborů podle času změny → zbytek dotahuje průběžně.
+  **Věta, kvůli které tam ten slide je:** dvakrát totéž zadání = dvakrát jiný výřez = jiná odpověď. Není to nespolehlivost modelu, je to jiný vstup. Odpovídá úkolu 5 z nahrávky 2. 9.
+- **deck 15 „Co má mít projektový adresář"** (nový 10. 9.): strom projektu (`CLAUDE.md`, `.claude/` se `settings.json`, `rules/`, `skills/`, `commands/`, `agents/`, dále `.mcp.json` a `docs/`) a **tři věci, které tam musí být vždy**: instrukce do každé session, místo pro dokumenty, pravidlo který zdroj při rozporu vyhrává. Odpovídá úkolu 4 z nahrávky 2. 9.
+  Doplnit nahlas: `CLAUDE.md` a `rules/` jdou do okna **pokaždé**, u skillu jde napřed jen popisek — proto dlouhé postupy patří do skillu. Váže se to zpátky na blok 4 (`/context`).
+- **Most k příštímu sezení:** jak ty soubory strukturovat **obsahově** pro specifikace a analýzy (dnes jen adresář, ne obsah), ontologie prvků, precedence zdrojů.
 
 ### 9 · Q&A + zpětná vazba (15 min)
 - Otevřené otázky, vlastní zkušenosti účastníků.
@@ -114,6 +127,7 @@
 
 - [x] **Předfiltrovaný výřez `history.jsonl`** jen z projektu Alza (blok 1) → `vyrez-history-2026-08-19.jsonl` (14 řádků, session se 4× `/compact`) + `vyrez-history-2026-07-09-K01.txt` (blok 8); popis a kontrola citlivého obsahu ve `VYREZ-HISTORY.md`
 - [x] **Statická tabulka 19 kompaktací** (blok 6) → `slide-kompaktace.html` + `slide-kompaktace.png` (záložní obrázek); čísla přepočítána proti `DOKLADY.md`
+- [x] **Deck rozšířen 10. 9. na 17 slidů** — nová vizualizace dávkového volání na slidu 01 (vstup → výpočet → výstup → prázdno, s tlačítkem „Zastavit") a čtyři nové slidy: 08 co po kompaktaci zůstane, 10 jaké nástroje harness má, 13 session a turn, 14 velké soubory, 15 projektový adresář. Zdroje a odůvodnění v HTML changelogu na konci souboru. **Stále necommitováno, nepushováno — GitLab**
 - [x] **Deck** (`C:\Git\shared\docs\claude-code\claude-code-jak-funguje.html`, lokálně upraveno 9. 9., **necommitováno, nepushováno — GitLab**): slide 02 = rozsah 3,5 (glosář) až 4 / 0,75 slova (Pricing FAQ) + „+30 % od Opus 4.7" + „1 M ≈ 2,5 M znaků" + falešný poměr skryt, štítek „ilustrace, ne měření", odkaz na tiktokenizer s výhradou; slide 06 = konkrétní modely + datum ověření; changelog se zdroji na konci souboru. Záloha originálu v `$CLAUDE_JOB_DIR/tmp/deck-backup.html`
 - [x] **Ceník** ověřen 9. 9. 2026 na [platform.claude.com/docs/en/about-claude/pricing](https://platform.claude.com/docs/en/about-claude/pricing): Opus 5 **$5 / $25** za MTok (vstup / výstup), cache čtení $0,50 (0,1×), cache zápis 5 min $6,25 (1,25×), 1 h $10 (2×); Sonnet 5 $2 / $10 (od 1. 9. 2026 standardní cena, ne zaváděcí); Haiku 4.5 $1 / $5. Dlouhý kontext bez příplatku („900k-token request is billed at the same per-token rate as a 9k-token request"). Čísla v kartě N-05 sedí. **Znovu zkontrolovat 10. 9.** (stránka se mění)
 - [x] **Věty do tiktokenizeru** → `tiktokenizer-vety.md`: 5 vložení v pořadí, s předpočítanými počty (tiktoken `o200k_base` = gpt-4o, výchozí model tiktokenizeru), rozpady, zadání pro účastníky, „co neříkat", záloha bez sítě. Klíčový pár: EN 53 znaků = 8 tokenů, CZ 47 znaků = **18** tokenů
@@ -127,8 +141,8 @@
 
 | Vypadlo | Proč | Kam |
 |---|---|---|
-| Ontologie prvků, precedence zdrojů (K-05, K-06) | varianta (a); bez infrastruktury jen cíl | 2. sezení |
-| Struktura souborů pro specifikace a analýzy, Markdown | navazující téma z nahrávky | 2. sezení |
+| Ontologie prvků, precedence zdrojů (K-05, K-06) | varianta (a); bez infrastruktury jen cíl. Deck 15 na to nově **ukazuje prstem** větou „pravidlo, který zdroj vyhrává" — a tam skončí | 2. sezení |
+| Obsah dokumentů pro specifikace a analýzy, Markdown | navazující téma z nahrávky; **adresářová kostra je nově v dílu 1** (deck 15), zůstává obsah a konvence | 2. sezení |
 | Tři zákazy, rewind, plan mode (N-01–N-03), „nic neměň" (M-02) | Díl 2 | 2. nebo 3. sezení podle zpětné vazby |
 | Prompt je zápis, ne rozhovor (N-04) — tokeny v promptech, klientská data | silné, ale patří k datové hranici (Díl 2) | 2. sezení — **zvážit přesun sem, pokud Q&A ukáže zájem o bezpečnost** |
 | Cvičný repozitář (N-06) | nepotřebný — účastníci mají vlastní Claude Code, já prezentuji na projektu Alza | zrušeno |
