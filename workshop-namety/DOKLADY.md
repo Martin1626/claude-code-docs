@@ -553,3 +553,140 @@ v projektu, pak to povyš do pluginu" je reálná, ne teoretická.
 Tři zákazy na úrovni projektu jsou mechanická pojistka proti tomu, aby agent smazal soubory,
 pushnul nebo zahodil rozpracovanou práci. To je přenositelná zásada v čisté podobě: nebezpečná
 operace se nezakazuje větou v `CLAUDE.md`, ale položkou v `deny`.
+
+---
+
+# Část 6 — Struktura dvou pracovních projektů (2026-09-10)
+
+Odečteno skriptem `_raw/merit-projekty.py` přímo ze souborů na disku 10. 9. 2026.
+Podklad pro 2. sezení (`PROGRAM-02.md`) a pro deck `claude-code-struktura-a-zdroje.html`.
+
+> ⚠ **Čísla v částech 1–5 jsou z 26. 8. a část z nich už neplatí.** Projekty se mezitím změnily.
+> Kde se hodnoty rozcházejí, platí tato část.
+
+### 6.1 Adresáře `docs/`
+
+| | alzask | fhb |
+|---|---:|---:|
+| podadresářů `docs/` | 16 | 12 |
+| **společných** | **9** | **9** |
+
+Společné: `adr`, `analysis`, `api`, `fr`, `meetings`, `onboarding`, `pbs`, `spec`, `spec-grounding`.
+Jen alzask: `bp-overview`, `export`, `external-sources`, `ontology`, `plc`, `suppliers`, `tools`.
+Jen fhb: `communications`, `feedback`, `superpowers`.
+
+Kostra je stejná, přestože ji nikdo neopisoval a jde o jiné zákazníky i jiné domény.
+
+### 6.2 Výbava v `.claude/`
+
+| | alzask | fhb |
+|---|---|---|
+| agenti | 5 revizních (návrh, sémantika, struktura, report, oprava) | 7 na psaní specifikace (záměr, plán, autor, kritik, red team, rešerše, syntéza) |
+| příkazy | 7 | 5 |
+| hooky | `guard-myfaber.py` + testy | `spec-guard.py` |
+| skilly | 2 (registr prvků, dotazy na dodavatele) | 1 |
+| styl výstupu | Feynman CZ | — |
+| validátory v `docs/` | 4 (`.adr-tools`, `.fr-tools`, `.ontology-tools`, `.plc-tools`) | 2 (`.adr-tools`, `.fr-tools`) |
+
+Dvě různé odpovědi na dvě různé bolesti: u alzask je problém **dohledat, co platí**, u fhb **napsat to tak, aby to obstálo**.
+
+### 6.3 Sdílená pravidla a jejich průnik
+
+| | počet | znaků |
+|---|---:|---:|
+| alzask `rules/shared/` | **18** | 50 367 |
+| fhb `rules/shared/` | **13** | 25 581 |
+| **průnik** | **10** | — |
+
+**Společných 10:** `RULE-AP-001` antipatterny · `RULE-AP-002` pokrytí ze zdroje · `RULE-CL-001` changelog ·
+`RULE-DIAG-001` diagramy · `RULE-GOV-001` hranice a promoce · `RULE-GOV-002` brána místo promptu ·
+`RULE-META-001` metadata · `RULE-SPEC-001` trasování akceptace · `RULE-SPEC-002` kritik cizího výstupu ·
+`RULE-TERM-001` terminologie.
+
+**Jen alzask (8):** `RULE-ONT-001`, `-002`, `-003` (registr prvků), `RULE-DOC-001`, `RULE-GOV-003`,
+`RULE-SIM-001`, `RULE-SPEC-004`, `RULE-TC-001`.
+**Jen fhb (3):** `RULE-API-002`, `-003`, `-005`.
+
+To je doložený tvar zásady „kostra cestuje, výbava zůstává doma".
+
+### 6.4 Co se načte při startu session
+
+| alzask | znaků |
+|---|---:|
+| `CLAUDE.md` | 11 884 |
+| `MEMORY.md` (paměť projektu) | 3 345 |
+| styl výstupu | 4 685 |
+| **celkem při startu** | **19 914** |
+
+**Pravidla se při startu nenačtou.** Všech 18 souborů v `alzask/.claude/rules/shared/` má ve frontmatteru
+`paths:`, takže se načítají teprve tehdy, když Claude sáhne na pasující soubor. U fhb je to 13 ze 13.
+Kdyby cestu neměla, přidala by 50 367 znaků ke každému startu — víc než dvojnásobek.
+
+> **Korekce prvního sezení.** Deck dílu 1, slide 15 říká „`CLAUDE.md` a `rules/` jdou do okna pokaždé".
+> Přesná formulace zní: **pravidlo bez uvedené cesty jde do okna vždy, pravidlo s cestou až na vyžádání.**
+> V obou mých projektech mají cestu všechna. Zdroj chování: code.claude.com/docs/en/memory, oddíl o pravidlech
+> vázaných na cesty (ověřeno 10. 9. 2026).
+
+### 6.5 Registr prvků projektu alzask
+
+| | hodnota |
+|---|---|
+| prvků | **176** — 48 fyzických, 48 logických, 61 číselníků, 19 aktérů |
+| vazeb | **354** |
+| atributů | **703** |
+| zapsaných rozporů | **97** |
+| karet prvků | 176 (+ 174 souborů poznámek) |
+
+| soubor | velikost | řádků | jak se používá |
+|---|---:|---:|---|
+| `INDEX.md` | 32 kB | 192 | čte se celý |
+| `TERMS.tsv` | 183 kB | 2 585 | hledá se v něm |
+| `RELATIONS.tsv` | 32 kB | 711 | hledá se v něm |
+| `conflicts.md` | 349 kB | 4 713 | otevírá se jen u sporu |
+| `coverage.md` | 279 kB | 1 719 | pokrytí zdrojů |
+| `anchors.tsv` | 170 kB | 1 228 | jen pro nástroj |
+| `ontology.yaml` | **1,7 MB** | 10 108 | **zdroj pravdy, nikdy se nečte celý** |
+
+Nástroje v `.ontology-tools/`: `build.py`, `cite.py`, `reanchor.py`, `anchors.py`, `audit.py`,
+`fix.py`, `render_md.py`, `render_html.py`, `session-check.py` (+ `build.cmd`).
+
+### 6.6 Sedm vrstev autority
+
+Z `docs/ontology/conflicts.md`, oddíl „Jak se rozpor rozhoduje". Rozhoduje **vrstva zdroje**, ne přesvědčivost
+formulace ani počet výskytů.
+
+| Vrstva | Co to je |
+|---|---|
+| 1a | konfigurace nasazení a datový model — co systém opravdu má |
+| 1b | *popis* datového modelu; ve sporu s 1a **prohrává** |
+| 2 | schéma rozhraní |
+| 3 | přijatá rozhodnutí (ADR) |
+| 4 | požadavky (FR) |
+| 5 | řídicí systém a seznamy fyzických prvků; u fyzických prvků předbíhá vrstvu 4 |
+| 6 | procesní analýza, posouzení rizik, zápisy z jednání, onboarding |
+
+Doplňující zásada odtamtud: **vstupní dokument se needituje.** Procesní analýza, posouzení rizik a podepsané
+verze jsou záznam — nález jde do soupisu rozporů, ne do nich.
+
+### 6.7 Kotvy citací: kolik hlášení je šum
+
+Z `RULE-ONT-003_kotvy-tri-tridy.md`, měření nad registrem **26. 8. 2026**: kotva je otisk okna ±2 až ±6 řádků
+kolem citace, takže ji shodí i odstavec vložený *vedle* citovaného místa. **Z 15 hlášení bylo 9 tento případ,
+tedy šum**, a jen 6 skutečných rozhodnutí.
+
+Pravidlo se kvůli tomu přepsalo: dřív šla člověku všechna hlášení, dnes mechanické případy opraví nástroj
+se stopou v úpravě a člověku zbyde jen nerozhodnutelný případ. Doklad, že se pravidlo mění měřením, ne názorem.
+
+Verdikty ověření citace: `OK` · `POSUN` · `POSUN TEXTU` · `ZMIZELA`.
+
+### 6.8 Co se od 26. 8. posunulo
+
+| Údaj | Část 3 a 4 (26. 8.) | Část 6 (10. 9.) |
+|---|---|---|
+| `CLAUDE.md` alzask | 23 818 znaků | **11 884** |
+| sdílených pravidel alzask | 15 | **18** |
+| název `RULE-ONT-003` | `_zmizela-resi-clovek` | `_kotvy-tri-tridy` |
+
+Instrukční soubor se zkrátil na polovinu, pravidel přibylo a jedno se přejmenovalo, protože se změnilo jeho
+zadání. **Kdo cituje čísla z části 3, cituje srpen.** Sama tahle tabulka je použitelný doklad: dokumentace
+o vlastní práci zastarává stejně rychle jako dokumentace o systému.
