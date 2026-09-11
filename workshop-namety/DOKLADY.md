@@ -641,7 +641,7 @@ Kdyby cestu neměla, přidala by 50 367 znaků ke každému startu — víc než
 |---|---:|---:|---|
 | `INDEX.md` | 32 kB | 192 | čte se celý |
 | `TERMS.tsv` | 183 kB | 2 585 | hledá se v něm |
-| `RELATIONS.tsv` | 32 kB | 711 | hledá se v něm |
+| `RELATIONS.tsv` | 33 kB | 711 | hledá se v něm |
 | `conflicts.md` | 349 kB | 4 713 | otevírá se jen u sporu |
 | `coverage.md` | 279 kB | 1 719 | pokrytí zdrojů |
 | `anchors.tsv` | 170 kB | 1 228 | jen pro nástroj |
@@ -690,3 +690,97 @@ Verdikty ověření citace: `OK` · `POSUN` · `POSUN TEXTU` · `ZMIZELA`.
 Instrukční soubor se zkrátil na polovinu, pravidel přibylo a jedno se přejmenovalo, protože se změnilo jeho
 zadání. **Kdo cituje čísla z části 3, cituje srpen.** Sama tahle tabulka je použitelný doklad: dokumentace
 o vlastní práci zastarává stejně rychle jako dokumentace o systému.
+
+---
+
+# Část 7 — Osm druhů dokumentů projektu alzask (2026-09-11)
+
+**Metoda.** Odečteno přímo ze souborů v `C:\Git\alzask` 11. 9. 2026. Kontrolní skript
+`_raw/overit-deck-02.py` srovnává každé číslo níže s tím, co je napsané na snímcích
+decku 2. sezení — spouštět před sezením znovu, projekt žije.
+
+**Proč tahle část vznikla.** Vlastník po revizi rozhodl, že deck 2. sezení je od snímku 3
+příliš podrobný, a zadal osm témat po dvou snímcích: **proč ta věc vznikla** a **jaký má
+princip**. Čísla níže jsou to, co ty snímky nesou.
+
+## 7.1 Rejstříky a orientační soubory
+
+| Údaj | Hodnota |
+|---|---|
+| ADR celkem | 54 |
+| z toho aktivních / navržených / override | 28 / 25 / 1 |
+| kategorie `process` / `api` / `hw` / `db` / `integration` | 20 / 16 / 10 / 4 / 3 |
+| souborů `INDEX.md` v `docs/adr/` | 7 (souhrn + 6 kategorií) |
+| zápisů v `docs/meetings/` | 66 |
+
+Pravidlo, které tu hranici drží: `.claude/rules/shared/RULE-DOC-001_orientacni-soubory.md`.
+Rozděluje tři soubory podle **adresáta a okamžiku načtení** — README čte člověk na vyžádání,
+INDEX je registr s ID a stavem (**práh zhruba >10 položek**), `CLAUDE.md` se načítá automaticky,
+a proto se za jeho obsah platí kontextem v každé session. Pravidlo výslovně zakazuje psát
+do `CLAUDE.md` adresářové stromy a výčty souborů: *„to si čtenář zjistí levněji `ls`em
+a stárne to při každé změně struktury."*
+
+## 7.2 Funkční požadavky a testovací scénáře
+
+| Údaj | Hodnota |
+|---|---|
+| souborů `FR-*.md` | 52 |
+| souborů `*.feature` v `docs/fr/**/tc/` | 109 |
+| scénářů v `docs/fr/tc-list.csv` | 946 |
+| z toho unikátních testovacích případů | 108 |
+| klasifikace positive / negative / edge-case | 529 / 409 / 8 |
+| typ behavior / contract / boundary | 336 / 326 / 281 |
+| stav done / draft | 862 / 84 |
+
+Tvary ID podle `docs/fr/README.md`: `FR-COMP-WES-{oblast}-{seq}` (1.1.x), `FR-COMP-API-…` (1.2.x),
+`FR-COMP-UI-…` (1.3.x), `FR-BP-{oblast}-{seq}` (2.x). Kanonické ID scénáře je `{TC-ID}.S{NN}`.
+
+Konvenci scénářů drží `RULE-TC-001_tc-konvence.md`. Dvě věty, které stojí za citování doslova:
+`@S{NN}` se **NIKDY** nepřečíslovává ani nerecykluje (smazaný scénář nechá mezeru a poznámku
+`# Retired: …`), a kroky popisují **doménovou akci**, ne názvy služeb — aby scénáře přežily
+přejmenování v kódu. Důvod uvedený v pravidle: stabilní `@S` drží dohledatelnost
+FR → TC → C# test napříč refaktoringy.
+
+## 7.3 Registr dotazů na dodavatele
+
+| Údaj | Hodnota |
+|---|---|
+| otázek celkem | 152 |
+| bullseye / bluesword | 126 / 26 |
+| Answered / Partially / No answer / Declined | 58 / 52 / 32 / 10 |
+| s vyplněným `landed_in` | 61 |
+
+`landed_in` je `soubor:řádek`, kde je odpověď zapsaná ve specifikaci. **Bez něj je registr
+jen hezčí mailbox** — tohle je to nejpřenositelnější z celého bloku.
+
+Zdroj pravdy je `questions.yaml`; `OTEVRENE.md`, `QUESTIONS.tsv` i `questions-view.html`
+jsou generované a needitují se. Identifikátory `PRE-*` / `MEZ-*` / `PORT-*` a číselník stavů
+jsou převzaté z komunikačního registru dodavatele a **záměrně se nepřejmenovávají** — odkazuje
+na ně dodavatel ve svých odpovědích (`docs/suppliers/README.md`).
+
+## 7.4 Skilly, příkazy, agenti, pluginy
+
+| Údaj | alzask | fhb |
+|---|---|---|
+| skillů v `.claude/skills/` | 2 | 1 |
+| příkazů v `.claude/commands/` | 9 | — |
+| agentů v `.claude/agents/` | 5 | 7 (`spec-*`) |
+
+Skill `ontologie-prvku-alzask` je **generovaný** z `ontology.yaml` — hlavička souboru to říká
+(`GENEROVANO — needituj`, `generated_from: ontology.yaml@…`). Sedmice agentů v fhb je tatáž,
+kterou balí plugin `spec-factory` 1.9.0 z marketplace `kvados-plugins`
+(`~/.claude/plugins/installed_plugins.json`).
+
+**Doklad z oficiální dokumentace** ([code.claude.com/docs/en/skills](https://code.claude.com/docs/en/skills),
+ověřeno 11. 9. 2026), doslovně: *„In a regular session, skill descriptions are loaded into context
+so Claude knows what's available, but full skill content only loads when invoked."* a *„The
+`description` helps Claude decide when to load the skill automatically."* Z toho plyne věta
+pro publikum: **popis je jediné, co model vidí předem** — špatný popis znamená skill,
+který se nikdy nespustí.
+
+## 7.5 Drobná korekce části 6.5
+
+`RELATIONS.tsv` má 32 504 B, tedy **33 kB**, ne 32 kB. Zaokrouhlení, ne změna souboru.
+Ostatní velikosti registru sedí: `INDEX.md` 32 kB, `TERMS.tsv` 183 kB, `conflicts.md` 349 kB,
+`ontology.yaml` 1,7 MB. Počítá se **kB = 1000 B**; kdo použije 1024, dostane 179 a 341
+a bude se zbytečně divit.

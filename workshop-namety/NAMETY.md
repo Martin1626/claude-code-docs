@@ -1850,6 +1850,17 @@ Rejstřík prvků je index faktů, ne jejich autorita — a citace je adresa *pl
 zdrojů kartu neměl. Doplněn 2026-09-10 podle skutečně připraveného 2. sezení (`PROGRAM-02.md`).
 S `K-06` a `K-05` z přílohy `P` dává **71 minut**, což je rozsah toho sezení bez diskuse.
 
+**Aktualizace 2026-09-11.** Skutečně odpřednášený tvar 2. sezení je jiný. Vlastník rozhodl,
+že deck je od snímku 3 příliš podrobný, a sezení se přestavělo na **osm témat po dvou
+snímcích** — indexové soubory, zápisy ze schůzek, ADR, FR, TC, ontologie prvků, komunikace
+s dodavateli, skilly a pluginy. Každé téma má snímek „proč to vzniklo" a snímek „princip";
+praktickou ukázku dělá lektor živě mimo snímky. Platný rozpis je `PROGRAM-02.md`,
+čísla `DOKLADY.md` části 6 a 7.
+
+Karty `K-08` až `K-10` **se neruší.** Popisují látku, která z tohoto sezení vypadla
+(kostra vs. výbava, kotvy a tři verdikty), nebo se smrskla na jednu dvojici snímků (`K-09`).
+Jsou to použitelné náměty pro dílnu nebo pro pozdější díl, ne popis toho, co se odpřednáší.
+
 ## Díl P — Příloha pro toho, kdo bude stavět nástroje
 
 **37 minut** · 3 námětů

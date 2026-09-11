@@ -1,129 +1,166 @@
 # Program 2. sezení — „Kde to leží a odkud to víš"
 
 **Kdy:** `[TERMÍN ZATÍM NEURČEN]` · **Délka:** 120 min · **Publikum:** analytici Alza, po 1. sezení z 11. 9. 2026
-**Rozsah:** struktura projektů Alza a FHB · rejstřík prvků systému · jak se odkazovat na zdroje · precedence při rozporu
-**Styl:** **čistý výklad a diskuse — žádná práce u klávesnice, žádné generování.** Ukazují se **jen hotové artefakty**, ne proces jejich vzniku
-**Stav:** návrh k odsouhlasení · **Navazuje:** `PROGRAM-01.md` slide 15 („pravidlo, který zdroj vyhrává") · karty: `NAMETY.md` K-08, K-09, K-10, K-05, K-06 · čísla: `DOKLADY.md` část 6
+**Rozsah:** osm druhů dokumentů, které v projektu Alza vznikly — u každého **proč** a **jaký má princip**
+**Styl:** výklad ze snímků + **živá ukázka lektora** u každého tématu. Účastníci u klávesnice nepracují.
+**Stav:** přestavěno 2026-09-11 podle zadání vlastníka · **Navazuje:** `PROGRAM-01.md` slide 15 („pravidlo, který zdroj vyhrává")
+**Deck:** `C:\Git\shared\docs\claude-code\claude-code-struktura-a-zdroje.html` (**GitLab — jen lokálně, nikdy nepushovat**)
+**Čísla:** `DOKLADY.md` části 6 a 7 · kontrola `_raw/overit-deck-02.py`
 
 ---
 
-## Co si mají odnést (jedna věta na blok, vyslovit na konci)
+## Jak je díl postavený
 
-1. Kostra projektu je u obou zákazníků stejná, liší se výbava. **Nekopíruj cizí výbavu, kopíruj kostru.**
-2. Deset pravidel z osmnácti a třinácti je společných. To je jádro, které mezi projekty cestuje.
-3. Rejstřík prvků je **index faktů, ne jejich autorita**.
-4. Citace je `soubor:řádek` **plus úryvek**. Bez úryvku je to jen adresa.
-5. Číslo řádku je adresa, ne identita. Kotva stárne a někdo ji musí opravovat.
-6. Při rozporu rozhoduje **vrstva zdroje**, ne přesvědčivost formulace ani počet výskytů.
-7. Minimální verze pro zítřek se obejde bez jediného nástroje: jeden soubor s rejstříkem, citace s úryvkem, napsané pořadí vrstev.
+Od snímku 03 jde **osm témat, každé po dvou snímcích**:
+
+| Snímek | Co na něm je |
+|---|---|
+| **A — proč** | jaká bolest ten artefakt vyvolala. Bez čísla z projektu se ten snímek nedá odvyprávět |
+| **B — princip** | jak to vypadá a proč zrovna takhle. Jeden zkrácený výřez a tři až pět vět |
+
+**Praktické ukázky nejsou na snímcích.** Po každé dvojici otevře lektor skutečný soubor v editoru.
+Snímek nese důvod a princip, obrazovka nese realitu. Kdyby se ukázka nestihla, snímky dávají smysl samy o sobě.
+
+**Rozpočet na blok:** zhruba 5 minut snímky + 5 až 7 minut živá ukázka a otázky.
+Kdo mluví ze snímků déle než pět minut, nestihne ukázku — a ukázka je to, co si publikum zapamatuje.
+
+---
+
+## Co si mají odnést (jedna věta na téma, vyslovit na konci bloku)
+
+1. **Rejstřík** odpovídá na „existuje to a mám to otevírat", ne na „co v tom je".
+2. **Zápis ze schůzky** není přepis. Rozhodnutí nahoře, doklad dole.
+3. **ADR** neodpovídá na „co platí", ale na „proč to tak je". Nahrazené se nemaže.
+4. **FR** má hodnotu ve dvou vazbách: nahoru na rozpad produktu, dolů na testy.
+5. **TC** je jediné místo, kde se pozná, že specifikace je dvojznačná.
+6. **Rejstřík prvků** je index faktů, ne jejich autorita. Citace je adresa *plus* úryvek.
+7. **Registr dotazů** má cenu až s místem dopadu — kde je odpověď zapsaná ve specifikaci.
+8. **Skill** je postup jako soubor. V okně je z něj jen jméno a popis; podle popisu se model rozhoduje.
 
 ---
 
 ## Časový plán
 
-> Sezení je bez práce u klávesnice, takže celou váhu nese deck a diskuse. Diskuse je proto rozdělená do bloků 3, 7 a 8, ne odložená na konec.
-> Deck: `C:\Git\shared\docs\claude-code\claude-code-struktura-a-zdroje.html` (**GitLab — jen lokálně, nikdy nepushovat**).
-
-| # | Čas | Min | Blok | Karta / deck | Role |
+| # | Čas | Min | Blok | Deck | Role |
 |---|---|---|---|---|---|
-| 0 | 0:00 | 5 | Kde jsme skončili minule | deck 00–01 | výklad |
-| 1 | 0:05 | 14 | **Dva projekty vedle sebe: co mají stejné** | K-08 · deck 02–04 | výklad |
-| 2 | 0:19 | 14 | **Uvnitř `.claude/`: co tam je a co z toho jde do okna** | deck 05–06 | výklad |
-| 3 | 0:33 | 12 | **Pravidlo jako artefakt**, sdílená a osobní vrstva | K-08 · deck 07–08 | výklad + diskuse |
-| — | 0:45 | 5 | *pauza* | | |
-| 4 | 0:50 | 18 | **Rejstřík prvků: co to je a jak se v něm hledá** | K-09 · deck 09–11 | výklad |
-| 5 | 1:08 | 14 | **Jak se odkazuje na zdroj** | K-09 · deck 12–13 | výklad |
-| 6 | 1:22 | 12 | **Citace stárne: tři verdikty** | K-10 · deck 14–15 | výklad |
-| 7 | 1:34 | 14 | **Precedence: rozhoduje vrstva, ne přesvědčivost** | K-06 · deck 16–17 | výklad + diskuse |
-| 8 | 1:48 | 12 | **Odkud začít u sebe zítra**, Q&A, zpětná vazba | deck 18–19 | diskuse |
+| 0 | 0:00 | 10 | Kde jsme skončili · dva projekty vedle sebe | 00–02 | výklad |
+| 1 | 0:10 | 12 | **Indexové soubory** | 03–04 | výklad + ukázka |
+| 2 | 0:22 | 12 | **Zápisy ze schůzek** | 05–06 | výklad + ukázka |
+| 3 | 0:34 | 14 | **ADR** | 07–08 | výklad + ukázka + diskuse |
+| — | 0:48 | 5 | *pauza* | | |
+| 4 | 0:53 | 12 | **FR** | 09–10 | výklad + ukázka |
+| 5 | 1:05 | 12 | **TC** | 11–12 | výklad + ukázka |
+| 6 | 1:17 | 14 | **Ontologie prvků** | 13–14 | výklad + ukázka + diskuse |
+| 7 | 1:31 | 12 | **Komunikace s dodavateli** | 15–16 | výklad + ukázka |
+| 8 | 1:43 | 12 | **Skilly a pluginy** | 17–18 | výklad + ukázka |
+| 9 | 1:55 | 5 | Shrnutí, Q&A, zpětná vazba | 19 | diskuse |
 | | 2:00 | | konec | | |
 
-**Součet:** 5 + 14 + 14 + 12 + 5 + 18 + 14 + 12 + 14 + 12 = **120 min.**
-**Čas účastníků u klávesnice:** 0 min. Vědomé rozhodnutí — místo toho je 26 minut vyhrazené diskuse (bloky 3, 7, 8).
-**Kde ubrat, když se to nevejde:** blok 2 snese vypustit hooky a output styles (deck 05); blok 6 se dá zkrátit na jeden verdikt místo tří (deck 14 bez 15).
+**Součet:** 10 + 12 + 12 + 14 + 5 + 12 + 12 + 14 + 12 + 12 + 5 = **120 min.**
+**Čas účastníků u klávesnice:** 0 min. Diskuse je vyhrazená v blocích 3, 6 a 9 (celkem 13 min) a vejde se i do otázek u ukázek.
+
+**Kde ubrat, když se to nevejde.** Bloky jsou nezávislé dvojice, takže se škrtá celé téma, ne půlka:
+vypustit **TC** (blok 5) nebo **skilly a pluginy** (blok 8). Obojí ušetří 12 minut a nic dalšího se nerozsype.
+**Neškrtat ontologii** — na ni navazuje minimální verze ve shrnutí.
 
 ---
 
 ## Bloky podrobně
 
-### 0 · Kde jsme skončili minule (deck 00–01, 5 min)
-- **Výklad:** tři věty z prvního dílu, na kterých tenhle stojí. `CLAUDE.md` a pravidla jdou do okna **pokaždé**. **Dokument nese kontext, prompt nese rozhodnutí.** A poslední věta prvního dílu: *pravidlo, který zdroj vyhrává* — dnes se dozvíte, jak takové pravidlo vypadá napsané.
-- **Co dnes není:** datová hranice a bezpečnost, jak psát zadání, revize výstupů. Každé z toho je samostatný díl.
-- ⚠ Nepřehrávat celý první díl. Pět minut, tři věty, jdeme dál.
+### 0 · Kde jsme skončili · dva projekty vedle sebe (deck 00–02, 10 min)
+- **Výklad:** tři věty z prvního dílu. Model si nic nepamatuje. **Dokument nese kontext, prompt nese rozhodnutí.** A poslední věta minula: *pravidlo, který zdroj vyhrává.*
+- **Slide 02 — dva projekty:** dva zákazníci, dvě domény, skoro stejný adresářový strom. Přepínačem zvýraznit společné adresáře. **Devět z šestnácti a dvanácti** je stejných.
+- **Věta k vyslovení:** kopírujte kostru, ne cizí výbavu. Výbava odpovídá tomu, co ten projekt bolelo. Dnešní díl je o té výbavě — kus po kuse.
+- ⚠ **FHB je jiný zákazník.** Na plátno jde **jen strom adresářů**. Neotvírat žádný dokument FHB. Rozhodnutí ukázat projekt pod pravým jménem padlo 10. 9. 2026.
+- ⚠ **Korekce prvního dílu.** Deck dílu 1 na slidu 15 říká, že `CLAUDE.md` a `rules/` jdou do okna pokaždé. Přesně: **pravidlo bez uvedené cesty jde do okna vždy, pravidlo s cestou až na vyžádání.** Všech 18 sdílených pravidel alzask i 13 fhb má `paths:`, takže se při startu session nenačte ani jedno. Vyslovit jednou větou, nerozebírat — viz `DOKLADY.md` 6.4.
+- ⚠ Nepřehrávat celý první díl. Deset minut i s tím stromem.
 
-### 1 · Dva projekty vedle sebe (K-08, deck 02–04, 14 min)
-- **Výklad:** dva zákazníci, dvě domény, dva různé týmy. A přesto skoro stejný adresářový strom. To není náhoda ani kopie — je to tvar, do kterého to dojde, když má agent v projektu pracovat opakovaně.
-- **Ukázka (hotové artefakty):** stromy obou projektů vedle sebe, kořen a `docs/` do druhé úrovně. Nic se neotvírá.
-- **Čísla (změřeno 10. 9. 2026):** `docs/` má alzask **16** podadresářů, fhb **12**, **společných 9** — `adr`, `analysis`, `api`, `fr`, `meetings`, `onboarding`, `pbs`, `spec`, `spec-grounding`.
-- **Čím se liší:** Alza má navíc registr prvků (`ontology`), PLC vrstvu, dodavatele a přehledy sprintů; FHB má komunikaci se zákazníkem, zpětné vazby po verzích a plány. **Alza 5 revizních agentů, FHB 7 agentů továrny na specifikace.**
-- **Ověřitelný výstup:** posluchač do příště najde ve svém projektu, které z těch devíti společných adresářů má, a které mu chybí.
-- ⚠ **FHB je jiný zákazník.** Na plátno jde **jen strom adresářů**. Neotvírat žádný dokument FHB, ani `apibluesword-wcs-api.yml`. Rozhodnutí ukázat projekt pod pravým jménem padlo 10. 9.
+### 1 · Indexové soubory (deck 03–04, 12 min)
+- **Snímek A — proč:** v jedné složce 66 zápisů, ve vedlejší 54 rozhodnutí. Bez rejstříku existují jen dvě odpovědi: otevřít všechno, nebo se zeptat kolegy. **Tři soubory, tři adresáti:** README pro člověka na vyžádání, INDEX jako registr, `CLAUDE.md` pro agenta a automaticky.
+- **Snímek B — princip:** hlavička `docs/adr/INDEX.md`. Práh zhruba **deset položek**. Stav v rejstříku musí odpovídat frontmatteru zdroje. Z té trojice zastarává rejstřík nejrychleji.
+- **Živá ukázka:** otevřít `docs/adr/INDEX.md` celý, ukázat tabulku kategorií a proklik do `api/INDEX.md`. Pak `docs/fr/README.md` vedle toho — jiná role, jiný obsah.
+- **Čísla (11. 9. 2026):** 54 ADR / 28 aktivních / 25 navržených / 1 override; kategorie process 20, api 16, hw 10, db 4, integration 3. Rejstříků v `docs/adr` je **sedm**.
+- **Zdroj pravidla:** `.claude/rules/shared/RULE-DOC-001_orientacni-soubory.md` — včetně věty, proč se do `CLAUDE.md` nepíšou adresářové stromy.
+- **Ověřitelný výstup:** posluchač řekne, který ze svých adresářů už překročil práh deseti položek a rejstřík nemá.
 
-### 2 · Uvnitř `.claude/` (deck 05–06, 14 min)
-- **Výklad:** šest kategorií a u každé jedna věta, k čemu je. `settings.json` je jediné místo, kde se **vynucuje** (zákaz, oprávnění, hook) — všechno ostatní je kontext, který model *přečte a snaží se dodržet*. To je ten rozdíl, který se v prvním dílu jen naznačil.
-- **Čím se to plní:** `CLAUDE.md` a pravidla jdou do okna při každém startu. Skill jde napřed **jen popiskem**, tělo až při použití. `docs/` nejde do okna nikdy celé.
-- **Čísla (10. 9. 2026):** `CLAUDE.md` alzask **11 884 znaků / 199 řádků**, fhb **14 374 znaků / 367 řádků**.
-- ⚠ **Nepoužívat srpnová čísla.** `DOKLADY.md` část 3 uvádí pro alzask 23 818 znaků — soubor se od té doby **zkrátil na polovinu**. Aktuální hodnoty jsou v části 6.
-- **Kam dál:** [code.claude.com/docs/en/claude-directory](https://code.claude.com/docs/en/claude-directory), [/docs/en/memory](https://code.claude.com/docs/en/memory).
+### 2 · Zápisy ze schůzek (deck 05–06, 12 min)
+- **Snímek A — proč:** hodinový přepis má tisíce slov a pět rozhodnutí, která nejsou označená. **V přepisu zní obě strany sporu stejně sebevědomě.** Model z něj závěr nepozná, člověk po měsíci taky ne.
+- **Snímek B — princip:** hlavička (datum, účastníci, jméno zdrojového přepisu) → *Klíčová rozhodnutí* číslovaná → *Operační body (bez ADR)* → celý přepis doslova pod tím.
+- **Živá ukázka:** `docs/meetings/2026-03-05 … idempotency.md` — projet prvních dvacet řádků, pak sjet dolů k přepisu a ukázat, z čeho ten souhrn vznikl.
+- **Věta k vyslovení:** přepis je doklad, zápis je rozhodnutí. Nejsou to dva formáty téhož.
+- **Věta, která patří nahlas:** souhrn navrhne agent, **rozhodnutí za něj potvrzuje člověk**. Tohle je místo, kde se delegovat nedá.
+- **Čísla:** 66 zápisů v `docs/meetings/`.
+- ⚠ Zápis obsahuje jména účastníků a věcný obsah jednání. **Vybrat dopředu jeden, který se dá promítnout** — ten o idempotency je bezpečný, je čistě technický.
 
-### 3 · Pravidlo jako artefakt (K-08, deck 07–08, 12 min)
-- **Výklad:** pravidlo není odstavec v `CLAUDE.md`. Je to soubor s hlavičkou, která říká **kde platí** (`paths`), **jak silně** (`enforcement`), **odkud pochází** (`source`) a **s čím souvisí** (`related_rules`). Tělo má pevný tvar: *PLATÍ KDYŽ · NEPOUŽÍVAT KDYŽ · Odůvodnění (proč)*. To „nepoužívat když" je tam schválně — pravidlo bez hranice se poruší a pak se přestane brát vážně.
-- **Ukázka:** hlavička `RULE-ONT-002_cituj-zdroj-ne-registr.md` doslova.
-- **Čísla (10. 9. 2026):** alzask **18** sdílených pravidel, fhb **13**, **společných 10**. Alza navíc 8, FHB navíc 3.
-- **Věta k vyslovení:** těch deset je jádro, které cestuje mezi projekty. Zbytek je doménový a nemá smysl ho kopírovat.
-- **Diskuse (4 min):** *Máte něco, co říkáte kolegům opakovaně? To je kandidát na pravidlo.*
-- **Ověřitelný výstup:** posluchač si do příště zapíše jednu větu, kterou opakuje, a rozhodne, kde by měla být zapsaná.
+### 3 · ADR (deck 07–08, 14 min)
+- **Snímek A — proč:** „Proč se u GET nevyžaduje hlavička s ID požadavku?" Bez záznamu žije odpověď v hlavě jednoho člověka. Za půl roku se rozhodne opačně a **nikdo neví, že se něco měnilo**.
+- **Snímek B — princip:** hlavička `ADR-ASK-API-008`. ID je trvalé. **Nahrazení se zapisuje na obě strany** — staré ADR zůstane s odkazem na nástupce. Recenzenti jmenovitě, se stavem. Tělo: kontext → rozhodnutí → důsledky.
+- **Živá ukázka:** otevřít to ADR celé a ukázat, jak je dlouhý kontext oproti samotnému rozhodnutí. Pak jedno `accepted` vedle jednoho `draft`.
+- **Věta k vyslovení:** ADR neodpovídá na „co platí" — na to je specifikace. Odpovídá na „proč to tak je".
+- **Diskuse (4 min):** *Kde je u vás zapsané rozhodnutí, na které se ptáte nejčastěji?* Většinou nikde, nebo v mailu — a to je ta pointa.
+- **Ověřitelný výstup:** posluchač jmenuje jedno rozhodnutí ze svého projektu, které nikde napsané není, a řekne, kdo je jeho vlastníkem.
 
-### 4 · Rejstřík prvků (K-09, deck 09–11, 18 min)
-- **Výklad:** rejstřík je seznam všeho, s čím se v projektu pracuje — fyzické prvky, logické entity, číselníky, aktéři — s popisem, vazbami a **odkazem na zdroj, ze kterého to tvrzení pochází**. Přesně to, co bylo v nahrávce z 2. 9. Jde o to, aby si model nemusel doménu domýšlet.
-- **Ukázka:** hlavička `INDEX.md` a jedna karta prvku.
-- **Čísla (10. 9. 2026):** **176 entit** (fyzických 48 · logických 48 · číselníků 61 · aktérů 19) · **354 vztahů** · **703 atributů** · **97 rozporů**.
-- **Jak se v tom hledá, aniž se zaplní okno:** `INDEX.md` 32 kB se přečte celý · karta prvku podle potřeby · termín se hledá grepem v `TERMS.tsv` (183 kB) · vazby v `RELATIONS.tsv` · **`ontology.yaml` 1,7 MB se nečte nikdy celý**. Přímá vazba na slide 14 prvního dílu.
-- ⚠ **Nesklouznout do nástrojů.** Že registr někdo generuje, se zmíní jednou větou. Jinak se z dílu stane díl o nástrojích a publikum si odnese, že tohle není pro ně.
-- **Kam dál:** blok 8, minimální verze bez nástrojů.
+### 4 · FR (deck 09–10, 12 min)
+- **Snímek A — proč:** věta ze zápisu se nedá odškrtnout. **Požadavek říká, co má systém umět. Rozhodnutí říká, proč jsme zvolili tuhle cestu.** Když se to smíchá, nedá se revidovat ani jedno.
+- **Snímek B — princip:** hierarchie sekce → kategorie → oblast → požadavek. Tvary ID `FR-COMP-{WES|API|UI}-…` a `FR-BP-…`. **Z ID se pozná umístění bez otevření souboru.**
+- **Živá ukázka:** strom `docs/fr/` do druhé úrovně a jeden FR otevřený — ukázat, na co se odkazuje nahoru a dolů.
+- **Čísla:** 52 požadavků, dvě sekce.
+- **Věta k vyslovení:** struktura složek je pro agenta stejná informace jako text — a je o řád levnější. Vypsat adresář stojí pár desítek tokenů, přečíst padesát dokumentů stojí celé okno.
+- **Ověřitelný výstup:** posluchač řekne, podle čeho jsou pojmenované jeho požadavky a jestli z názvu poznat, kam patří.
 
-### 5 · Jak se odkazuje na zdroj (K-09, deck 12–13, 14 min)
-- **Výklad:** citace má dvě části. **Adresu** `soubor:řádek` a **úryvek toho, co na tom místě stojí**. Karty prvků mají kvůli tomu vlastní sloupec — většinou pak zdroj vůbec nemusíš otevírat.
-- **Druhé pravidlo:** *cituj původní zdroj, ne registr.* Registr je index faktů, ne jejich autorita. Kdo cituje registr, založí druhou vrstvu zastarávání: dokument → registr → zdroj. Kotvy hlídají jen jednu z nich.
-- **Ukázka:** sloupec „co na tom místě stojí" na kartě prvku a znění `RULE-ONT-002`.
-- **Druhý projekt, jiná konvence:** FHB používá u architektury citaci tvarem `[TAG §sekce "3–6 slov doslovně"]` plus značku jistoty. Jiný zápis, tentýž princip — **adresa plus doslovný úryvek**.
-- **Ověřitelný výstup:** posluchač najde ve svém posledním dokumentu jedno tvrzení bez citace a doplní k němu zdroj i úryvek.
+### 5 · TC (deck 11–12, 12 min)
+- **Snímek A — proč:** **z dvojznačné věty se scénář napsat nedá.** Kdo píše scénáře, čte specifikaci pozorněji než kdokoli jiný a najde v ní díry dřív než vývojář.
+- **Snímek B — princip:** `TC-BP-DECANT-002-01.S03` — případ tečka scénář. **`@S` se nikdy nepřečísluje ani nerecykluje**, smazaný nechá mezeru. Tagy nesou klasifikaci, stav a datum má každý scénář zvlášť. Kroky mluví doménou, ne názvy služeb.
+- **Živá ukázka:** jeden `.feature` soubor a vedle něj řádek z `tc-list.csv` — dokument pro čtení, tabulka pro filtr.
+- **Čísla (11. 9. 2026):** 946 scénářů ve 108 případech, 109 souborů `.feature`, hotových 862, rozepsaných 84, negativních **409 z 946**.
+- **Zdroj konvence:** `RULE-TC-001_tc-konvence.md`.
+- **Věta k vyslovení:** stabilní identifikátor je jediné, co drží dohledatelnost přes refaktoring. Přečíslování je ztráta vazby.
+- ⚠ Tohle je blok, který se škrtá první, když se čas nevejde.
 
-### 6 · Citace stárne (K-10, deck 14–15, 12 min)
-- **Výklad:** **číslo řádku je adresa, ne identita.** Text nad citací se edituje a řádek pak ukazuje jinam. Přečteš cizí místo téhož dokumentu a nemáš jak to poznat. Proto se u citace drží **kotva** — otisk okolí několika řádků — a ověřuje se nástrojem, který vrátí verdikt, ne text.
-- **Tři verdikty:** `OK` sedí · `POSUN` text se našel jinde · `ZMIZELA` text tam není a **tvrzení je třeba ověřit znovu**. Kdo opraví zmizelou citaci přepsáním čísla řádku, vyrobí horší stav než zastaralý: *tvar sedí, obsah lže.*
-- **Číslo, kvůli kterému se pravidlo změnilo:** měření nad registrem 26. 8. — **z 15 hlášení jich 9 byl šum** (vložený odstavec *vedle* citace ji shodí stejně jako přepsaná věta). Pravidlo, které pošle člověku všechna hlášení, mu naloží devět mechanických případů smíchaných se šesti skutečnými. Člověk pak odklikne všechno, nebo to odloží. Obojí je horší než automatika.
-- **Věta k vyslovení:** tohle je doklad, jak se pravidlo opravuje měřením, ne názorem. Původní verze posílala všechno člověku.
-- ⚠ Neprodávat to jako hotové řešení. **Bez nástroje si posluchač odnese jen ostražitost** — a to je málo. Vyvážit blokem 8.
+### 6 · Ontologie prvků (deck 13–14, 14 min)
+- **Snímek A — proč:** dopravník, conveyor, `CONV_01`, „ta pásovka u dekantace". **Model si doménu domýšlí, když ji nemá kde vzít — a domyslí ji věrohodně.** To je horší, než kdyby odpověď odmítl.
+- **Snímek B — princip:** tabulka souborů registru a způsobu čtení. `INDEX.md` celý, karta na vyžádání, TSV grepem, **`ontology.yaml` 1,7 MB nikdy celý**. Citace je adresa *plus* úryvek. **Cituj zdroj, ne rejstřík.**
+- **Živá ukázka:** hlavička `INDEX.md`, jedna karta prvku se sloupcem „co na tom místě stojí", a grep v `TERMS.tsv` na jeden termín.
+- **Čísla (10. 9. 2026):** 176 prvků · 354 vazeb · 703 atributů · 97 rozporů.
+- **Diskuse (5 min):** *Kolik jmen má u vás ta samá věc?* Odpověď bývá tři a je to nejrychlejší cesta k tomu, proč registr vůbec vznikl.
+- ⚠ **Nesklouznout do nástrojů.** Že registr někdo generuje, se zmíní jednou větou. Jinak se z toho stane díl o nástrojích a publikum si odnese, že tohle není pro ně. **Vyvážit shrnutím** — minimální verze je jeden soubor.
+- ⚠ Registr obsahuje jména dodavatelů a zákaznická čísla. Kartu prvku vybrat dopředu a projít řádek po řádku.
 
-### 7 · Precedence (K-06, deck 16–17, 14 min)
-- **Výklad:** když si dva dokumenty odporují, potřebuješ pravidlo, které rozhodne **předem**. Jinak rozhodne to, co model přečte první. A pozor: **novější nemusí vyhrát.** Specifikace může prohrát s daty ze skutečného nasazení.
-- **Ukázka:** tabulka sedmi vrstev autority z registru a jeden zapsaný rozpor.
-- **Věta k vyslovení:** *rozhoduje vrstva zdroje, ne přesvědčivost formulace ani počet výskytů.*
-- **Druhé pravidlo, které stojí za vyslovení:** **vstupní dokument se needituje.** Procesní analýza, posouzení rizik a podepsané verze jsou záznam. Nález jde do soupisu rozporů, ne do nich.
-- **Nejtěžší případ:** rozpor **uvnitř téže vrstvy**. Tam hierarchie nepomůže a rozhoduje člověk.
-- **Diskuse (5 min):** *Který z vašich dokumentů je nejvyšší autorita?* Většinou to nikdo neví — a to je ta pointa.
-- ⚠ Hierarchii musí někdo napsat, je to doménová práce. Neslibovat, že to udělá nástroj.
+### 7 · Komunikace s dodavateli (deck 15–16, 12 min)
+- **Snímek A — proč:** stav býval v Excelu a v mailboxu a dal se vyčíst jen ručním čtením. **„Odpověděli" a „odpověděli dost" nejsou totéž** — a ten rozdíl v mailu vidět není.
+- **Snímek B — princip:** trvalé ID převzaté z registru dodavatele, **nepřejmenovává se**, odkazuje na ně i on. Odpověď doslova. U „částečně" je napsané, co konkrétně chybí. A `landed_in` — kde je odpověď zapsaná ve specifikaci.
+- **Živá ukázka:** `OTEVRENE.md` s otevřenými otázkami a proklik z jednoho `landed_in` do místa ve specifikaci. Případně prohlížeč `questions-view.html`.
+- **Čísla (11. 9. 2026):** 152 otázek (bullseye 126, bluesword 26) · zodpovězeno 58 · částečně 52 · bez odpovědi 32 · odmítnuto 10 · vyplněné `landed_in` u **61**.
+- **Věta k vyslovení:** bez místa dopadu je registr jen hezčí mailbox.
+- ⚠ Otázky jsou v angličtině a obsahují **jména dodavatelů a technické detaily zakázky**. Vybrat dopředu dva až tři záznamy, které se dají promítnout.
 
-### 8 · Odkud začít u sebe zítra (deck 18–19, 12 min)
-- **Výklad — tři kroky, každý bez jediného nástroje:**
-  1. **Jeden soubor s rejstříkem.** Seznam prvků, se kterými pracuješ, jedna řádka na prvek. Nemusí být úplný.
-  2. **Citace s úryvkem.** Ke každému tvrzení, které přebíráš odjinud, adresu a tři až šest slov doslova.
-  3. **Napsané pořadí vrstev.** Který dokument vyhrává. Vejde se to na pět řádků.
-- **Věta k vyslovení:** registr se 176 prvky vznikl tak, že někdo začal jedním souborem. Nástroje přišly potom, protože ručně to přestalo stačit — ne obráceně.
+### 8 · Skilly a pluginy (deck 17–18, 12 min)
+- **Snímek A — proč:** postup v hlavě funguje, dokud je u toho ten člověk. Postup v `CLAUDE.md` se načte pokaždé, tedy se za něj **platí kontextem i ve dnech, kdy se nepoužije**. Skill je třetí možnost: v okně je jen jméno a popis, tělo až při použití.
+- **Snímek B — princip:** **skill** je soubor s postupem · **příkaz** je tenká obálka, která ho vyvolá s určitým vstupem · **plugin** je balík skillů, příkazů, agentů a kontrol s číslem verze.
+- **Živá ukázka:** `SKILL.md` skillu na dotazy dodavatelům — hlavička s popisem a tabulka situací. Pak příkaz `/dodavatele:mail`, který je proti němu krátký. A nakonec `/plugin` se seznamem nainstalovaných balíků.
+- **Čísla:** alzask 2 skilly, 9 příkazů, 5 agentů. Skill na rejstřík prvků je **generovaný** z `ontology.yaml`.
+- **Věta k vyslovení:** popis je jediné, co model vidí předem. Špatný popis = skill, který se nikdy nespustí.
+- **Věta, která patří nahlas:** tohle je poslední krok, ne první. Balí se postup, který se osvědčil.
+- **Doklad z dokumentace:** skill descriptions se načítají do okna, tělo až při vyvolání — [code.claude.com/docs/en/skills](https://code.claude.com/docs/en/skills), ověřeno 11. 9. 2026.
+
+### 9 · Shrnutí, Q&A, zpětná vazba (deck 19, 5 min)
+- **Věta, na které to celé stojí:** *každý z těch osmi souborů vznikl z jedné otázky, která přišla potřetí.* Žádný z nich nevznikl proto, že to tak má být.
+- **Čtyři věci, které jdou udělat bez nástroje:** rejstřík místo otevírání všeho · trvalé ID místo přejmenovávání · citace s úryvkem místo paměti · napsané pořadí vrstev.
 - **Zpětná vazba:** formulář `zpetna-vazba-02.html`, tři otázky, dvě minuty.
-- **Most k dalšímu dílu:** podle zpětné vazby buď datová hranice (co poslat modelu a co ne), nebo jak psát zadání.
+- **Most k dalšímu dílu:** podle formuláře buď datová hranice (co poslat modelu a co ne), nebo jak psát zadání.
 
 ---
 
 ## Co je potřeba připravit
 
-- [ ] **Termín a délku doplnit** do hlavičky a do patičky decku
-- [ ] **Projít každý výřez, který jde do decku, řádek po řádku** — registr obsahuje jména dodavatelů, zákaznická čísla a zapsané spory. Ukazovat strukturu a metadata, ne věcný obsah sporů
+- [ ] **Termín doplnit** do hlavičky programu a do patičky decku
+- [ ] **Vybrat dopředu soubory pro živé ukázky** a projít je řádek po řádku — zápis, karta prvku a záznamy dodavatelů obsahují jména a zákaznická čísla
+- [ ] **Otevřít si je předem ve dvou oknech editoru**, aby se během bloku jen přepínalo; hledání souboru na plátně sežere celou ukázku
 - [ ] **Vytisknout formuláře** podle počtu účastníků + 3 rezervní
-- [ ] **Zkušební průchod nahlas s hodinkami** — bez cvičení je 120 minut samotného výkladu hodně, hlídat tempo
+- [ ] **Zkušební průchod nahlas s hodinkami** — osm ukázek za sebou svádí k tomu mluvit u každé o dvě minuty déle, což je šestnáct minut přes čas
 - [ ] **Zpětná vazba z 1. sezení vyhodnocena** → pokud z otázky 3 vyjde silně bezpečnost, tenhle díl se posune a jede se Díl 2 z katalogu
 - [ ] **Na prezentačním stroji:** zvětšení stránky 100 % (Ctrl+0), celá obrazovka (F11)
+- [ ] **Spustit `_raw/overit-deck-02.py`** těsně před sezením — projekty žijí a čísla na snímcích se hýbou
 
 ---
 
@@ -131,9 +168,21 @@
 
 | Vypadlo | Proč | Kam |
 |---|---|---|
-| Datová hranice, tři zákazy, rewind, plan mode (N-01–N-04, M-02) | samostatné téma, nemíchat s dohledatelností | Díl 2 katalogu |
-| Jak psát zadání, straw-man, rozpočet na otázky | navazuje, ale je toho na celý díl | Díly 3 a 4 |
-| Revize výstupů, triáž nálezů, slepý recenzent | Díl 7 | podle zpětné vazby |
-| Skills, subagenti, hooky jako vlastní výbava | dnes jen zmíněny jako součást `.claude/` | Díl 9 |
-| Jak registr vzniká — generátor, plugin, dávkové přeukotvení | jedna věta, jinak by z toho byl díl o nástrojích | případná dílna pro zájemce |
-| Obsahové konvence FR, ADR a specifikací (šablony, changelog, trace) | dnes jen struktura adresářů, ne obsah dokumentů | Díl 3 |
+| Kostra vs. výbava obou projektů podrobně, obsah `.claude/`, co jde do okna při startu | přestavba 11. 9. — bylo to příliš podrobné, zůstal z toho slide 02 a jedna věta | materiál je v `DOKLADY.md` 6.1–6.4 |
+| Pravidlo jako artefakt, deset společných pravidel | totéž | `DOKLADY.md` 6.3, karta K-08 |
+| Kotvy citací, tři verdikty, sedm vrstev autority, zápis rozporu | totéž — vrstvy autority dnes zazní jen jako jedna ze čtyř věcí ve shrnutí | `DOKLADY.md` 6.6–6.7, karty K-06 a K-10 |
+| Datová hranice, tři zákazy, rewind, plan mode | samostatné téma | Díl 2 katalogu |
+| Jak psát zadání, straw-man, rozpočet na otázky | je toho na celý díl | Díly 3 a 4 |
+| Revize výstupů, triáž nálezů, slepý recenzent | samostatné téma | Díl 7 |
+| Jak registr vzniká — generátor, dávkové přeukotvení | jedna věta, jinak by z toho byl díl o nástrojích | dílna pro zájemce |
+| Obsahové šablony dokumentů (co přesně má být v které sekci) | dnes jde o **důvod a princip**, ne o šablonu | Díl 3 |
+
+---
+
+## Poznámka k historii tohoto programu
+
+První verze (10. 9. 2026) vedla souvislý oblouk od struktury projektů přes rejstřík prvků
+k precedenci zdrojů — devět bloků, deck o dvaceti snímcích. Vlastník po revizi rozhodl,
+že **od snímku 3 je to příliš podrobné**, a zadal osm témat po dvou snímcích s tím,
+že praktické ukázky dělá živě. Deck i program jsou přestavěné 11. 9. 2026.
+Původní měření nejsou zahozená — leží v `DOKLADY.md` část 6 a v kartách `K-08` až `K-10`.
